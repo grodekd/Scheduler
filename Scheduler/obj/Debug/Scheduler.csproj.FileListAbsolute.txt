@@ -1,0 +1,14 @@
+C:\Users\cgroded\Documents\Visual Studio 2013\Projects\Scheduler\Scheduler\bin\Debug\Scheduler.exe.config
+C:\Users\cgroded\Documents\Visual Studio 2013\Projects\Scheduler\Scheduler\bin\Debug\Scheduler.exe
+C:\Users\cgroded\Documents\Visual Studio 2013\Projects\Scheduler\Scheduler\bin\Debug\Scheduler.pdb
+C:\Users\cgroded\Documents\Visual Studio 2013\Projects\Scheduler\Scheduler\bin\Debug\MongoDB.Bson.dll
+C:\Users\cgroded\Documents\Visual Studio 2013\Projects\Scheduler\Scheduler\bin\Debug\MongoDB.Driver.Core.dll
+C:\Users\cgroded\Documents\Visual Studio 2013\Projects\Scheduler\Scheduler\bin\Debug\MongoDB.Driver.dll
+C:\Users\cgroded\Documents\Visual Studio 2013\Projects\Scheduler\Scheduler\bin\Debug\MongoDB.Bson.xml
+C:\Users\cgroded\Documents\Visual Studio 2013\Projects\Scheduler\Scheduler\bin\Debug\MongoDB.Driver.xml
+C:\Users\cgroded\Documents\Visual Studio 2013\Projects\Scheduler\Scheduler\obj\Debug\Scheduler.exe
+C:\Users\cgroded\Documents\Visual Studio 2013\Projects\Scheduler\Scheduler\obj\Debug\Scheduler.pdb
+C:\Users\cgroded\Documents\Visual Studio 2013\Projects\Scheduler\Scheduler\obj\Debug\Scheduler.csprojResolveAssemblyReference.cache
+C:\Git\Scheduler\Scheduler\bin\Debug\Scheduler.exe.config
+C:\Git\Scheduler\Scheduler\obj\Debug\Scheduler.exe
+C:\Git\Scheduler\Scheduler\obj\Debug\Scheduler.pdb
