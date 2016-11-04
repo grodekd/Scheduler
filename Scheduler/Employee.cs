@@ -5,10 +5,10 @@ namespace Scheduler
 {
     public class Employee
     {
-        private readonly int id;
+        private readonly string id;
         private readonly List<string> rooms; 
 
-        public Employee(int id, String firstName, String lastName, int maxHours, TimeSpan monStart, TimeSpan monEnd, TimeSpan tuesStart, TimeSpan tuesEnd,
+        public Employee(string id, String firstName, String lastName, int maxHours, TimeSpan monStart, TimeSpan monEnd, TimeSpan tuesStart, TimeSpan tuesEnd,
             TimeSpan wedStart, TimeSpan wedEnd, TimeSpan thurStart, TimeSpan thurEnd, TimeSpan friStart, TimeSpan friEnd, List<string> rooms)
         {
             this.id = id;
@@ -30,7 +30,12 @@ namespace Scheduler
             this.rooms = rooms;
         }
 
-        public int Id
+        public Employee(string id, string firstName, string lastName)
+            : this(id, firstName, lastName, 0, TimeSpan.Zero, TimeSpan.Zero, TimeSpan.Zero, TimeSpan.Zero, TimeSpan.Zero, TimeSpan.Zero, TimeSpan.Zero, TimeSpan.Zero, TimeSpan.Zero, TimeSpan.Zero, null)
+        { 
+        }
+
+        public string Id
         {
             get { return id; }
         }

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using MongoDB.Bson;
+using System.Linq;
 
 namespace Scheduler
 {
@@ -8,6 +10,7 @@ namespace Scheduler
         public static void Main(string[] args)
         {
             var dbAccess = DatabaseAccess.GetDatabaseAccess();
+            var scheduleService = ScheduleService.GetScheduleService();
 
             //dbAccess.AddEmployee(2, "Another", "One", new BsonArray
             //{
@@ -18,8 +21,9 @@ namespace Scheduler
             //    new BsonDocument{{"start", 9}, {"end", 5}}
             //}).Wait();
 
-            //var employees = dbAccess.GetEmployees();
-            Console.WriteLine("butts");
+            List<Child> employees = dbAccess.GetChildren();
+            List<Child> tts = employees.Where(employee => employee.RoomLabel=="TT").ToList();
+            scheduleService.GetEmployeesNeeded(tts, 3);
         }
     }
 }
