@@ -1,35 +1,35 @@
 ﻿
 using System;
+using MongoDB.Bson;
 
 namespace Scheduler
 {
     public class Child
     {
-        private readonly int id;
+        private readonly string id;
 
-        public Child(int id, String firstName, String lastName, String roomLabel, TimeSpan monStart, TimeSpan monEnd, TimeSpan tuesStart,
-            TimeSpan tuesEnd, TimeSpan wedStart, TimeSpan wedEnd, TimeSpan thurStart, TimeSpan thurEnd, TimeSpan friStart,
-             TimeSpan friEnd, bool monSchool, bool tuesSchool, bool wedSchool, bool thurSchool, bool friSchool, int schoolType)
+        public Child(string id, String firstName, String lastName, String roomLabel, BsonArray monday, BsonArray tuesday, BsonArray wednesday, BsonArray thursday, 
+            BsonArray friday, int schoolType)
         {
             this.id = id;
             this.FirstName = firstName;
             this.LastName = lastName;
             this.RoomLabel = roomLabel;
-            this.MonStart = monStart;
-            this.MonEnd = monEnd;
-            this.TuesStart = tuesStart;
-            this.TuesEnd = tuesEnd;
-            this.WedStart = wedStart;
-            this.WedEnd = wedEnd;
-            this.ThurStart = thurStart;
-            this.ThurEnd = thurEnd;
-            this.FriStart = friStart;
-            this.FriEnd = friEnd;
-            this.MonSchool = monSchool;
-            this.TuesSchool = tuesSchool;
-            this.WedSchool = wedSchool;
-            this.ThurSchool = thurSchool;
-            this.FriSchool = friSchool;
+            this.MonStart = new TimeSpan(monday[1]["Start Hour"].AsInt32, monday[2]["Start Min"].AsInt32, 0);
+            this.MonEnd = new TimeSpan(monday[3]["End Hour"].AsInt32, monday[4]["End Min"].AsInt32, 0);
+            this.TuesStart = new TimeSpan(tuesday[1]["Start Hour"].AsInt32, tuesday[2]["Start Min"].AsInt32, 0);
+            this.TuesEnd = new TimeSpan(tuesday[3]["End Hour"].AsInt32, tuesday[4]["End Min"].AsInt32, 0);
+            this.WedStart = new TimeSpan(wednesday[1]["Start Hour"].AsInt32, wednesday[2]["Start Min"].AsInt32, 0);
+            this.WedEnd = new TimeSpan(wednesday[3]["End Hour"].AsInt32, wednesday[4]["End Min"].AsInt32, 0);
+            this.ThurStart = new TimeSpan(thursday[1]["Start Hour"].AsInt32, thursday[2]["Start Min"].AsInt32, 0);
+            this.ThurEnd = new TimeSpan(thursday[3]["End Hour"].AsInt32, thursday[4]["End Min"].AsInt32, 0);
+            this.FriStart = new TimeSpan(friday[1]["Start Hour"].AsInt32, friday[2]["Start Min"].AsInt32, 0);
+            this.FriEnd = new TimeSpan(friday[3]["End Hour"].AsInt32, friday[4]["End Min"].AsInt32, 0);
+            this.MonSchool = monday[0]["Break"].AsBoolean;
+            this.TuesSchool = tuesday[0]["Break"].AsBoolean;
+            this.WedSchool = wednesday[0]["Break"].AsBoolean;
+            this.ThurSchool = thursday[0]["Break"].AsBoolean;
+            this.FriSchool = friday[0]["Break"].AsBoolean;
             this.SchoolType = schoolType;
         }
 

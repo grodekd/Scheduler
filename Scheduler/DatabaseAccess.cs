@@ -13,7 +13,7 @@ namespace Scheduler
 
         private DatabaseAccess()
         {
-            const string uri = "string";
+            const string uri = "mongodb://grod:$ched@ds035786.mlab.com:35786/bethlehemscheduler";
             var client = new MongoClient(uri);
             db = client.GetDatabase("bethlehemscheduler");
         }
@@ -50,11 +50,26 @@ namespace Scheduler
             List<Employee> employees = new List<Employee>();
             var filter = new BsonDocument();
 
-            //employeesDoc.Find(filter).ForEachAsync(employee => 
-            //    employees.Add(new Employee(employee["Id"].AsInt32, employee["FirstName"].AsString, employee["LastName"].AsString, employee["MaxHours"].AsInt32, new TimeSpan(employee[""]), ))
-            //).Wait();
+            employeesDoc.Find(filter).ForEachAsync(employee => 
+                employees.Add(new Employee(employee["_id"].AsObjectId.ToString(), employee["FirstName"].AsString, employee["LastName"].AsString))
+            ).Wait();
 
-            return employees;
+            return null;
+        }
+
+        public List<Child> GetChildren()
+        {
+            var kidsDoc = db.GetCollection<BsonDocument>("Children");
+
+            var kids = new List<Child>();
+            var filter = new BsonDocument();
+
+            kidsDoc.Find(filter).ForEachAsync(kid =>
+                kids.Add(new Child(kid["_id"].AsObjectId.ToString(), kid["FirstName"].AsString, kid["LastName"].AsString, kid["Room"].AsString, kid["Monday"].AsBsonArray, kid["Tuesday"].AsBsonArray,
+                    kid["Wednesday"].AsBsonArray, kid["Thursday"].AsBsonArray, kid["Friday"].AsBsonArray, kid.Contains("BreakType") ? kid["BreakType"].AsInt32 : 0 )
+            )).Wait();
+
+            return kids;
         }
     }
 }

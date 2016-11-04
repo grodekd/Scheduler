@@ -12,3 +12,11 @@ C:\Users\cgroded\Documents\Visual Studio 2013\Projects\Scheduler\Scheduler\obj\D
 C:\Git\Scheduler\Scheduler\bin\Debug\Scheduler.exe.config
 C:\Git\Scheduler\Scheduler\obj\Debug\Scheduler.exe
 C:\Git\Scheduler\Scheduler\obj\Debug\Scheduler.pdb
+C:\Git\Scheduler\Scheduler\bin\Debug\Scheduler.exe
+C:\Git\Scheduler\Scheduler\bin\Debug\Scheduler.pdb
+C:\Git\Scheduler\Scheduler\bin\Debug\MongoDB.Bson.dll
+C:\Git\Scheduler\Scheduler\bin\Debug\MongoDB.Driver.Core.dll
+C:\Git\Scheduler\Scheduler\bin\Debug\MongoDB.Driver.dll
+C:\Git\Scheduler\Scheduler\bin\Debug\MongoDB.Bson.xml
+C:\Git\Scheduler\Scheduler\bin\Debug\MongoDB.Driver.xml
+C:\Git\Scheduler\Scheduler\obj\Debug\Scheduler.csprojResolveAssemblyReference.cache
