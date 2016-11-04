@@ -13,7 +13,7 @@ namespace Scheduler
 
         private DatabaseAccess()
         {
-            const string uri = "mongodb://grod:$ched@ds035786.mlab.com:35786/bethlehemscheduler";
+            const string uri = "string";
             var client = new MongoClient(uri);
             db = client.GetDatabase("bethlehemscheduler");
         }
