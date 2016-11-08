@@ -20,3 +20,9 @@ C:\Git\Scheduler\Scheduler\bin\Debug\MongoDB.Driver.dll
 C:\Git\Scheduler\Scheduler\bin\Debug\MongoDB.Bson.xml
 C:\Git\Scheduler\Scheduler\bin\Debug\MongoDB.Driver.xml
 C:\Git\Scheduler\Scheduler\obj\Debug\Scheduler.csprojResolveAssemblyReference.cache
+C:\Git\Scheduler\Scheduler\obj\Debug\Scheduler.Main.resources
+C:\Git\Scheduler\Scheduler\obj\Debug\Scheduler.csproj.GenerateResource.Cache
+C:\Git\Scheduler\Scheduler\obj\Debug\Scheduler.EmployeeControl.resources
+C:\Git\Scheduler\Scheduler\obj\Debug\Scheduler.ChildrenControl.resources
+C:\Git\Scheduler\Scheduler\obj\Debug\Scheduler.MainControl.resources
+C:\Git\Scheduler\Scheduler\obj\Debug\Scheduler.RoomsControl.resources
