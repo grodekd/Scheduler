@@ -44,6 +44,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,12 +54,42 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Child.cs" />
+    <Compile Include="ChildrenControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChildrenControl.Designer.cs">
+      <DependentUpon>ChildrenControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseAccess.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="EmployeeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeControl.Designer.cs">
+      <DependentUpon>EmployeeControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeService.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainControl.Designer.cs">
+      <DependentUpon>MainControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Room.cs" />
+    <Compile Include="RoomsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RoomsControl.Designer.cs">
+      <DependentUpon>RoomsControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="ScheduleService.cs" />
     <Compile Include="ScheduleServiceTest.cs" />
     <Compile Include="Time.cs" />
@@ -69,6 +101,23 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ChildrenControl.resx">
+      <DependentUpon>ChildrenControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeControl.resx">
+      <DependentUpon>EmployeeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainControl.resx">
+      <DependentUpon>MainControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoomsControl.resx">
+      <DependentUpon>RoomsControl.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
