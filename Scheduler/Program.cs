@@ -11,9 +11,12 @@ namespace Scheduler
     {
         public static void Main(string[] args)
         {
+            //var dbAccess = DatabaseAccess.GetDatabaseAccess();
+            //var employeeService = EmployeeService.GetEmployeeService(null);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            Application.Run(new Main(null));
             //var dbAccess = DatabaseAccess.GetDatabaseAccess();
             //var scheduleService = ScheduleService.GetScheduleService();
 
