@@ -7,8 +7,8 @@ namespace Scheduler
     public class EmployeeService
     {
         private static EmployeeService EmployeeServiceInstance;
-        private DatabaseAccess db;
-        private List<Employee> employees;
+        private readonly DatabaseAccess db;
+        private readonly List<Employee> employees;
 
         private EmployeeService(DatabaseAccess db)
         {
@@ -52,11 +52,11 @@ namespace Scheduler
             foreach (var employee in employees)
             {
                 table.Rows.Add(employee.FirstName, employee.LastName, employee.MaxHours, employee.GetRoomsString(), 
-                    Employee.GetTimeString(employee.MonStart, employee.MonEnd),
-                    Employee.GetTimeString(employee.TuesStart, employee.TuesEnd),
-                    Employee.GetTimeString(employee.WedStart, employee.WedEnd),
-                    Employee.GetTimeString(employee.ThurStart, employee.ThurEnd),
-                    Employee.GetTimeString(employee.FriStart, employee.FriEnd));
+                    Time.GetTimeString(employee.MonStart, employee.MonEnd),
+                    Time.GetTimeString(employee.TuesStart, employee.TuesEnd),
+                    Time.GetTimeString(employee.WedStart, employee.WedEnd),
+                    Time.GetTimeString(employee.ThurStart, employee.ThurEnd),
+                    Time.GetTimeString(employee.FriStart, employee.FriEnd));
             }
 
             return table;
