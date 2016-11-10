@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Scheduler
 {
@@ -89,6 +90,11 @@ namespace Scheduler
             }
             rooms.Remove(room);
             return true;
+        }
+
+        public string GetRoomsString()
+        {
+            return rooms.Aggregate("", (current, room) => current + (room + " "));
         }
     }
 }

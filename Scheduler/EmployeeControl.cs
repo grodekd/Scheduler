@@ -12,9 +12,11 @@ namespace Scheduler
 {
     public partial class EmployeeControl : UserControl
     {
-        public EmployeeControl()
+        public EmployeeControl(Employee employee, DataTable table)
         {
             InitializeComponent();
+            this.label1.Text = employee.FirstName + " " + employee.LastName;
+            this.dataGridView1.DataSource = table;
         }
     }
 }
