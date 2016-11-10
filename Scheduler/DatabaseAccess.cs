@@ -50,11 +50,12 @@ namespace Scheduler
             List<Employee> employees = new List<Employee>();
             var filter = new BsonDocument();
 
-            employeesDoc.Find(filter).ForEachAsync(employee => 
-                employees.Add(new Employee(employee["_id"].AsObjectId.ToString(), employee["FirstName"].AsString, employee["LastName"].AsString))
+            employeesDoc.Find(filter).ForEachAsync(employee =>
+                employees.Add(new Employee(employee["_id"].AsObjectId.ToString(), employee["FirstName"].AsString, employee["LastName"].AsString, employee["MaxHours"], employee["Monday"].AsBsonArray,
+                    employee["Tuesday"].AsBsonArray, employee["Wednesday"].AsBsonArray, employee["Thursday"].AsBsonArray, employee["Friday"].AsBsonArray, employee["Rooms"].AsBsonArray))
             ).Wait();
 
-            return null;
+            return employees;
         }
 
         public List<Child> GetChildren()

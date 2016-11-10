@@ -43,10 +43,20 @@ namespace Scheduler
             table.Columns.Add("Last Name", typeof(string));
             table.Columns.Add("Max Hours", typeof(int));
             table.Columns.Add("Rooms", typeof(string));
+            table.Columns.Add("Monday", typeof(string));
+            table.Columns.Add("Tuesday", typeof(string));
+            table.Columns.Add("Wednesday", typeof(string));
+            table.Columns.Add("Thursday", typeof(string));
+            table.Columns.Add("Friday", typeof(string));
 
             foreach (var employee in employees)
             {
-                table.Rows.Add(employee.FirstName, employee.LastName, employee.MaxHours, employee.GetRoomsString());
+                table.Rows.Add(employee.FirstName, employee.LastName, employee.MaxHours, employee.GetRoomsString(), 
+                    Employee.GetTimeString(employee.MonStart, employee.MonEnd),
+                    Employee.GetTimeString(employee.TuesStart, employee.TuesEnd),
+                    Employee.GetTimeString(employee.WedStart, employee.WedEnd),
+                    Employee.GetTimeString(employee.ThurStart, employee.ThurEnd),
+                    Employee.GetTimeString(employee.FriStart, employee.FriEnd));
             }
 
             return table;
