@@ -60,6 +60,7 @@
     <Compile Include="ChildrenControl.Designer.cs">
       <DependentUpon>ChildrenControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildService.cs" />
     <Compile Include="DatabaseAccess.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="EmployeeControl.cs">

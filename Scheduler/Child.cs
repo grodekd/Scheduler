@@ -55,5 +55,34 @@ namespace Scheduler
         public bool FriSchool { get; set; }
 
         public int SchoolType { get; set; }
+
+        public string GetSchool()
+        {
+            switch (RoomLabel)
+            {
+                case "BH":
+                    if (TuesSchool || ThurSchool)
+                    {
+                        return "Yes";
+                    }
+                    break;
+                case "BM":
+                    switch (SchoolType)
+                    {
+                        case 1:
+                            return "PM";
+                        case 2:
+                            return "AM";
+                    }
+                    break;
+                case "SA":
+                    if (MonSchool || TuesSchool || WedSchool || ThurSchool || FriSchool)
+                    {
+                        return "Yes";
+                    }
+                    break;
+            }
+            return "";
+        }
     }
 }
