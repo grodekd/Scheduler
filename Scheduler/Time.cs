@@ -46,5 +46,29 @@ namespace Scheduler
 
             return times;
         }
+
+        public static TimeSpan[] GetTimeSpans(string timeXml)
+        {
+            var startEnd = timeXml.Split(new[] { " to " }, StringSplitOptions.None);
+
+            var startM = startEnd[0].Split(' ')[1];
+            var endM = startEnd[1].Split(' ')[1];
+
+            var startHour = Convert.ToInt32(startEnd[0].Split(' ')[0].Split(':')[0]);
+            if (startM == "PM") startHour += 12;
+
+            var endHour = Convert.ToInt32(startEnd[1].Split(' ')[0].Split(':')[0]);
+            if (endM == "PM") endHour += 12;
+
+            var startMin = Convert.ToInt32(startEnd[0].Split(' ')[0].Split(':')[1]);
+            var endMin = Convert.ToInt32(startEnd[1].Split(' ')[0].Split(':')[1]);
+
+            var returnTimes = new TimeSpan[2];
+
+            returnTimes[0] = new TimeSpan(startHour, startMin, 0);
+            returnTimes[1] = new TimeSpan(endHour, endMin, 0);
+
+            return returnTimes;
+        }
     }
 }

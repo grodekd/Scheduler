@@ -6,7 +6,7 @@ namespace Scheduler
 {
     public class Child
     {
-        private readonly string id;
+        public readonly string id;
 
         public Child(string id, String firstName, String lastName, String roomLabel, BsonArray monday, BsonArray tuesday, BsonArray wednesday, BsonArray thursday, 
             BsonArray friday, int schoolType)
@@ -31,6 +31,14 @@ namespace Scheduler
             this.ThurSchool = thursday[0]["Break"].AsBoolean;
             this.FriSchool = friday[0]["Break"].AsBoolean;
             this.SchoolType = schoolType;
+        }
+
+        public Child(string id, String firstName, String lastName, String room)
+        {
+            this.id = id;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.RoomLabel = room;
         }
 
         public String FirstName { get; set; }
