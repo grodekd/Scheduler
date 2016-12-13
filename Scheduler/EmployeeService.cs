@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 
@@ -16,6 +17,11 @@ namespace Scheduler
             employees = this.db.GetEmployees();
         }
 
+        private EmployeeService()
+        {
+            employees = new List<Employee> {new Employee("1", "Testy", "McTest", 40)};
+        }
+
         public static EmployeeService GetEmployeeService(DatabaseAccess db)
         {
             if (EmployeeServiceInstance != null)
@@ -23,6 +29,16 @@ namespace Scheduler
                 return EmployeeServiceInstance;
             }
             EmployeeServiceInstance = new EmployeeService(db);
+            return EmployeeServiceInstance;
+        }
+
+        public static EmployeeService GetEmployeeService()
+        {
+            if (EmployeeServiceInstance != null)
+            {
+                return EmployeeServiceInstance;
+            }
+            EmployeeServiceInstance = new EmployeeService();
             return EmployeeServiceInstance;
         }
 

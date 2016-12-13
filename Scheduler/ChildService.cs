@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using System.Xml;
 
@@ -11,21 +12,39 @@ namespace Scheduler
     {
         private static ChildService ChildServiceInstance;
         private readonly DatabaseAccess db;
-        private readonly List<Child> children;
+        private List<Child> children;
 
         private ChildService(DatabaseAccess db)
         {
             this.db = db;
             children = this.db.GetChildren();
         }
+        private ChildService()
+        {
+            children = new List<Child>();
+            children.Add(new Child("1", "Maddox", "Alvarez", "LL", new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<bool> { false, false, false, false, false }, 0));
+            children.Add(new Child("2", "Geoffrey", "Rue", "LL", new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<bool> { false, false, false, false, false }, 0));
+            children.Add(new Child("3", "Aiden", "Brauer", "TT", new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<bool> { false, false, false, false, false }, 0));
+            children.Add(new Child("4", "Luke", "Zatarski", "TT", new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<bool> { false, false, false, false, false }, 0));
+            children.Add(new Child("5", "Luke", "Kruschel", "LL", new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<bool> { false, false, false, false, false }, 0));
+        }
 
-        public static ChildService GetEmployeeService(DatabaseAccess db)
+        public static ChildService GetChildService(DatabaseAccess db)
         {
             if (ChildServiceInstance != null)
             {
                 return ChildServiceInstance;
             }
             ChildServiceInstance = new ChildService(db);
+            return ChildServiceInstance;
+        }
+        public static ChildService GetChildService()
+        {
+            if (ChildServiceInstance != null)
+            {
+                return ChildServiceInstance;
+            }
+            ChildServiceInstance = new ChildService();
             return ChildServiceInstance;
         }
 
@@ -55,6 +74,8 @@ namespace Scheduler
 
             return table;
         }
+
+
 
         public static List<Child> UpdateKidList(string nameXml, string timeXml, string dayOfWeek, List<Child> kids)
         {
@@ -115,9 +136,9 @@ namespace Scheduler
             return kids;
         }
 
-        public static void Import()
+        public List<Child> Import()
         {
-            OpenFileDialog ofd = new OpenFileDialog
+            var ofd = new OpenFileDialog
             {
                 InitialDirectory = "C:\\",
                 Filter = "xml files (*.xml)|*.xml",
@@ -125,7 +146,7 @@ namespace Scheduler
                 RestoreDirectory = true
             };
 
-            XmlDocument doc = new XmlDocument();
+            var doc = new XmlDocument();
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 var x = File.ReadAllText(ofd.FileName);
@@ -135,9 +156,8 @@ namespace Scheduler
             //XmlDocument doc = new XmlDocument();
             //doc.LoadXml(File.ReadAllText("C:\\Users\\cgroded\\Downloads\\Daily Schedule for Child care 3.xml"));
 
-            XmlNamespaceManager manager = new XmlNamespaceManager(doc.NameTable);
+            var manager = new XmlNamespaceManager(doc.NameTable);
             manager.AddNamespace("ns", "urn:crystal-reports:schemas:report-detail");
-            XmlNode root = doc.DocumentElement;
             var y = doc.SelectNodes("//ns:CrystalReport/ns:Group[@Level=\"1\"]", manager);
 
             var kids = new List<Child>();
@@ -146,8 +166,6 @@ namespace Scheduler
             {
                 var data = y[i];
                 var q = data.SelectNodes("descendant::ns:Group[@Level=\"2\"]", manager);
-                var room = data.SelectSingleNode("descendant::ns:GroupHeader", manager)
-                    .SelectSingleNode("descendant::ns:TextValue", manager).InnerText;
 
                 for (int ii = 0; ii < q.Count; ii++)
                 {
@@ -170,8 +188,44 @@ namespace Scheduler
                         kids = UpdateKidList(name, times, day, kids);
                     }
                 }
-
             }
+
+            bool debug = kids.Count > children.Count;
+            var updatedKids = new List<Child>();
+            foreach (var child in children)
+            {
+                var index = kids.FindIndex(kid => (GetIdFromName(children, kid.FirstName, kid.LastName) ?? "") == child.id);
+                if (index >= 0)
+                {
+                    updatedKids.Add(CombineKids(kids[index], child));
+                    if (debug) kids.Remove(kids[index]);
+                }
+                else
+                {
+                    child.EmptyTimes();
+                    updatedKids.Add(child);
+                }
+            }
+            children = updatedKids;
+
+            return debug ? kids : new List<Child>();
+        }
+
+        private static Child CombineKids(Child times, Child info)
+        {
+            var monday = new List<TimeSpan> { times.MonStart, times.MonEnd };
+            var tuesday = new List<TimeSpan> { times.TuesStart, times.TuesEnd };
+            var wednesday = new List<TimeSpan> { times.WedStart, times.WedEnd };
+            var thursday = new List<TimeSpan> { times.ThurStart, times.ThurEnd };
+            var friday = new List<TimeSpan> { times.FriStart, times.FriEnd };
+            var school = new List<bool> { info.MonSchool, info.TuesSchool, info.WedSchool, info.ThurSchool, info.FriSchool };
+
+            return new Child(info.id, info.FirstName, info.LastName, info.RoomLabel, monday, tuesday, wednesday, thursday, friday, school, info.SchoolType);
+        }
+
+        private static string GetIdFromName(IEnumerable<Child> children, String first, String last)
+        {
+            return children.Where(child => child.FirstName == first && child.LastName == last).Select(child => child.id).FirstOrDefault();
         }
     }
 }

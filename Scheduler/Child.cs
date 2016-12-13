@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Collections.Generic;
 using MongoDB.Bson;
 
 namespace Scheduler
@@ -30,6 +31,31 @@ namespace Scheduler
             this.WedSchool = wednesday[0]["Break"].AsBoolean;
             this.ThurSchool = thursday[0]["Break"].AsBoolean;
             this.FriSchool = friday[0]["Break"].AsBoolean;
+            this.SchoolType = schoolType;
+        }
+
+        public Child(string id, String firstName, String lastName, String roomLabel, IList<TimeSpan> monday, IList<TimeSpan> tuesday, IList<TimeSpan> wednesday,
+            IList<TimeSpan> thursday, IList<TimeSpan> friday, IList<bool> school, int schoolType)
+        {
+            this.id = id;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.RoomLabel = roomLabel;
+            this.MonStart = monday[0];
+            this.MonEnd = monday[1];
+            this.TuesStart = tuesday[0];
+            this.TuesEnd = tuesday[1];
+            this.WedStart = wednesday[0];
+            this.WedEnd = wednesday[1];
+            this.ThurStart = thursday[0];
+            this.ThurEnd = thursday[1];
+            this.FriStart = friday[0];
+            this.FriEnd = friday[1];
+            this.MonSchool = school[0];
+            this.TuesSchool = school[1];
+            this.WedSchool = school[2];
+            this.ThurSchool = school[3];
+            this.FriSchool = school[4];
             this.SchoolType = schoolType;
         }
 
@@ -91,6 +117,20 @@ namespace Scheduler
                     break;
             }
             return "";
+        }
+
+        public void EmptyTimes()
+        {
+            MonStart = TimeSpan.Zero;
+            MonEnd = TimeSpan.Zero;
+            TuesStart = TimeSpan.Zero;
+            TuesEnd = TimeSpan.Zero;
+            WedStart = TimeSpan.Zero;
+            WedEnd = TimeSpan.Zero;
+            ThurStart = TimeSpan.Zero;
+            ThurEnd = TimeSpan.Zero;
+            FriStart = TimeSpan.Zero;
+            FriEnd = TimeSpan.Zero;
         }
     }
 }

@@ -43,6 +43,27 @@ namespace Scheduler
             this.rooms = roomList;
         }
 
+        public Employee(string id, String firstName, String lastName, double maxHours)
+        {
+            this.id = id;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.MaxHours = maxHours;
+
+            this.MonStart = TimeSpan.Zero;
+            this.MonEnd = TimeSpan.Zero;
+            this.TuesStart = TimeSpan.Zero;
+            this.TuesEnd = TimeSpan.Zero;
+            this.WedStart = TimeSpan.Zero;
+            this.WedEnd = TimeSpan.Zero;
+            this.ThurStart = TimeSpan.Zero;
+            this.ThurEnd = TimeSpan.Zero;
+            this.FriStart = TimeSpan.Zero;
+            this.FriEnd = TimeSpan.Zero;
+
+            this.rooms = new List<string>{"LL", "TT"};
+        }
+
 
         public string Id
         {

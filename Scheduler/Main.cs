@@ -12,17 +12,19 @@ namespace Scheduler
 {
     public partial class Main : Form
     {
-        private EmployeeService employeeService;
-        public Main(EmployeeService employeeService)
+        private readonly EmployeeService employeeService;
+        private readonly ChildService childService;
+        public Main(EmployeeService employeeService, ChildService childService)
         {
             this.employeeService = employeeService;
+            this.childService = childService;
             InitializeComponent();
             groupBox1.Controls.Add(new MainControl());
         }
 
         private void sdgToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UserControl oldView = groupBox1.Controls[0] as UserControl;
+            var oldView = groupBox1.Controls[0] as UserControl;
             groupBox1.Controls.Remove(oldView);
             groupBox1.Controls.Add(new MainControl());
         }
@@ -36,7 +38,7 @@ namespace Scheduler
             //table.Columns.Add("Rooms", typeof(string));
             //table.Rows.Add("Testy", "McTest", 40, "TT LL");
 
-            UserControl oldView = groupBox1.Controls[0] as UserControl;
+            var oldView = groupBox1.Controls[0] as UserControl;
             groupBox1.Controls.Remove(oldView);
             //groupBox1.Controls.Add(new EmployeeControl(new Employee("1", "Testy", "McTest", 40, TimeSpan.Zero, TimeSpan.Zero, TimeSpan.Zero, TimeSpan.Zero, TimeSpan.Zero, TimeSpan.Zero, TimeSpan.Zero, TimeSpan.Zero, TimeSpan.Zero, TimeSpan.Zero, new List<string>()), table));
             groupBox1.Controls.Add(new EmployeeControl(employeeService.GetEmployee(), employeeService.GetEmployeeDataTable()));
@@ -44,16 +46,24 @@ namespace Scheduler
 
         private void childrenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UserControl oldView = groupBox1.Controls[0] as UserControl;
+            var oldView = groupBox1.Controls[0] as UserControl;
             groupBox1.Controls.Remove(oldView);
-            groupBox1.Controls.Add(new ChildrenControl());
+            groupBox1.Controls.Add(new ChildrenControl(childService.GetChildDataTable()));
         }
 
         private void roomsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UserControl oldView = groupBox1.Controls[0] as UserControl;
+            var oldView = groupBox1.Controls[0] as UserControl;
             groupBox1.Controls.Remove(oldView);
             groupBox1.Controls.Add(new RoomsControl());
+        }
+
+        private void uploadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var oldView = groupBox1.Controls[0] as UserControl;
+            groupBox1.Controls.Remove(oldView);
+            var failed = childService.Import();
+            groupBox1.Controls.Add(new UploadControl(failed));
         }
     }
 }

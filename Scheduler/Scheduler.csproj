@@ -95,6 +95,12 @@
     <Compile Include="ScheduleServiceTest.cs" />
     <Compile Include="Time.cs" />
     <Compile Include="Timeline.cs" />
+    <Compile Include="UploadControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UploadControl.Designer.cs">
+      <DependentUpon>UploadControl.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -118,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RoomsControl.resx">
       <DependentUpon>RoomsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UploadControl.resx">
+      <DependentUpon>UploadControl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

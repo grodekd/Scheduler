@@ -9,14 +9,21 @@ namespace Scheduler
 {
     public class Program
     {
+        [STAThread]
         public static void Main(string[] args)
         {
-            var dbAccess = DatabaseAccess.GetDatabaseAccess();
-            var employeeService = EmployeeService.GetEmployeeService(dbAccess);
+            //var dbAccess = DatabaseAccess.GetDatabaseAccess();
+            //var employeeService = EmployeeService.GetEmployeeService(dbAccess);
+            //var childService = ChildService.GetChildService(dbAccess);
+
+            var employeeService = EmployeeService.GetEmployeeService();
+            var childService = ChildService.GetChildService();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main(employeeService));
+            Application.Run(new Main(employeeService, childService));
+
+
             //var dbAccess = DatabaseAccess.GetDatabaseAccess();
             //var scheduleService = ScheduleService.GetScheduleService();
 

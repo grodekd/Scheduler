@@ -12,9 +12,10 @@ namespace Scheduler
 {
     public partial class ChildrenControl : UserControl
     {
-        public ChildrenControl()
+        public ChildrenControl(DataTable table)
         {
             InitializeComponent();
+            this.dataGridView1.DataSource = table;
         }
 
         private void label1_Click(object sender, EventArgs e)
