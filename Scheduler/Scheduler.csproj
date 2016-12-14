@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddNewControl.Designer.cs">
+      <DependentUpon>AddNewControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Child.cs" />
     <Compile Include="ChildrenControl.cs">
       <SubType>UserControl</SubType>
@@ -82,6 +88,7 @@
     <Compile Include="MainControl.Designer.cs">
       <DependentUpon>MainControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Room.cs" />
@@ -110,6 +117,9 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddNewControl.resx">
+      <DependentUpon>AddNewControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildrenControl.resx">
       <DependentUpon>ChildrenControl.cs</DependentUpon>
     </EmbeddedResource>

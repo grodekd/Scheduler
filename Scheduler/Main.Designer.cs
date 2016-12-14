@@ -36,6 +36,10 @@
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uploadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.newButton = new System.Windows.Forms.Button();
+            this.updateButton = new System.Windows.Forms.Button();
+            this.editButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,7 +96,7 @@
             // uploadToolStripMenuItem
             // 
             this.uploadToolStripMenuItem.Name = "uploadToolStripMenuItem";
-            this.uploadToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.uploadToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.uploadToolStripMenuItem.Text = "Upload";
             this.uploadToolStripMenuItem.Click += new System.EventHandler(this.uploadToolStripMenuItem_Click);
             // 
@@ -104,11 +108,54 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
+            // newButton
+            // 
+            this.newButton.Location = new System.Drawing.Point(26, 553);
+            this.newButton.Name = "newButton";
+            this.newButton.Size = new System.Drawing.Size(117, 52);
+            this.newButton.TabIndex = 2;
+            this.newButton.Text = "Add New";
+            this.newButton.UseVisualStyleBackColor = true;
+            this.newButton.Click += new System.EventHandler(this.newButton_Click);
+            // 
+            // updateButton
+            // 
+            this.updateButton.Location = new System.Drawing.Point(1061, 553);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(117, 52);
+            this.updateButton.TabIndex = 3;
+            this.updateButton.Text = "Update All";
+            this.updateButton.UseVisualStyleBackColor = true;
+            // 
+            // editButton
+            // 
+            this.editButton.Location = new System.Drawing.Point(548, 553);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(117, 52);
+            this.editButton.TabIndex = 4;
+            this.editButton.Text = "Edit";
+            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1190, 617);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.editButton);
+            this.Controls.Add(this.updateButton);
+            this.Controls.Add(this.newButton);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -131,5 +178,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem uploadToolStripMenuItem;
+        private System.Windows.Forms.Button newButton;
+        private System.Windows.Forms.Button updateButton;
+        private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.Label label1;
     }
 }

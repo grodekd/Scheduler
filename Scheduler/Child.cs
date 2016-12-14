@@ -5,7 +5,7 @@ using MongoDB.Bson;
 
 namespace Scheduler
 {
-    public class Child
+    public class Child : Person
     {
         public readonly string id;
 

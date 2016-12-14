@@ -75,6 +75,10 @@ namespace Scheduler
             return table;
         }
 
+        public List<Child> GetChildren()
+        {
+            return children;
+        }
 
 
         public static List<Child> UpdateKidList(string nameXml, string timeXml, string dayOfWeek, List<Child> kids)
@@ -189,6 +193,7 @@ namespace Scheduler
                     }
                 }
             }
+            if (kids.Count == 0) return null;
 
             bool debug = kids.Count > children.Count;
             var updatedKids = new List<Child>();

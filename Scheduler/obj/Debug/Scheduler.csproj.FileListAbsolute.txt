@@ -27,3 +27,4 @@ C:\Git\Scheduler\Scheduler\obj\Debug\Scheduler.MainControl.resources
 C:\Git\Scheduler\Scheduler\obj\Debug\Scheduler.RoomsControl.resources
 C:\Git\Scheduler\Scheduler\obj\Debug\Scheduler.csprojResolveAssemblyReference.cache
 C:\Git\Scheduler\Scheduler\obj\Debug\Scheduler.UploadControl.resources
+C:\Git\Scheduler\Scheduler\obj\Debug\Scheduler.AddNewControl.resources
