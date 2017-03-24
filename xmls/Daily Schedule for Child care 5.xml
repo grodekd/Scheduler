@@ -1,0 +1,2204 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CrystalReport xmlns="urn:crystal-reports:schemas:report-detail"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:crystal-reports:schemas:report-detail http://www.businessobjects.com/products/xml/CR2008Schema.xsd">
+<Group Level="1">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text3"><TextValue>Young Infants</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Tuesday, December 27, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 04:15 PM</FormattedValue><Value>07:30 AM to 04:15 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Alvarez, Maddox </FormattedValue><Value>Alvarez, Maddox </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>06:30 AM to 04:30 PM</FormattedValue><Value>06:30 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Bartol, Ben </FormattedValue><Value>Bartol, Ben </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 06:00 PM</FormattedValue><Value>08:00 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Bonk, James </FormattedValue><Value>Bonk, James </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:30 PM</FormattedValue><Value>07:30 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Egan, Kayla Jane </FormattedValue><Value>Egan, Kayla Jane </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:30 PM</FormattedValue><Value>07:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Horness, Declan </FormattedValue><Value>Horness, Declan </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 05:00 PM</FormattedValue><Value>08:00 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Miller, Caleb </FormattedValue><Value>Miller, Caleb </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 05:00 PM</FormattedValue><Value>08:00 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Rue, Geoffrey </FormattedValue><Value>Rue, Geoffrey </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 12:30 PM</FormattedValue><Value>08:00 AM to 12:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schrimpf, Abigail </FormattedValue><Value>Schrimpf, Abigail </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 05:30 PM</FormattedValue><Value>08:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Wiech, Elsie </FormattedValue><Value>Wiech, Elsie </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:30 PM</FormattedValue><Value>07:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Wohlfeil, Henry </FormattedValue><Value>Wohlfeil, Henry </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Wednesday, December 28, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>06:30 AM to 04:30 PM</FormattedValue><Value>06:30 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Bartol, Ben </FormattedValue><Value>Bartol, Ben </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:30 AM to 04:00 PM</FormattedValue><Value>08:30 AM to 04:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Bohlmann, Gideon M</FormattedValue><Value>Bohlmann, Gideon M</Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:45 AM to 05:45 PM</FormattedValue><Value>07:45 AM to 05:45 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Garner, Marcus </FormattedValue><Value>Garner, Marcus </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:30 PM</FormattedValue><Value>07:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Horness, Declan </FormattedValue><Value>Horness, Declan </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:00 PM</FormattedValue><Value>07:30 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Miller, Caleb </FormattedValue><Value>Miller, Caleb </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 05:00 PM</FormattedValue><Value>08:00 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Rue, Geoffrey </FormattedValue><Value>Rue, Geoffrey </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 12:30 PM</FormattedValue><Value>08:00 AM to 12:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schrimpf, Abigail </FormattedValue><Value>Schrimpf, Abigail </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:30 PM</FormattedValue><Value>07:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Wohlfeil, Henry </FormattedValue><Value>Wohlfeil, Henry </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Thursday, December 29, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:30 PM</FormattedValue><Value>07:30 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Egan, Kayla Jane </FormattedValue><Value>Egan, Kayla Jane </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:45 AM to 05:45 PM</FormattedValue><Value>07:45 AM to 05:45 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Garner, Marcus </FormattedValue><Value>Garner, Marcus </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 05:00 PM</FormattedValue><Value>08:00 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Miller, Caleb </FormattedValue><Value>Miller, Caleb </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 05:00 PM</FormattedValue><Value>08:00 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Rue, Geoffrey </FormattedValue><Value>Rue, Geoffrey </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 12:30 PM</FormattedValue><Value>08:00 AM to 12:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schrimpf, Abigail </FormattedValue><Value>Schrimpf, Abigail </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:30 PM</FormattedValue><Value>07:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Wohlfeil, Henry </FormattedValue><Value>Wohlfeil, Henry </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Friday, December 30, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>11:30 AM to 04:00 PM</FormattedValue><Value>11:30 AM to 04:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Alvarez, Maddox </FormattedValue><Value>Alvarez, Maddox </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:30 AM to 04:00 PM</FormattedValue><Value>08:30 AM to 04:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Bohlmann, Gideon M</FormattedValue><Value>Bohlmann, Gideon M</Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:45 AM to 05:45 PM</FormattedValue><Value>07:45 AM to 05:45 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Garner, Marcus </FormattedValue><Value>Garner, Marcus </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:30 PM</FormattedValue><Value>07:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Horness, Declan </FormattedValue><Value>Horness, Declan </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 05:00 PM</FormattedValue><Value>08:00 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Rue, Geoffrey </FormattedValue><Value>Rue, Geoffrey </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 12:30 PM</FormattedValue><Value>08:00 AM to 12:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schrimpf, Abigail </FormattedValue><Value>Schrimpf, Abigail </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+</Group>
+<Group Level="1">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text3"><TextValue>Mobile Infants - Tiny Turtles</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Tuesday, December 27, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 05:00 PM</FormattedValue><Value>07:15 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Brauer, Aiden J</FormattedValue><Value>Brauer, Aiden J</Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:10 AM to 05:00 PM</FormattedValue><Value>07:10 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Deutschendorf, Carter </FormattedValue><Value>Deutschendorf, Carter </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 03:30 PM</FormattedValue><Value>08:00 AM to 03:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Johns, Natalie </FormattedValue><Value>Johns, Natalie </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:45 PM</FormattedValue><Value>07:30 AM to 05:45 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Madore, Sierra </FormattedValue><Value>Madore, Sierra </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 05:45 PM</FormattedValue><Value>07:15 AM to 05:45 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Parnau, Carter </FormattedValue><Value>Parnau, Carter </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>06:15 AM to 04:30 PM</FormattedValue><Value>06:15 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Pizzitola, Juliet E</FormattedValue><Value>Pizzitola, Juliet E</Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:30 AM to 06:00 PM</FormattedValue><Value>08:30 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Sannes, Chase </FormattedValue><Value>Sannes, Chase </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:45 AM to 08:00 AM</FormattedValue><Value>07:45 AM to 08:00 AM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Yunk, Colton </FormattedValue><Value>Yunk, Colton </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Wednesday, December 28, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 04:30 PM</FormattedValue><Value>07:15 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Beyer, Chloe </FormattedValue><Value>Beyer, Chloe </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 05:00 PM</FormattedValue><Value>07:15 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Brauer, Aiden J</FormattedValue><Value>Brauer, Aiden J</Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:10 AM to 05:00 PM</FormattedValue><Value>07:10 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Deutschendorf, Carter </FormattedValue><Value>Deutschendorf, Carter </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:30 AM to 05:00 PM</FormattedValue><Value>08:30 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Huber, Olivia </FormattedValue><Value>Huber, Olivia </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:30 AM to 05:00 PM</FormattedValue><Value>08:30 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Huber, Addison </FormattedValue><Value>Huber, Addison </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 03:30 PM</FormattedValue><Value>08:00 AM to 03:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Johns, Natalie </FormattedValue><Value>Johns, Natalie </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 06:00 PM</FormattedValue><Value>07:30 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Kostrewa, Cooper </FormattedValue><Value>Kostrewa, Cooper </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:45 PM</FormattedValue><Value>07:30 AM to 05:45 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Madore, Sierra </FormattedValue><Value>Madore, Sierra </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 05:45 PM</FormattedValue><Value>07:15 AM to 05:45 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Parnau, Carter </FormattedValue><Value>Parnau, Carter </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>06:15 AM to 04:30 PM</FormattedValue><Value>06:15 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Pizzitola, Juliet E</FormattedValue><Value>Pizzitola, Juliet E</Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:45 AM to 08:00 AM</FormattedValue><Value>07:45 AM to 08:00 AM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Yunk, Colton </FormattedValue><Value>Yunk, Colton </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 05:45 PM</FormattedValue><Value>08:00 AM to 05:45 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Zatarski, Luke </FormattedValue><Value>Zatarski, Luke </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Thursday, December 29, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 05:00 PM</FormattedValue><Value>07:15 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Brauer, Aiden J</FormattedValue><Value>Brauer, Aiden J</Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:10 AM to 05:00 PM</FormattedValue><Value>07:10 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Deutschendorf, Carter </FormattedValue><Value>Deutschendorf, Carter </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 03:30 PM</FormattedValue><Value>08:00 AM to 03:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Johns, Natalie </FormattedValue><Value>Johns, Natalie </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 06:00 PM</FormattedValue><Value>07:30 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Kostrewa, Cooper </FormattedValue><Value>Kostrewa, Cooper </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:45 PM</FormattedValue><Value>07:30 AM to 05:45 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Madore, Sierra </FormattedValue><Value>Madore, Sierra </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 05:45 PM</FormattedValue><Value>07:15 AM to 05:45 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Parnau, Carter </FormattedValue><Value>Parnau, Carter </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:45 AM to 08:00 AM</FormattedValue><Value>07:45 AM to 08:00 AM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Yunk, Colton </FormattedValue><Value>Yunk, Colton </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Friday, December 30, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 05:00 PM</FormattedValue><Value>07:15 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Brauer, Aiden J</FormattedValue><Value>Brauer, Aiden J</Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:10 AM to 05:00 PM</FormattedValue><Value>07:10 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Deutschendorf, Carter </FormattedValue><Value>Deutschendorf, Carter </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 03:30 PM</FormattedValue><Value>08:00 AM to 03:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Johns, Natalie </FormattedValue><Value>Johns, Natalie </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:45 AM to 08:00 AM</FormattedValue><Value>07:45 AM to 08:00 AM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Yunk, Colton </FormattedValue><Value>Yunk, Colton </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 05:45 PM</FormattedValue><Value>08:00 AM to 05:45 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Zatarski, Luke </FormattedValue><Value>Zatarski, Luke </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+</Group>
+<Group Level="1">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text3"><TextValue>Young Toddlers</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Tuesday, December 27, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 12:30 PM</FormattedValue><Value>08:00 AM to 12:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Domnitz, Nola Rose </FormattedValue><Value>Domnitz, Nola Rose </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:30 PM</FormattedValue><Value>07:30 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Duncan, Lily </FormattedValue><Value>Duncan, Lily </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 06:00 PM</FormattedValue><Value>07:00 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Ertl, Zoe </FormattedValue><Value>Ertl, Zoe </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>09:00 AM to 04:45 PM</FormattedValue><Value>09:00 AM to 04:45 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Foley, Daisy </FormattedValue><Value>Foley, Daisy </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>10:00 AM to 04:00 PM</FormattedValue><Value>10:00 AM to 04:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Gebert, Madeline </FormattedValue><Value>Gebert, Madeline </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Wednesday, December 28, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 12:30 PM</FormattedValue><Value>08:00 AM to 12:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Domnitz, Nola Rose </FormattedValue><Value>Domnitz, Nola Rose </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:30 PM</FormattedValue><Value>07:30 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Duncan, Lily </FormattedValue><Value>Duncan, Lily </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 06:00 PM</FormattedValue><Value>07:00 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Ertl, Zoe </FormattedValue><Value>Ertl, Zoe </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>09:00 AM to 04:45 PM</FormattedValue><Value>09:00 AM to 04:45 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Foley, Daisy </FormattedValue><Value>Foley, Daisy </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>10:00 AM to 06:00 PM</FormattedValue><Value>10:00 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Gebert, Madeline </FormattedValue><Value>Gebert, Madeline </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>09:00 AM to 06:00 PM</FormattedValue><Value>09:00 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schliepp, Corbin &quot;CJ&quot; </FormattedValue><Value>Schliepp, Corbin &quot;CJ&quot; </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>06:30 AM to 05:30 PM</FormattedValue><Value>06:30 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schuetze, Lillian </FormattedValue><Value>Schuetze, Lillian </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Thursday, December 29, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 12:30 PM</FormattedValue><Value>08:00 AM to 12:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Domnitz, Nola Rose </FormattedValue><Value>Domnitz, Nola Rose </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:30 PM</FormattedValue><Value>07:30 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Duncan, Lily </FormattedValue><Value>Duncan, Lily </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>09:00 AM to 04:45 PM</FormattedValue><Value>09:00 AM to 04:45 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Foley, Daisy </FormattedValue><Value>Foley, Daisy </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>10:00 AM to 06:00 PM</FormattedValue><Value>10:00 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Gebert, Madeline </FormattedValue><Value>Gebert, Madeline </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:30 AM to 06:00 PM</FormattedValue><Value>08:30 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schliepp, Corbin &quot;CJ&quot; </FormattedValue><Value>Schliepp, Corbin &quot;CJ&quot; </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>06:30 AM to 05:30 PM</FormattedValue><Value>06:30 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schuetze, Lillian </FormattedValue><Value>Schuetze, Lillian </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Friday, December 30, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 12:30 PM</FormattedValue><Value>08:00 AM to 12:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Domnitz, Nola Rose </FormattedValue><Value>Domnitz, Nola Rose </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>09:00 AM to 02:00 PM</FormattedValue><Value>09:00 AM to 02:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Foley, Daisy </FormattedValue><Value>Foley, Daisy </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>10:00 AM to 06:00 PM</FormattedValue><Value>10:00 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Gebert, Madeline </FormattedValue><Value>Gebert, Madeline </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+</Group>
+<Group Level="1">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text3"><TextValue>Mature Toddlers</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Tuesday, December 27, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:30 PM</FormattedValue><Value>07:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Egan, Jackson </FormattedValue><Value>Egan, Jackson </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:30 PM</FormattedValue><Value>07:30 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Scheife, Theodore </FormattedValue><Value>Scheife, Theodore </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:00 PM</FormattedValue><Value>07:30 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Stern, Grace </FormattedValue><Value>Stern, Grace </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Wednesday, December 28, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 04:30 PM</FormattedValue><Value>07:15 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Beyer, Jackson </FormattedValue><Value>Beyer, Jackson </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:30 PM</FormattedValue><Value>07:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Egan, Jackson </FormattedValue><Value>Egan, Jackson </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 04:00 PM</FormattedValue><Value>08:00 AM to 04:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Guenther, Katelyn A</FormattedValue><Value>Guenther, Katelyn A</Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 06:00 PM</FormattedValue><Value>08:00 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Scheife, Theodore </FormattedValue><Value>Scheife, Theodore </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:00 PM</FormattedValue><Value>07:30 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Stern, Grace </FormattedValue><Value>Stern, Grace </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Thursday, December 29, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:30 PM</FormattedValue><Value>07:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Egan, Jackson </FormattedValue><Value>Egan, Jackson </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 05:00 PM</FormattedValue><Value>08:00 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Grevenow, Leo </FormattedValue><Value>Grevenow, Leo </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>09:00 AM to 05:00 PM</FormattedValue><Value>09:00 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Scheife, Theodore </FormattedValue><Value>Scheife, Theodore </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:00 PM</FormattedValue><Value>07:30 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Stern, Grace </FormattedValue><Value>Stern, Grace </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Friday, December 30, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 04:00 PM</FormattedValue><Value>08:00 AM to 04:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Guenther, Katelyn A</FormattedValue><Value>Guenther, Katelyn A</Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:00 PM</FormattedValue><Value>07:30 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Scheife, Theodore </FormattedValue><Value>Scheife, Theodore </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:00 PM</FormattedValue><Value>07:30 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Stern, Grace </FormattedValue><Value>Stern, Grace </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+</Group>
+<Group Level="1">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text3"><TextValue>Young Twos</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Tuesday, December 27, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>06:30 AM to 04:30 PM</FormattedValue><Value>06:30 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Bartol, Olivia </FormattedValue><Value>Bartol, Olivia </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 04:30 PM</FormattedValue><Value>07:30 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schmitz, Alexandria &quot;Lexi&quot; </FormattedValue><Value>Schmitz, Alexandria &quot;Lexi&quot; </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 12:30 PM</FormattedValue><Value>08:00 AM to 12:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schrimpf, Josiah </FormattedValue><Value>Schrimpf, Josiah </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:30 PM</FormattedValue><Value>07:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Wohlfeil, Ellie </FormattedValue><Value>Wohlfeil, Ellie </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Wednesday, December 28, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>06:30 AM to 04:30 PM</FormattedValue><Value>06:30 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Bartol, Olivia </FormattedValue><Value>Bartol, Olivia </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>06:30 AM to 06:00 PM</FormattedValue><Value>06:30 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Holt, Jaden </FormattedValue><Value>Holt, Jaden </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 04:30 PM</FormattedValue><Value>07:30 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schmitz, Alexandria &quot;Lexi&quot; </FormattedValue><Value>Schmitz, Alexandria &quot;Lexi&quot; </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 12:30 PM</FormattedValue><Value>08:00 AM to 12:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schrimpf, Josiah </FormattedValue><Value>Schrimpf, Josiah </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:30 PM</FormattedValue><Value>07:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Wohlfeil, Ellie </FormattedValue><Value>Wohlfeil, Ellie </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:00 PM</FormattedValue><Value>07:30 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Zetley, Owen Hans </FormattedValue><Value>Zetley, Owen Hans </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Thursday, December 29, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 04:30 PM</FormattedValue><Value>07:30 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schmitz, Alexandria &quot;Lexi&quot; </FormattedValue><Value>Schmitz, Alexandria &quot;Lexi&quot; </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 12:30 PM</FormattedValue><Value>08:00 AM to 12:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schrimpf, Josiah </FormattedValue><Value>Schrimpf, Josiah </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>06:30 AM to 05:30 PM</FormattedValue><Value>06:30 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Wiggenhorn, Amaleah </FormattedValue><Value>Wiggenhorn, Amaleah </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:30 PM</FormattedValue><Value>07:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Wohlfeil, Ellie </FormattedValue><Value>Wohlfeil, Ellie </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Friday, December 30, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>06:30 AM to 06:00 PM</FormattedValue><Value>06:30 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Holt, Jaden </FormattedValue><Value>Holt, Jaden </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 04:30 PM</FormattedValue><Value>07:30 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schmitz, Alexandria &quot;Lexi&quot; </FormattedValue><Value>Schmitz, Alexandria &quot;Lexi&quot; </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 12:30 PM</FormattedValue><Value>08:00 AM to 12:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schrimpf, Josiah </FormattedValue><Value>Schrimpf, Josiah </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>06:30 AM to 05:30 PM</FormattedValue><Value>06:30 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Wiggenhorn, Amaleah </FormattedValue><Value>Wiggenhorn, Amaleah </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:00 PM</FormattedValue><Value>07:30 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Zetley, Owen Hans </FormattedValue><Value>Zetley, Owen Hans </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+</Group>
+<Group Level="1">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text3"><TextValue>Mature Twos/Non-PT Threes</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Tuesday, December 27, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 04:15 PM</FormattedValue><Value>07:30 AM to 04:15 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Alvarez, Scarlett </FormattedValue><Value>Alvarez, Scarlett </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:00 PM</FormattedValue><Value>07:00 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Deutschendorf, Grace </FormattedValue><Value>Deutschendorf, Grace </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 12:30 PM</FormattedValue><Value>08:00 AM to 12:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Domnitz, Emi Belle </FormattedValue><Value>Domnitz, Emi Belle </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>09:00 AM to 04:45 PM</FormattedValue><Value>09:00 AM to 04:45 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Foley, Grayden </FormattedValue><Value>Foley, Grayden </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>10:00 AM to 04:00 PM</FormattedValue><Value>10:00 AM to 04:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Gebert, Lillian </FormattedValue><Value>Gebert, Lillian </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:30 AM to 06:00 PM</FormattedValue><Value>08:30 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Sannes, Emma </FormattedValue><Value>Sannes, Emma </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 05:30 PM</FormattedValue><Value>07:15 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schaffner, Lucas </FormattedValue><Value>Schaffner, Lucas </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:30 AM to 04:30 PM</FormattedValue><Value>08:30 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Zak, Jonathan </FormattedValue><Value>Zak, Jonathan </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Wednesday, December 28, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:00 PM</FormattedValue><Value>07:00 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Deutschendorf, Grace </FormattedValue><Value>Deutschendorf, Grace </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 12:30 PM</FormattedValue><Value>08:00 AM to 12:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Domnitz, Emi Belle </FormattedValue><Value>Domnitz, Emi Belle </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>09:00 AM to 04:45 PM</FormattedValue><Value>09:00 AM to 04:45 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Foley, Grayden </FormattedValue><Value>Foley, Grayden </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>10:00 AM to 06:00 PM</FormattedValue><Value>10:00 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Gebert, Lillian </FormattedValue><Value>Gebert, Lillian </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:30 AM to 04:30 PM</FormattedValue><Value>08:30 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Zak, Jonathan </FormattedValue><Value>Zak, Jonathan </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Thursday, December 29, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:00 PM</FormattedValue><Value>07:00 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Deutschendorf, Grace </FormattedValue><Value>Deutschendorf, Grace </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 12:30 PM</FormattedValue><Value>08:00 AM to 12:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Domnitz, Emi Belle </FormattedValue><Value>Domnitz, Emi Belle </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>09:00 AM to 04:45 PM</FormattedValue><Value>09:00 AM to 04:45 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Foley, Grayden </FormattedValue><Value>Foley, Grayden </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>10:00 AM to 06:00 PM</FormattedValue><Value>10:00 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Gebert, Lillian </FormattedValue><Value>Gebert, Lillian </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 05:30 PM</FormattedValue><Value>07:15 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schaffner, Lucas </FormattedValue><Value>Schaffner, Lucas </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:30 AM to 04:30 PM</FormattedValue><Value>08:30 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Zak, Jonathan </FormattedValue><Value>Zak, Jonathan </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Friday, December 30, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>11:30 AM to 04:00 PM</FormattedValue><Value>11:30 AM to 04:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Alvarez, Scarlett </FormattedValue><Value>Alvarez, Scarlett </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:00 PM</FormattedValue><Value>07:00 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Deutschendorf, Grace </FormattedValue><Value>Deutschendorf, Grace </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 12:30 PM</FormattedValue><Value>08:00 AM to 12:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Domnitz, Emi Belle </FormattedValue><Value>Domnitz, Emi Belle </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>09:00 AM to 02:00 PM</FormattedValue><Value>09:00 AM to 02:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Foley, Grayden </FormattedValue><Value>Foley, Grayden </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>10:00 AM to 06:00 PM</FormattedValue><Value>10:00 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Gebert, Lillian </FormattedValue><Value>Gebert, Lillian </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 05:30 PM</FormattedValue><Value>07:15 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schaffner, Lucas </FormattedValue><Value>Schaffner, Lucas </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 04:30 PM</FormattedValue><Value>07:15 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Sipin, Lila Jane </FormattedValue><Value>Sipin, Lila Jane </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+</Group>
+<Group Level="1">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text3"><TextValue>Three-Year-Old Preschool</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Tuesday, December 27, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 05:00 PM</FormattedValue><Value>08:00 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Feely, Riley </FormattedValue><Value>Feely, Riley </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:30 PM</FormattedValue><Value>07:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Sand, Caleb </FormattedValue><Value>Sand, Caleb </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 05:30 PM</FormattedValue><Value>08:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Wiech, Alexander </FormattedValue><Value>Wiech, Alexander </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 04:30 PM</FormattedValue><Value>07:15 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Wlodarczyk, Lucas </FormattedValue><Value>Wlodarczyk, Lucas </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Wednesday, December 28, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:00 PM</FormattedValue><Value>07:30 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Miller, Declan J</FormattedValue><Value>Miller, Declan J</Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:30 PM</FormattedValue><Value>07:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Sand, Caleb </FormattedValue><Value>Sand, Caleb </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>09:00 AM to 06:00 PM</FormattedValue><Value>09:00 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schliepp, Aaliyah </FormattedValue><Value>Schliepp, Aaliyah </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:30 AM to 04:00 PM</FormattedValue><Value>08:30 AM to 04:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Wisniewski, Ayla </FormattedValue><Value>Wisniewski, Ayla </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 04:30 PM</FormattedValue><Value>07:15 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Wlodarczyk, Lucas </FormattedValue><Value>Wlodarczyk, Lucas </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Thursday, December 29, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 05:00 PM</FormattedValue><Value>08:00 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Feely, Riley </FormattedValue><Value>Feely, Riley </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:00 PM</FormattedValue><Value>07:30 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Miller, Declan J</FormattedValue><Value>Miller, Declan J</Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:30 PM</FormattedValue><Value>07:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Sand, Caleb </FormattedValue><Value>Sand, Caleb </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>09:00 AM to 06:00 PM</FormattedValue><Value>09:00 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schliepp, Aaliyah </FormattedValue><Value>Schliepp, Aaliyah </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 04:30 PM</FormattedValue><Value>07:15 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Wlodarczyk, Lucas </FormattedValue><Value>Wlodarczyk, Lucas </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Friday, December 30, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:30 PM</FormattedValue><Value>07:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Sand, Caleb </FormattedValue><Value>Sand, Caleb </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 04:30 PM</FormattedValue><Value>07:15 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Wlodarczyk, Lucas </FormattedValue><Value>Wlodarczyk, Lucas </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+</Group>
+<Group Level="1">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text3"><TextValue>Four-Year-Old Preschool</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Tuesday, December 27, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 06:00 PM</FormattedValue><Value>08:00 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Conradt, Danielle </FormattedValue><Value>Conradt, Danielle </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 05:00 PM</FormattedValue><Value>08:00 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Feely, Harper </FormattedValue><Value>Feely, Harper </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:45 AM to 06:00 PM</FormattedValue><Value>07:45 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Segatti-Henry, Dominick </FormattedValue><Value>Segatti-Henry, Dominick </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 04:30 PM</FormattedValue><Value>07:15 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Speth, Nicolas </FormattedValue><Value>Speth, Nicolas </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 04:30 PM</FormattedValue><Value>07:15 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Speth, Ali </FormattedValue><Value>Speth, Ali </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:00 PM</FormattedValue><Value>07:30 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Stern, Faith </FormattedValue><Value>Stern, Faith </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 04:30 PM</FormattedValue><Value>07:15 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Wlodarczyk, Maximus </FormattedValue><Value>Wlodarczyk, Maximus </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Wednesday, December 28, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 06:00 PM</FormattedValue><Value>08:00 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Conradt, Danielle </FormattedValue><Value>Conradt, Danielle </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 04:00 PM</FormattedValue><Value>08:00 AM to 04:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Guenther, Caleb A</FormattedValue><Value>Guenther, Caleb A</Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:15 AM to 05:00 PM</FormattedValue><Value>08:15 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Held, Owen </FormattedValue><Value>Held, Owen </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:30 AM to 05:15 PM</FormattedValue><Value>08:30 AM to 05:15 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Huber, Ella </FormattedValue><Value>Huber, Ella </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:45 AM to 06:00 PM</FormattedValue><Value>07:45 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Segatti-Henry, Dominick </FormattedValue><Value>Segatti-Henry, Dominick </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 04:30 PM</FormattedValue><Value>07:15 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Speth, Nicolas </FormattedValue><Value>Speth, Nicolas </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 04:30 PM</FormattedValue><Value>07:15 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Speth, Ali </FormattedValue><Value>Speth, Ali </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:00 PM</FormattedValue><Value>07:30 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Stern, Faith </FormattedValue><Value>Stern, Faith </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 04:30 PM</FormattedValue><Value>07:15 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Wlodarczyk, Maximus </FormattedValue><Value>Wlodarczyk, Maximus </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 05:45 PM</FormattedValue><Value>08:00 AM to 05:45 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Zatarski, Lily </FormattedValue><Value>Zatarski, Lily </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Thursday, December 29, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 06:00 PM</FormattedValue><Value>08:00 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Conradt, Danielle </FormattedValue><Value>Conradt, Danielle </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 05:00 PM</FormattedValue><Value>08:00 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Feely, Harper </FormattedValue><Value>Feely, Harper </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 05:00 PM</FormattedValue><Value>08:00 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Grevenow, Scarlett </FormattedValue><Value>Grevenow, Scarlett </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:15 AM to 05:00 PM</FormattedValue><Value>08:15 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Held, Owen </FormattedValue><Value>Held, Owen </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:45 AM to 06:00 PM</FormattedValue><Value>07:45 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Segatti-Henry, Dominick </FormattedValue><Value>Segatti-Henry, Dominick </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 04:30 PM</FormattedValue><Value>07:15 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Speth, Nicolas </FormattedValue><Value>Speth, Nicolas </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 04:30 PM</FormattedValue><Value>07:15 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Speth, Ali </FormattedValue><Value>Speth, Ali </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:00 PM</FormattedValue><Value>07:30 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Stern, Faith </FormattedValue><Value>Stern, Faith </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 04:30 PM</FormattedValue><Value>07:15 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Wlodarczyk, Maximus </FormattedValue><Value>Wlodarczyk, Maximus </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Friday, December 30, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 06:00 PM</FormattedValue><Value>08:00 AM to 06:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Conradt, Danielle </FormattedValue><Value>Conradt, Danielle </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 04:00 PM</FormattedValue><Value>08:00 AM to 04:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Guenther, Caleb A</FormattedValue><Value>Guenther, Caleb A</Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:00 PM</FormattedValue><Value>07:00 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Johnson, Autumn </FormattedValue><Value>Johnson, Autumn </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 04:30 PM</FormattedValue><Value>07:15 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Speth, Nicolas </FormattedValue><Value>Speth, Nicolas </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 04:30 PM</FormattedValue><Value>07:15 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Speth, Ali </FormattedValue><Value>Speth, Ali </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:00 PM</FormattedValue><Value>07:30 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Stern, Faith </FormattedValue><Value>Stern, Faith </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:15 AM to 04:30 PM</FormattedValue><Value>07:15 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Wlodarczyk, Maximus </FormattedValue><Value>Wlodarczyk, Maximus </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 05:45 PM</FormattedValue><Value>08:00 AM to 05:45 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Zatarski, Lily </FormattedValue><Value>Zatarski, Lily </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+</Group>
+<Group Level="1">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text3"><TextValue>School Age</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Tuesday, December 27, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 04:15 PM</FormattedValue><Value>07:30 AM to 04:15 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Alvarez, Elijah </FormattedValue><Value>Alvarez, Elijah </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:45 AM to 05:00 PM</FormattedValue><Value>07:45 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Geibl, Megan </FormattedValue><Value>Geibl, Megan </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:30 PM</FormattedValue><Value>07:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Sand, Natalie </FormattedValue><Value>Sand, Natalie </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 04:30 PM</FormattedValue><Value>07:30 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schmitz, Victoria &quot;Tori&quot; </FormattedValue><Value>Schmitz, Victoria &quot;Tori&quot; </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 04:30 PM</FormattedValue><Value>07:30 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schmitz, Rebecca &quot;Becca&quot; </FormattedValue><Value>Schmitz, Rebecca &quot;Becca&quot; </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:30 PM</FormattedValue><Value>07:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Zemlicka, Ethan </FormattedValue><Value>Zemlicka, Ethan </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Wednesday, December 28, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:00 PM</FormattedValue><Value>07:00 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Honzelka, Tim </FormattedValue><Value>Honzelka, Tim </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:30 PM</FormattedValue><Value>07:30 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Landisch, Makenna </FormattedValue><Value>Landisch, Makenna </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:30 PM</FormattedValue><Value>07:30 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Landisch, Caden </FormattedValue><Value>Landisch, Caden </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:30 PM</FormattedValue><Value>07:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Sand, Natalie </FormattedValue><Value>Sand, Natalie </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 04:30 PM</FormattedValue><Value>07:30 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schmitz, Victoria &quot;Tori&quot; </FormattedValue><Value>Schmitz, Victoria &quot;Tori&quot; </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 04:30 PM</FormattedValue><Value>07:30 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schmitz, Rebecca &quot;Becca&quot; </FormattedValue><Value>Schmitz, Rebecca &quot;Becca&quot; </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 05:45 PM</FormattedValue><Value>08:00 AM to 05:45 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Zatarski, Grace </FormattedValue><Value>Zatarski, Grace </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:30 PM</FormattedValue><Value>07:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Zemlicka, Ethan </FormattedValue><Value>Zemlicka, Ethan </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Thursday, December 29, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:45 AM to 05:00 PM</FormattedValue><Value>07:45 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Geibl, Megan </FormattedValue><Value>Geibl, Megan </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:45 AM to 05:00 PM</FormattedValue><Value>07:45 AM to 05:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Knaak, Kayla </FormattedValue><Value>Knaak, Kayla </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:30 PM</FormattedValue><Value>07:30 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Landisch, Makenna </FormattedValue><Value>Landisch, Makenna </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 05:30 PM</FormattedValue><Value>07:30 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Landisch, Caden </FormattedValue><Value>Landisch, Caden </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>06:30 AM to 04:15 PM</FormattedValue><Value>06:30 AM to 04:15 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Nicholson, Kaylee </FormattedValue><Value>Nicholson, Kaylee </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:30 PM</FormattedValue><Value>07:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Sand, Natalie </FormattedValue><Value>Sand, Natalie </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 04:30 PM</FormattedValue><Value>07:30 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schmitz, Victoria &quot;Tori&quot; </FormattedValue><Value>Schmitz, Victoria &quot;Tori&quot; </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 04:30 PM</FormattedValue><Value>07:30 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schmitz, Rebecca &quot;Becca&quot; </FormattedValue><Value>Schmitz, Rebecca &quot;Becca&quot; </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:30 PM</FormattedValue><Value>07:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Zemlicka, Ethan </FormattedValue><Value>Zemlicka, Ethan </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+<Group Level="2">
+<GroupHeader>
+<Section SectionNumber="0">
+<Text Name="Text2"><TextValue>Friday, December 30, 2016</TextValue>
+</Text>
+<Text Name="Text7"><TextValue>In</TextValue>
+</Text>
+<Text Name="Text8"><TextValue>Out</TextValue>
+</Text>
+<Text Name="Text9"><TextValue>Scheduled Times</TextValue>
+</Text>
+<Text Name="Text10"><TextValue>Comments</TextValue>
+</Text>
+</Section>
+</GroupHeader>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>11:30 AM to 04:00 PM</FormattedValue><Value>11:30 AM to 04:00 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Alvarez, Elijah </FormattedValue><Value>Alvarez, Elijah </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>06:30 AM to 04:15 PM</FormattedValue><Value>06:30 AM to 04:15 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Nicholson, Kaylee </FormattedValue><Value>Nicholson, Kaylee </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:00 AM to 05:30 PM</FormattedValue><Value>07:00 AM to 05:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Sand, Natalie </FormattedValue><Value>Sand, Natalie </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 04:30 PM</FormattedValue><Value>07:30 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schmitz, Victoria &quot;Tori&quot; </FormattedValue><Value>Schmitz, Victoria &quot;Tori&quot; </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:30 AM to 04:30 PM</FormattedValue><Value>07:30 AM to 04:30 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Schmitz, Rebecca &quot;Becca&quot; </FormattedValue><Value>Schmitz, Rebecca &quot;Becca&quot; </Value></Field>
+</Section>
+</Details>
+<Details Level="3">
+<Section SectionNumber="0">
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>08:00 AM to 05:45 PM</FormattedValue><Value>08:00 AM to 05:45 PM</Value></Field>
+<Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Zatarski, Grace </FormattedValue><Value>Zatarski, Grace </Value></Field>
+</Section>
+</Details>
+<GroupFooter>
+<Section SectionNumber="0">
+</Section>
+<Section SectionNumber="1">
+</Section>
+</GroupFooter>
+</Group>
+</Group>
+<ReportFooter>
+<Section SectionNumber="0">
+<Field Name="FilterString1" FieldName="{@FilterString}"><FormattedValue>Filtered By: {Child while viewing Visible Accounts}, Selected Classrooms: {Young Infants AND Mobile Infants - Tiny Turtles AND Young Toddlers AND Mature Toddlers AND Young Twos AND Mature Twos/Non-PT Threes AND Three-Year-Old Preschool AND Four-Year-Old Preschool AND School Age AND Infants - Little Lambs 1 AND Kindergarten AND 1st-2nd Grade AND Tods-Bumble Bee Forest 1 AND Drop In AND Two Year Olds}</FormattedValue><Value>Filtered By: {Child while viewing Visible Accounts}, Selected Classrooms: {Young Infants AND Mobile Infants - Tiny Turtles AND Young Toddlers AND Mature Toddlers AND Young Twos AND Mature Twos/Non-PT Threes AND Three-Year-Old Preschool AND Four-Year-Old Preschool AND School Age AND Infants - Little Lambs 1 AND Kindergarten AND 1st-2nd Grade AND Tods-Bumble Bee Forest 1 AND Drop In AND Two Year Olds}</Value></Field>
+</Section>
+</ReportFooter>
+</CrystalReport>
