@@ -5,11 +5,11 @@ using MongoDB.Bson;
 
 namespace Scheduler
 {
-    public class Child : Person
+    public class Child
     {
         public readonly string id;
 
-        public Child(string id, String firstName, String lastName, String roomLabel, BsonArray monday, BsonArray tuesday, BsonArray wednesday, BsonArray thursday, 
+        public Child(string id, string firstName, string lastName, string roomLabel, BsonArray monday, BsonArray tuesday, BsonArray wednesday, BsonArray thursday, 
             BsonArray friday, int schoolType)
         {
             this.id = id;
@@ -34,7 +34,7 @@ namespace Scheduler
             this.SchoolType = schoolType;
         }
 
-        public Child(string id, String firstName, String lastName, String roomLabel, IList<TimeSpan> monday, IList<TimeSpan> tuesday, IList<TimeSpan> wednesday,
+        public Child(string id, string firstName, string lastName, string roomLabel, IList<TimeSpan> monday, IList<TimeSpan> tuesday, IList<TimeSpan> wednesday,
             IList<TimeSpan> thursday, IList<TimeSpan> friday, IList<bool> school, int schoolType)
         {
             this.id = id;
@@ -59,17 +59,18 @@ namespace Scheduler
             this.SchoolType = schoolType;
         }
 
-        public Child(string id, String firstName, String lastName, String room)
+        public Child(string id, string firstName, string lastName, string room)
         {
             this.id = id;
             this.FirstName = firstName;
             this.LastName = lastName;
             this.RoomLabel = room;
+            this.SchoolType = 0;
         }
 
-        public String FirstName { get; set; }
-        public String LastName { get; set; }
-        public String RoomLabel { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string RoomLabel { get; set; }
 
         public TimeSpan MonStart { get; set; }
         public TimeSpan MonEnd { get; set; }
@@ -88,6 +89,9 @@ namespace Scheduler
         public bool ThurSchool { get; set; }
         public bool FriSchool { get; set; }
 
+        //Used only for 4yr preschool.  This will be 0 for no school or 3yr preschool and regular school
+        //Value of 1 for PM preschool (12:15 - 3:00 5 days a week)
+        //Value of 2 for AM preschool (8:30 - 11:15 3 days a week MWF)
         public int SchoolType { get; set; }
 
         public string GetSchool()
@@ -131,6 +135,11 @@ namespace Scheduler
             ThurEnd = TimeSpan.Zero;
             FriStart = TimeSpan.Zero;
             FriEnd = TimeSpan.Zero;
+        }
+
+        public string CheckTimesForValidity()
+        {
+            return Time.CheckTimeValidity(MonStart, MonEnd, TuesStart, TuesEnd, WedStart, WedEnd, ThurStart, ThurEnd, FriStart, FriEnd);
         }
     }
 }

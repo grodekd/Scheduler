@@ -1,6 +1,6 @@
 ﻿namespace Scheduler
 {
-    partial class AddNewControl
+    partial class ChildEditControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -32,18 +32,7 @@
             this.firstNameBox = new System.Windows.Forms.TextBox();
             this.lastNameBox = new System.Windows.Forms.TextBox();
             this.lastNameLabel = new System.Windows.Forms.Label();
-            this.maxHoursBox = new System.Windows.Forms.TextBox();
-            this.maxHoursLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.schoolAgeCheck = new System.Windows.Forms.CheckBox();
-            this.mindsCheck = new System.Windows.Forms.CheckBox();
-            this.horizonsCheck = new System.Windows.Forms.CheckBox();
-            this.fireflies2Check = new System.Windows.Forms.CheckBox();
-            this.fireflies1Check = new System.Windows.Forms.CheckBox();
-            this.forest2Check = new System.Windows.Forms.CheckBox();
-            this.forest1Check = new System.Windows.Forms.CheckBox();
-            this.tinyTurtlesCheck = new System.Windows.Forms.CheckBox();
-            this.littleLambCheck = new System.Windows.Forms.CheckBox();
             this.schoolAgeRadio = new System.Windows.Forms.RadioButton();
             this.mindsRadio = new System.Windows.Forms.RadioButton();
             this.horizonsRadio = new System.Windows.Forms.RadioButton();
@@ -95,8 +84,14 @@
             this.friStartAm = new System.Windows.Forms.ComboBox();
             this.friStartMin = new System.Windows.Forms.ComboBox();
             this.friStartHour = new System.Windows.Forms.TextBox();
-            this.saveButton = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.friCheckBox = new System.Windows.Forms.CheckBox();
+            this.thurCheckBox = new System.Windows.Forms.CheckBox();
+            this.wedCheckBox = new System.Windows.Forms.CheckBox();
+            this.tuesCheckBox = new System.Windows.Forms.CheckBox();
+            this.monCheckBox = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // firstNameLabel
@@ -131,33 +126,8 @@
             this.lastNameLabel.TabIndex = 2;
             this.lastNameLabel.Text = "Last Name:";
             // 
-            // maxHoursBox
-            // 
-            this.maxHoursBox.Location = new System.Drawing.Point(81, 63);
-            this.maxHoursBox.Name = "maxHoursBox";
-            this.maxHoursBox.Size = new System.Drawing.Size(144, 20);
-            this.maxHoursBox.TabIndex = 5;
-            // 
-            // maxHoursLabel
-            // 
-            this.maxHoursLabel.AutoSize = true;
-            this.maxHoursLabel.Location = new System.Drawing.Point(15, 66);
-            this.maxHoursLabel.Name = "maxHoursLabel";
-            this.maxHoursLabel.Size = new System.Drawing.Size(61, 13);
-            this.maxHoursLabel.TabIndex = 4;
-            this.maxHoursLabel.Text = "Max Hours:";
-            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.schoolAgeCheck);
-            this.groupBox1.Controls.Add(this.mindsCheck);
-            this.groupBox1.Controls.Add(this.horizonsCheck);
-            this.groupBox1.Controls.Add(this.fireflies2Check);
-            this.groupBox1.Controls.Add(this.fireflies1Check);
-            this.groupBox1.Controls.Add(this.forest2Check);
-            this.groupBox1.Controls.Add(this.forest1Check);
-            this.groupBox1.Controls.Add(this.tinyTurtlesCheck);
-            this.groupBox1.Controls.Add(this.littleLambCheck);
             this.groupBox1.Controls.Add(this.schoolAgeRadio);
             this.groupBox1.Controls.Add(this.mindsRadio);
             this.groupBox1.Controls.Add(this.horizonsRadio);
@@ -167,102 +137,12 @@
             this.groupBox1.Controls.Add(this.forest1Radio);
             this.groupBox1.Controls.Add(this.tinyTurtlesRadio);
             this.groupBox1.Controls.Add(this.littleLambRadio);
-            this.groupBox1.Location = new System.Drawing.Point(18, 89);
+            this.groupBox1.Location = new System.Drawing.Point(18, 80);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(207, 360);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // schoolAgeCheck
-            // 
-            this.schoolAgeCheck.AutoSize = true;
-            this.schoolAgeCheck.Location = new System.Drawing.Point(33, 337);
-            this.schoolAgeCheck.Name = "schoolAgeCheck";
-            this.schoolAgeCheck.Size = new System.Drawing.Size(81, 17);
-            this.schoolAgeCheck.TabIndex = 17;
-            this.schoolAgeCheck.Text = "School Age";
-            this.schoolAgeCheck.UseVisualStyleBackColor = true;
-            // 
-            // mindsCheck
-            // 
-            this.mindsCheck.AutoSize = true;
-            this.mindsCheck.Location = new System.Drawing.Point(33, 301);
-            this.mindsCheck.Name = "mindsCheck";
-            this.mindsCheck.Size = new System.Drawing.Size(84, 17);
-            this.mindsCheck.TabIndex = 16;
-            this.mindsCheck.Text = "Bright Minds";
-            this.mindsCheck.UseVisualStyleBackColor = true;
-            // 
-            // horizonsCheck
-            // 
-            this.horizonsCheck.AutoSize = true;
-            this.horizonsCheck.Location = new System.Drawing.Point(33, 261);
-            this.horizonsCheck.Name = "horizonsCheck";
-            this.horizonsCheck.Size = new System.Drawing.Size(97, 17);
-            this.horizonsCheck.TabIndex = 15;
-            this.horizonsCheck.Text = "Bright Horizons";
-            this.horizonsCheck.UseVisualStyleBackColor = true;
-            // 
-            // fireflies2Check
-            // 
-            this.fireflies2Check.AutoSize = true;
-            this.fireflies2Check.Location = new System.Drawing.Point(33, 221);
-            this.fireflies2Check.Name = "fireflies2Check";
-            this.fireflies2Check.Size = new System.Drawing.Size(70, 17);
-            this.fireflies2Check.TabIndex = 14;
-            this.fireflies2Check.Text = "Fireflies 2";
-            this.fireflies2Check.UseVisualStyleBackColor = true;
-            // 
-            // fireflies1Check
-            // 
-            this.fireflies1Check.AutoSize = true;
-            this.fireflies1Check.Location = new System.Drawing.Point(33, 183);
-            this.fireflies1Check.Name = "fireflies1Check";
-            this.fireflies1Check.Size = new System.Drawing.Size(70, 17);
-            this.fireflies1Check.TabIndex = 13;
-            this.fireflies1Check.Text = "Fireflies 1";
-            this.fireflies1Check.UseVisualStyleBackColor = true;
-            // 
-            // forest2Check
-            // 
-            this.forest2Check.AutoSize = true;
-            this.forest2Check.Location = new System.Drawing.Point(33, 145);
-            this.forest2Check.Name = "forest2Check";
-            this.forest2Check.Size = new System.Drawing.Size(120, 17);
-            this.forest2Check.TabIndex = 12;
-            this.forest2Check.Text = "Bumblebee Forest 2";
-            this.forest2Check.UseVisualStyleBackColor = true;
-            // 
-            // forest1Check
-            // 
-            this.forest1Check.AutoSize = true;
-            this.forest1Check.Location = new System.Drawing.Point(33, 110);
-            this.forest1Check.Name = "forest1Check";
-            this.forest1Check.Size = new System.Drawing.Size(120, 17);
-            this.forest1Check.TabIndex = 11;
-            this.forest1Check.Text = "Bumblebee Forest 1";
-            this.forest1Check.UseVisualStyleBackColor = true;
-            // 
-            // tinyTurtlesCheck
-            // 
-            this.tinyTurtlesCheck.AutoSize = true;
-            this.tinyTurtlesCheck.Location = new System.Drawing.Point(33, 74);
-            this.tinyTurtlesCheck.Name = "tinyTurtlesCheck";
-            this.tinyTurtlesCheck.Size = new System.Drawing.Size(81, 17);
-            this.tinyTurtlesCheck.TabIndex = 10;
-            this.tinyTurtlesCheck.Text = "Tiny Turtles";
-            this.tinyTurtlesCheck.UseVisualStyleBackColor = true;
-            // 
-            // littleLambCheck
-            // 
-            this.littleLambCheck.AutoSize = true;
-            this.littleLambCheck.Location = new System.Drawing.Point(33, 39);
-            this.littleLambCheck.Name = "littleLambCheck";
-            this.littleLambCheck.Size = new System.Drawing.Size(82, 17);
-            this.littleLambCheck.TabIndex = 9;
-            this.littleLambCheck.Text = "Little Lambs";
-            this.littleLambCheck.UseVisualStyleBackColor = true;
+            this.groupBox1.Text = "Room:";
             // 
             // schoolAgeRadio
             // 
@@ -393,7 +273,7 @@
             // mondayLabel
             // 
             this.mondayLabel.AutoSize = true;
-            this.mondayLabel.Location = new System.Drawing.Point(445, 37);
+            this.mondayLabel.Location = new System.Drawing.Point(6, 22);
             this.mondayLabel.Name = "mondayLabel";
             this.mondayLabel.Size = new System.Drawing.Size(48, 13);
             this.mondayLabel.TabIndex = 9;
@@ -402,7 +282,7 @@
             // tuesdayLabel
             // 
             this.tuesdayLabel.AutoSize = true;
-            this.tuesdayLabel.Location = new System.Drawing.Point(445, 112);
+            this.tuesdayLabel.Location = new System.Drawing.Point(6, 96);
             this.tuesdayLabel.Name = "tuesdayLabel";
             this.tuesdayLabel.Size = new System.Drawing.Size(51, 13);
             this.tuesdayLabel.TabIndex = 10;
@@ -411,7 +291,7 @@
             // wednesdayLabel
             // 
             this.wednesdayLabel.AutoSize = true;
-            this.wednesdayLabel.Location = new System.Drawing.Point(445, 186);
+            this.wednesdayLabel.Location = new System.Drawing.Point(6, 171);
             this.wednesdayLabel.Name = "wednesdayLabel";
             this.wednesdayLabel.Size = new System.Drawing.Size(67, 13);
             this.wednesdayLabel.TabIndex = 11;
@@ -420,7 +300,7 @@
             // thursdayLabel
             // 
             this.thursdayLabel.AutoSize = true;
-            this.thursdayLabel.Location = new System.Drawing.Point(445, 261);
+            this.thursdayLabel.Location = new System.Drawing.Point(3, 246);
             this.thursdayLabel.Name = "thursdayLabel";
             this.thursdayLabel.Size = new System.Drawing.Size(54, 13);
             this.thursdayLabel.TabIndex = 12;
@@ -429,7 +309,7 @@
             // fridayLabel
             // 
             this.fridayLabel.AutoSize = true;
-            this.fridayLabel.Location = new System.Drawing.Point(445, 337);
+            this.fridayLabel.Location = new System.Drawing.Point(6, 321);
             this.fridayLabel.Name = "fridayLabel";
             this.fridayLabel.Size = new System.Drawing.Size(38, 13);
             this.fridayLabel.TabIndex = 13;
@@ -445,6 +325,7 @@
             // 
             // monStartMin
             // 
+            this.monStartMin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.monStartMin.FormattingEnabled = true;
             this.monStartMin.Items.AddRange(new object[] {
             "00",
@@ -458,6 +339,7 @@
             // 
             // monStartAm
             // 
+            this.monStartAm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.monStartAm.FormattingEnabled = true;
             this.monStartAm.Items.AddRange(new object[] {
             "AM",
@@ -478,6 +360,7 @@
             // 
             // monEndAm
             // 
+            this.monEndAm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.monEndAm.FormattingEnabled = true;
             this.monEndAm.Items.AddRange(new object[] {
             "AM",
@@ -489,6 +372,7 @@
             // 
             // monEndMin
             // 
+            this.monEndMin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.monEndMin.FormattingEnabled = true;
             this.monEndMin.Items.AddRange(new object[] {
             "00",
@@ -510,6 +394,7 @@
             // 
             // tuesEndAm
             // 
+            this.tuesEndAm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tuesEndAm.FormattingEnabled = true;
             this.tuesEndAm.Items.AddRange(new object[] {
             "AM",
@@ -521,6 +406,7 @@
             // 
             // tuesEndMin
             // 
+            this.tuesEndMin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tuesEndMin.FormattingEnabled = true;
             this.tuesEndMin.Items.AddRange(new object[] {
             "00",
@@ -551,6 +437,7 @@
             // 
             // tuesStartAm
             // 
+            this.tuesStartAm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tuesStartAm.FormattingEnabled = true;
             this.tuesStartAm.Items.AddRange(new object[] {
             "AM",
@@ -562,6 +449,7 @@
             // 
             // tuesStartMin
             // 
+            this.tuesStartMin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tuesStartMin.FormattingEnabled = true;
             this.tuesStartMin.Items.AddRange(new object[] {
             "00",
@@ -583,6 +471,7 @@
             // 
             // wedEndAm
             // 
+            this.wedEndAm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.wedEndAm.FormattingEnabled = true;
             this.wedEndAm.Items.AddRange(new object[] {
             "AM",
@@ -594,6 +483,7 @@
             // 
             // wedEndMin
             // 
+            this.wedEndMin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.wedEndMin.FormattingEnabled = true;
             this.wedEndMin.Items.AddRange(new object[] {
             "00",
@@ -624,6 +514,7 @@
             // 
             // wedStartAm
             // 
+            this.wedStartAm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.wedStartAm.FormattingEnabled = true;
             this.wedStartAm.Items.AddRange(new object[] {
             "AM",
@@ -635,6 +526,7 @@
             // 
             // wedStartMin
             // 
+            this.wedStartMin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.wedStartMin.FormattingEnabled = true;
             this.wedStartMin.Items.AddRange(new object[] {
             "00",
@@ -656,6 +548,7 @@
             // 
             // thurEndAm
             // 
+            this.thurEndAm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.thurEndAm.FormattingEnabled = true;
             this.thurEndAm.Items.AddRange(new object[] {
             "AM",
@@ -667,6 +560,7 @@
             // 
             // thurEndMin
             // 
+            this.thurEndMin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.thurEndMin.FormattingEnabled = true;
             this.thurEndMin.Items.AddRange(new object[] {
             "00",
@@ -697,6 +591,7 @@
             // 
             // thurStartAm
             // 
+            this.thurStartAm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.thurStartAm.FormattingEnabled = true;
             this.thurStartAm.Items.AddRange(new object[] {
             "AM",
@@ -708,6 +603,7 @@
             // 
             // thurStartMin
             // 
+            this.thurStartMin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.thurStartMin.FormattingEnabled = true;
             this.thurStartMin.Items.AddRange(new object[] {
             "00",
@@ -729,6 +625,7 @@
             // 
             // friEndAm
             // 
+            this.friEndAm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.friEndAm.FormattingEnabled = true;
             this.friEndAm.Items.AddRange(new object[] {
             "AM",
@@ -740,6 +637,7 @@
             // 
             // friEndMin
             // 
+            this.friEndMin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.friEndMin.FormattingEnabled = true;
             this.friEndMin.Items.AddRange(new object[] {
             "00",
@@ -770,6 +668,7 @@
             // 
             // friStartAm
             // 
+            this.friStartAm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.friStartAm.FormattingEnabled = true;
             this.friStartAm.Items.AddRange(new object[] {
             "AM",
@@ -781,6 +680,7 @@
             // 
             // friStartMin
             // 
+            this.friStartMin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.friStartMin.FormattingEnabled = true;
             this.friStartMin.Items.AddRange(new object[] {
             "00",
@@ -800,20 +700,80 @@
             this.friStartHour.Size = new System.Drawing.Size(21, 21);
             this.friStartHour.TabIndex = 42;
             // 
-            // saveButton
+            // groupBox2
             // 
-            this.saveButton.Location = new System.Drawing.Point(732, 426);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(112, 44);
-            this.saveButton.TabIndex = 49;
-            this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = true;
+            this.groupBox2.Controls.Add(this.friCheckBox);
+            this.groupBox2.Controls.Add(this.thurCheckBox);
+            this.groupBox2.Controls.Add(this.wedCheckBox);
+            this.groupBox2.Controls.Add(this.tuesCheckBox);
+            this.groupBox2.Controls.Add(this.monCheckBox);
+            this.groupBox2.Controls.Add(this.mondayLabel);
+            this.groupBox2.Controls.Add(this.tuesdayLabel);
+            this.groupBox2.Controls.Add(this.wednesdayLabel);
+            this.groupBox2.Controls.Add(this.thursdayLabel);
+            this.groupBox2.Controls.Add(this.fridayLabel);
+            this.groupBox2.Location = new System.Drawing.Point(397, 11);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(113, 349);
+            this.groupBox2.TabIndex = 49;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Days:";
             // 
-            // AddNewControl
+            // friCheckBox
+            // 
+            this.friCheckBox.AutoSize = true;
+            this.friCheckBox.Location = new System.Drawing.Point(87, 322);
+            this.friCheckBox.Name = "friCheckBox";
+            this.friCheckBox.Size = new System.Drawing.Size(15, 14);
+            this.friCheckBox.TabIndex = 18;
+            this.friCheckBox.UseVisualStyleBackColor = true;
+            this.friCheckBox.CheckedChanged += new System.EventHandler(this.friCheckBox_CheckedChanged);
+            // 
+            // thurCheckBox
+            // 
+            this.thurCheckBox.AutoSize = true;
+            this.thurCheckBox.Location = new System.Drawing.Point(87, 246);
+            this.thurCheckBox.Name = "thurCheckBox";
+            this.thurCheckBox.Size = new System.Drawing.Size(15, 14);
+            this.thurCheckBox.TabIndex = 17;
+            this.thurCheckBox.UseVisualStyleBackColor = true;
+            this.thurCheckBox.CheckedChanged += new System.EventHandler(this.thurCheckBox_CheckedChanged);
+            // 
+            // wedCheckBox
+            // 
+            this.wedCheckBox.AutoSize = true;
+            this.wedCheckBox.Location = new System.Drawing.Point(87, 170);
+            this.wedCheckBox.Name = "wedCheckBox";
+            this.wedCheckBox.Size = new System.Drawing.Size(15, 14);
+            this.wedCheckBox.TabIndex = 16;
+            this.wedCheckBox.UseVisualStyleBackColor = true;
+            this.wedCheckBox.CheckedChanged += new System.EventHandler(this.wedCheckBox_CheckedChanged);
+            // 
+            // tuesCheckBox
+            // 
+            this.tuesCheckBox.AutoSize = true;
+            this.tuesCheckBox.Location = new System.Drawing.Point(87, 96);
+            this.tuesCheckBox.Name = "tuesCheckBox";
+            this.tuesCheckBox.Size = new System.Drawing.Size(15, 14);
+            this.tuesCheckBox.TabIndex = 15;
+            this.tuesCheckBox.UseVisualStyleBackColor = true;
+            this.tuesCheckBox.CheckedChanged += new System.EventHandler(this.tuesCheckBox_CheckedChanged);
+            // 
+            // monCheckBox
+            // 
+            this.monCheckBox.AutoSize = true;
+            this.monCheckBox.Location = new System.Drawing.Point(87, 23);
+            this.monCheckBox.Name = "monCheckBox";
+            this.monCheckBox.Size = new System.Drawing.Size(15, 14);
+            this.monCheckBox.TabIndex = 14;
+            this.monCheckBox.UseVisualStyleBackColor = true;
+            this.monCheckBox.CheckedChanged += new System.EventHandler(this.monCheckBox_CheckedChanged);
+            // 
+            // ChildEditControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.saveButton);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.friEndAm);
             this.Controls.Add(this.friEndMin);
             this.Controls.Add(this.friEndHour);
@@ -849,24 +809,19 @@
             this.Controls.Add(this.monStartAm);
             this.Controls.Add(this.monStartMin);
             this.Controls.Add(this.monStartHour);
-            this.Controls.Add(this.fridayLabel);
-            this.Controls.Add(this.thursdayLabel);
-            this.Controls.Add(this.wednesdayLabel);
-            this.Controls.Add(this.tuesdayLabel);
-            this.Controls.Add(this.mondayLabel);
             this.Controls.Add(this.schoolLabel);
             this.Controls.Add(this.schoolCombo);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.maxHoursBox);
-            this.Controls.Add(this.maxHoursLabel);
             this.Controls.Add(this.lastNameBox);
             this.Controls.Add(this.lastNameLabel);
             this.Controls.Add(this.firstNameBox);
             this.Controls.Add(this.firstNameLabel);
-            this.Name = "AddNewControl";
-            this.Size = new System.Drawing.Size(1152, 494);
+            this.Name = "ChildEditControl";
+            this.Size = new System.Drawing.Size(1352, 494);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -878,8 +833,6 @@
         private System.Windows.Forms.TextBox firstNameBox;
         private System.Windows.Forms.TextBox lastNameBox;
         private System.Windows.Forms.Label lastNameLabel;
-        private System.Windows.Forms.TextBox maxHoursBox;
-        private System.Windows.Forms.Label maxHoursLabel;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton schoolAgeRadio;
         private System.Windows.Forms.RadioButton mindsRadio;
@@ -890,15 +843,6 @@
         private System.Windows.Forms.RadioButton forest1Radio;
         private System.Windows.Forms.RadioButton tinyTurtlesRadio;
         private System.Windows.Forms.RadioButton littleLambRadio;
-        private System.Windows.Forms.CheckBox schoolAgeCheck;
-        private System.Windows.Forms.CheckBox mindsCheck;
-        private System.Windows.Forms.CheckBox horizonsCheck;
-        private System.Windows.Forms.CheckBox fireflies2Check;
-        private System.Windows.Forms.CheckBox fireflies1Check;
-        private System.Windows.Forms.CheckBox forest2Check;
-        private System.Windows.Forms.CheckBox forest1Check;
-        private System.Windows.Forms.CheckBox tinyTurtlesCheck;
-        private System.Windows.Forms.CheckBox littleLambCheck;
         private System.Windows.Forms.ComboBox schoolCombo;
         private System.Windows.Forms.Label schoolLabel;
         private System.Windows.Forms.Label mondayLabel;
@@ -941,7 +885,12 @@
         private System.Windows.Forms.ComboBox friStartAm;
         private System.Windows.Forms.ComboBox friStartMin;
         private System.Windows.Forms.TextBox friStartHour;
-        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.CheckBox thurCheckBox;
+        private System.Windows.Forms.CheckBox wedCheckBox;
+        private System.Windows.Forms.CheckBox tuesCheckBox;
+        private System.Windows.Forms.CheckBox monCheckBox;
+        private System.Windows.Forms.CheckBox friCheckBox;
 
     }
 }

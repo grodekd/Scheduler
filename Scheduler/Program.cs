@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using MongoDB.Bson;
-using System.Linq;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace Scheduler
@@ -18,10 +14,12 @@ namespace Scheduler
 
             var employeeService = EmployeeService.GetEmployeeService();
             var childService = ChildService.GetChildService();
+            var roomService = RoomService.GetRoomService();
+            var scheduleService = ScheduleService.GetScheduleService();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main(employeeService, childService));
+            Application.Run(new Main(employeeService, childService, roomService, scheduleService));
 
 
             //var dbAccess = DatabaseAccess.GetDatabaseAccess();

@@ -1,0 +1,39 @@
+Things To Do:
+
+    Change size to fullscreen, update text size, proportional locations?
+    Room Add/Edit (might not be able to do add for now becaue concern #1)
+        Room edit export?
+    Requests Page
+    MULTIPLE ROOMS OF SAME (LL)
+
+    SCHDULE ALGORITHM
+
+Things Done That Need Testing:
+
+    Employee Add/Edit Form Validation
+    Fix Add new child to add to proper dataTable
+    See if the unknown kids in an upload could be added automatically
+    Add school impact on upload
+    Check if loading thread can be removed. (Not sure if it will ever matter since the slow part is UI loading)
+    Check if DB gives an id when adding and Write to DB on Add (It does)
+    Change label1 text checking to enum
+    Main Page Data
+        Child Data
+        Employee Data
+        Room Data with warning logic
+
+
+Concerns:
+
+    Rooms in employee and child add/edit aren't scalable so they wont reflect new rooms.
+    Update All was removed since it makes a lot less sense with the child upload, but it could come back.
+
+Improvements:
+
+    Change DB to have seperate tables for each rooms so the bulk list of children doesn't need to be broken apart each time in ChildService.
+        Doesn't seem to slow the system down at all at 300 children
+
+No Longer Doing:
+    
+    Update employee in db - NOT DOING
+    Child Add/Edit db calls - NOT DOING
