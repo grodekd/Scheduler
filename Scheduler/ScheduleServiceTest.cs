@@ -25,7 +25,7 @@ namespace Scheduler
             //kids.Add(new Child(1, "Jam", "Jam", "LL", new TimeSpan(12, 30, 0), new TimeSpan(16, 30, 0), new TimeSpan(12, 30, 0), new TimeSpan(16, 30, 0), new TimeSpan(12, 30, 0), new TimeSpan(16, 30, 0), new TimeSpan(12, 30, 0), new TimeSpan(16, 30, 0), new TimeSpan(12, 30, 0), new TimeSpan(16, 30, 0), false, false, false, false, false, 0));
             //kids.Add(new Child(1, "Jam", "Jam", "LL", new TimeSpan(12, 30, 0), new TimeSpan(16, 30, 0), new TimeSpan(12, 30, 0), new TimeSpan(16, 30, 0), new TimeSpan(12, 30, 0), new TimeSpan(16, 30, 0), new TimeSpan(12, 30, 0), new TimeSpan(16, 30, 0), new TimeSpan(12, 30, 0), new TimeSpan(16, 30, 0), false, false, false, false, false, 0));
             //kids.Add(new Child(1, "Jam", "Jam", "LL", new TimeSpan(6, 0, 0), new TimeSpan(12, 30, 0), new TimeSpan(6, 0, 0), new TimeSpan(13, 0, 0), new TimeSpan(6, 0, 0), new TimeSpan(12, 30, 0), new TimeSpan(6, 0, 0), new TimeSpan(12, 30, 0), new TimeSpan(6, 0, 0), new TimeSpan(12, 30, 0), false, false, false, false, false, 0));
-            scheduleService.GetEmployeesNeeded(kids, 3);
+            //scheduleService.GetEmployeesNeeded(kids, 3);
         }
     }
 }

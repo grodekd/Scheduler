@@ -1,14 +1,15 @@
 ﻿
 using System;
+using System.Collections.Generic;
 using MongoDB.Bson;
 
 namespace Scheduler
 {
     public class Child
     {
-        private readonly string id;
+        public readonly string id;
 
-        public Child(string id, String firstName, String lastName, String roomLabel, BsonArray monday, BsonArray tuesday, BsonArray wednesday, BsonArray thursday, 
+        public Child(string id, string firstName, string lastName, string roomLabel, BsonArray monday, BsonArray tuesday, BsonArray wednesday, BsonArray thursday, 
             BsonArray friday, int schoolType)
         {
             this.id = id;
@@ -33,9 +34,43 @@ namespace Scheduler
             this.SchoolType = schoolType;
         }
 
-        public String FirstName { get; set; }
-        public String LastName { get; set; }
-        public String RoomLabel { get; set; }
+        public Child(string id, string firstName, string lastName, string roomLabel, IList<TimeSpan> monday, IList<TimeSpan> tuesday, IList<TimeSpan> wednesday,
+            IList<TimeSpan> thursday, IList<TimeSpan> friday, IList<bool> school, int schoolType)
+        {
+            this.id = id;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.RoomLabel = roomLabel;
+            this.MonStart = monday[0];
+            this.MonEnd = monday[1];
+            this.TuesStart = tuesday[0];
+            this.TuesEnd = tuesday[1];
+            this.WedStart = wednesday[0];
+            this.WedEnd = wednesday[1];
+            this.ThurStart = thursday[0];
+            this.ThurEnd = thursday[1];
+            this.FriStart = friday[0];
+            this.FriEnd = friday[1];
+            this.MonSchool = school[0];
+            this.TuesSchool = school[1];
+            this.WedSchool = school[2];
+            this.ThurSchool = school[3];
+            this.FriSchool = school[4];
+            this.SchoolType = schoolType;
+        }
+
+        public Child(string id, string firstName, string lastName, string room)
+        {
+            this.id = id;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.RoomLabel = room;
+            this.SchoolType = 0;
+        }
+
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string RoomLabel { get; set; }
 
         public TimeSpan MonStart { get; set; }
         public TimeSpan MonEnd { get; set; }
@@ -54,6 +89,9 @@ namespace Scheduler
         public bool ThurSchool { get; set; }
         public bool FriSchool { get; set; }
 
+        //Used only for 4yr preschool.  This will be 0 for no school or 3yr preschool and regular school
+        //Value of 1 for PM preschool (12:15 - 3:00 5 days a week)
+        //Value of 2 for AM preschool (8:30 - 11:15 3 days a week MWF)
         public int SchoolType { get; set; }
 
         public string GetSchool()
@@ -83,6 +121,25 @@ namespace Scheduler
                     break;
             }
             return "";
+        }
+
+        public void EmptyTimes()
+        {
+            MonStart = TimeSpan.Zero;
+            MonEnd = TimeSpan.Zero;
+            TuesStart = TimeSpan.Zero;
+            TuesEnd = TimeSpan.Zero;
+            WedStart = TimeSpan.Zero;
+            WedEnd = TimeSpan.Zero;
+            ThurStart = TimeSpan.Zero;
+            ThurEnd = TimeSpan.Zero;
+            FriStart = TimeSpan.Zero;
+            FriEnd = TimeSpan.Zero;
+        }
+
+        public string CheckTimesForValidity()
+        {
+            return Time.CheckTimeValidity(MonStart, MonEnd, TuesStart, TuesEnd, WedStart, WedEnd, ThurStart, ThurEnd, FriStart, FriEnd);
         }
     }
 }

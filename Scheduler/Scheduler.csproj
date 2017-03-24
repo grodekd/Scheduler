@@ -53,23 +53,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Child.cs" />
-    <Compile Include="ChildrenControl.cs">
+    <Compile Include="Child\ChildEditControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ChildrenControl.Designer.cs">
+    <Compile Include="Child\ChildEditControl.Designer.cs">
+      <DependentUpon>ChildEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Child\Child.cs" />
+    <Compile Include="Child\ChildrenControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Child\ChildrenControl.Designer.cs">
       <DependentUpon>ChildrenControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChildService.cs" />
+    <Compile Include="Child\ChildService.cs" />
+    <Compile Include="ConfirmImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmImportForm.Designer.cs">
+      <DependentUpon>ConfirmImportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseAccess.cs" />
-    <Compile Include="Employee.cs" />
-    <Compile Include="EmployeeControl.cs">
+    <Compile Include="Employee\Employee.cs" />
+    <Compile Include="Employee\EmployeeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="EmployeeControl.Designer.cs">
+    <Compile Include="Employee\EmployeeControl.Designer.cs">
       <DependentUpon>EmployeeControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeService.cs" />
+    <Compile Include="Employee\EmployeeEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Employee\EmployeeEditControl.Designer.cs">
+      <DependentUpon>EmployeeEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\EmployeeService.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,19 +100,28 @@
     <Compile Include="MainControl.Designer.cs">
       <DependentUpon>MainControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonControl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Room.cs" />
-    <Compile Include="RoomsControl.cs">
+    <Compile Include="Room\Room.cs" />
+    <Compile Include="Room\RoomEditControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="RoomsControl.Designer.cs">
-      <DependentUpon>RoomsControl.cs</DependentUpon>
+    <Compile Include="Room\RoomEditControl.Designer.cs">
+      <DependentUpon>RoomEditControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Room\RoomControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Room\RoomControl.Designer.cs">
+      <DependentUpon>RoomControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Room\RoomService.cs" />
     <Compile Include="ScheduleService.cs" />
     <Compile Include="ScheduleServiceTest.cs" />
     <Compile Include="Time.cs" />
     <Compile Include="Timeline.cs" />
+    <Compile Include="ViewType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -104,11 +131,20 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ChildrenControl.resx">
+    <EmbeddedResource Include="Child\ChildEditControl.resx">
+      <DependentUpon>ChildEditControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Child\ChildrenControl.resx">
       <DependentUpon>ChildrenControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeControl.resx">
+    <EmbeddedResource Include="ConfirmImportForm.resx">
+      <DependentUpon>ConfirmImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\EmployeeControl.resx">
       <DependentUpon>EmployeeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\EmployeeEditControl.resx">
+      <DependentUpon>EmployeeEditControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -116,8 +152,11 @@
     <EmbeddedResource Include="MainControl.resx">
       <DependentUpon>MainControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RoomsControl.resx">
-      <DependentUpon>RoomsControl.cs</DependentUpon>
+    <EmbeddedResource Include="Room\RoomEditControl.resx">
+      <DependentUpon>RoomEditControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Room\RoomControl.resx">
+      <DependentUpon>RoomControl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
