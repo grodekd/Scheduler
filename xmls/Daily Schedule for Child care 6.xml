@@ -430,7 +430,7 @@
 </Details>
 <Details Level="3">
 <Section SectionNumber="0">
-<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:45 AM to 08:00 AM</FormattedValue><Value>07:45 AM to 08:00 AM</Value></Field>
+<Field Name="ScheduleTimes1" FieldName="{G_ReportData4.ScheduleTimes}"><FormattedValue>07:45 AM to 06:00 PM</FormattedValue><Value>07:45 AM to 06:00 PM</Value></Field>
 <Field Name="ChildName2" FieldName="{@ChildName}"><FormattedValue>Yunk, Colton </FormattedValue><Value>Yunk, Colton </Value></Field>
 </Section>
 </Details>
