@@ -7,14 +7,7 @@ namespace Scheduler
     public class RoomService
     {
         private static RoomService RoomServiceInstance;
-        private readonly DatabaseAccess db;
         private readonly List<Room> rooms;
-
-        private RoomService(DatabaseAccess db)
-        {
-            this.db = db;
-            rooms = this.db.GetRooms();
-        }
 
         private RoomService()
         {
@@ -30,16 +23,6 @@ namespace Scheduler
                 new Room("Bright Minds", "Four's", "BM", 10, 24),
                 new Room("School Age", "School Age", "SA", 12, 0)
             };
-        }
-
-        public static RoomService GetRoomService(DatabaseAccess db)
-        {
-            if (RoomServiceInstance != null)
-            {
-                return RoomServiceInstance;
-            }
-            RoomServiceInstance = new RoomService(db);
-            return RoomServiceInstance;
         }
 
         public static RoomService GetRoomService()

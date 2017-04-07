@@ -121,5 +121,25 @@ namespace Scheduler
 
             return "";
         }
+
+        public static double GetHoursAsDouble(TimeSpan time)
+        {
+            var hours = Convert.ToDouble(time.Hours);
+
+            switch (time.Minutes)
+            {
+                case 15:
+                    hours += .25;
+                    break;
+                case 30:
+                    hours += .5;
+                    break;
+                case 45:
+                    hours += .75;
+                    break;
+            }
+
+            return hours;
+        }
     }
 }

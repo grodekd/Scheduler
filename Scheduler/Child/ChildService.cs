@@ -11,29 +11,14 @@ namespace Scheduler
     public class ChildService
     {
         private static ChildService ChildServiceInstance;
-        private readonly DatabaseAccess db;
         private List<Child> children;
 
-        private ChildService(DatabaseAccess db)
-        {
-            this.db = db;
-            children = this.db.GetChildren();
-        }
         private ChildService()
         {
             children = new List<Child>();
             //children.Add(new Child("5", "Luke", "Kruschel", "SA", new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<TimeSpan> { TimeSpan.Zero, TimeSpan.Zero }, new List<bool> { false, false, false, false, false }, 0));
         }
 
-        public static ChildService GetChildService(DatabaseAccess db)
-        {
-            if (ChildServiceInstance != null)
-            {
-                return ChildServiceInstance;
-            }
-            ChildServiceInstance = new ChildService(db);
-            return ChildServiceInstance;
-        }
         public static ChildService GetChildService()
         {
             if (ChildServiceInstance != null)

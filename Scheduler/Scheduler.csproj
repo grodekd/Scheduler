@@ -73,7 +73,6 @@
     <Compile Include="ConfirmImportForm.Designer.cs">
       <DependentUpon>ConfirmImportForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseAccess.cs" />
     <Compile Include="Employee\Employee.cs" />
     <Compile Include="Employee\EmployeeControl.cs">
       <SubType>UserControl</SubType>
@@ -119,6 +118,7 @@
     <Compile Include="Room\RoomService.cs" />
     <Compile Include="ScheduleService.cs" />
     <Compile Include="ScheduleServiceTest.cs" />
+    <Compile Include="Shift.cs" />
     <Compile Include="Time.cs" />
     <Compile Include="Timeline.cs" />
     <Compile Include="ViewType.cs" />
