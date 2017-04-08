@@ -117,6 +117,7 @@
             // 
             // exportEmployeesToolStripMenuItem
             // 
+            this.exportEmployeesToolStripMenuItem.Enabled = false;
             this.exportEmployeesToolStripMenuItem.Name = "exportEmployeesToolStripMenuItem";
             this.exportEmployeesToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.exportEmployeesToolStripMenuItem.Text = "Export Employees";

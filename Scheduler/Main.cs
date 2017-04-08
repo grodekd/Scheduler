@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace Scheduler
@@ -111,7 +110,37 @@ namespace Scheduler
             }
             else
             {
-                childService.Import();
+                ImportChildren(sender, e);
+            }
+        }
+
+        private void ImportChildren(object sender, EventArgs e)
+        {
+            string filename;
+            childService.Import(out filename);
+            //The child upload failed
+            if (filename != "")
+            {
+                string outFilename;
+                var result = employeeService.Import(out outFilename, filename);
+
+                //Not an employee upload file, show child upload failed message
+                if (outFilename != "")
+                {
+                    MessageBox.Show("Unable to import children from the given file.  Please make sure this is a valid child data file.", "Import Failed");
+                }
+                //It was an employee upload file, and they decided to upload the employees.  Follow successful employee upload procedure.
+                else if (result != "")
+                {
+                    lastEmployeesUploadedPath = result;
+                    exportEmployeesToolStripMenuItem.Enabled = true;
+                    employeesToolStripMenuItem_Click(sender, e);
+                }
+                //If it was an employee upload file, but they decided not to upload it, do nothing.
+            }
+            //Either it was successful, or they canceled the upload.  Either way show the children page.
+            else
+            {
                 childrenToolStripMenuItem_Click(sender, e);
             }
         }
@@ -227,6 +256,7 @@ namespace Scheduler
                     return;
                 }
 
+                exportEmployeesToolStripMenuItem.Enabled = true;
                 employeeService.AddOrUpdate(employee);
                 employeesEdited = true;
 
@@ -283,9 +313,41 @@ namespace Scheduler
             }
             else
             {
-                var returnString = employeeService.Import();
-                lastEmployeesUploadedPath = returnString != "" ? returnString : lastEmployeesUploadedPath;
-                employeesToolStripMenuItem_Click(sender, e);
+                ImportEmployees(sender, e);
+            }
+        }
+
+        private void ImportEmployees(object sender, EventArgs e)
+        {
+            string filename;
+            var returnString = employeeService.Import(out filename);
+            //employee upload failed
+            if (filename != "")
+            {
+                string outFilename;
+                childService.Import(out outFilename, filename);
+
+                //Not an child upload file, show employee upload failed message
+                if (outFilename != "")
+                {
+                    MessageBox.Show("Unable to import employees from the given file.  Please make sure this is a valid employee data file.", "Import Failed");
+                }
+                //It was a child upload file. Follow successful child upload procedure, whether they uploaded them or not
+                else
+                {
+                    childrenToolStripMenuItem_Click(sender, e);
+                }
+            }
+            else
+            {
+                //successful upload
+                if (returnString != "")
+                {
+                    lastEmployeesUploadedPath = returnString;
+                    exportEmployeesToolStripMenuItem.Enabled = true;
+                    employeesToolStripMenuItem_Click(sender, e);
+                }
+                //upload canceled., do nothing.
             }
         }
 
@@ -318,27 +380,21 @@ namespace Scheduler
 
             if (importForm.GetButtonClicked() == 1)
             {
-                childService.Import();
-                childrenToolStripMenuItem_Click(sender, formClosedEventArgs);
+                ImportChildren(sender, formClosedEventArgs);
             }
         }
 
         private void EmployeeConfirmImportFormClosed(object sender, FormClosedEventArgs formClosedEventArgs)
         {
             var importForm = sender as ConfirmImportForm;
-            string returnString;
             switch (importForm.GetButtonClicked())
             {
                 case 1:
-                    returnString = employeeService.Import();
-                    lastEmployeesUploadedPath = returnString != "" ? returnString : lastEmployeesUploadedPath;
-                    employeesToolStripMenuItem_Click(sender, formClosedEventArgs);
+                    ImportEmployees(sender, formClosedEventArgs);
                     break;
                 case 3:
                     employeeService.Export(lastEmployeesUploadedPath);
-                    returnString = employeeService.Import();
-                    lastEmployeesUploadedPath = returnString != "" ? returnString : lastEmployeesUploadedPath;
-                    employeesToolStripMenuItem_Click(sender, formClosedEventArgs);
+                    ImportEmployees(sender, formClosedEventArgs);
                     break;
             }
         }
