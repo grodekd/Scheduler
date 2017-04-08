@@ -1,0 +1,13 @@
+﻿#Ignore temporary and built files
+.vs/
+obj/
+bin/
+packages/
+TestResults/
+
+
+*.suo
+*.user
+*.exe
+*.pdb
+*.cache

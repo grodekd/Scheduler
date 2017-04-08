@@ -80,10 +80,11 @@ namespace Scheduler
             return employees.Where(employee => employee.HasRoom(roomCode)).ToList();
         }
 
-        public List<Employee> GetFilteredEmployees(string roomCode, string dayOfWeek, List<int> scheduledEmployees)
+        public List<Employee> GetFilteredEmployees(string roomCode, string dayOfWeek, List<int> employeesToIgnore)
         {
-            return employees.Where(employee => employee.HasRoom(roomCode) && scheduledHours[employee.Id] < employee.MaxHours 
-                && !scheduledEmployees.Contains(employee.Id) && employee.HasDay(dayOfWeek)).ToList();
+            var scheduled = employeeShifts.Select(x => x.EmployeeId);
+            return employees.Where(employee => employee.HasRoom(roomCode) && scheduledHours[employee.Id] < employee.MaxHours
+                && !scheduled.Contains(employee.Id) && !employeesToIgnore.Contains(employee.Id) && employee.HasDay(dayOfWeek)).ToList();
         }
 
         public void InitializeHoursDictionary()
@@ -114,110 +115,131 @@ namespace Scheduler
                 }
             }
 
-            var scheduledStartTimes = new Dictionary<int, TimeSpan>();
-            var scheduledEndTimes = new Dictionary<int, TimeSpan>();
-            var scheduledEmployees = new List<int>();
-
-            foreach (var childStartTime in childStartTimes)
+            while (childStartTimes.Any())
             {
-                //Get the employees that are in this room this day, that haven't been scheduled this week, and that havn't met their max hours.
-                var totalEmployees = GetFilteredEmployees(room, dayOfWeek, scheduledEmployees);
-                totalEmployees = totalEmployees.Where(x => x.GetStart(dayOfWeek).CompareTo(childStartTime) <= 0).ToList(); //theystart before this child start time
+                var scheduledStartTimes = new Dictionary<int, TimeSpan>();
+                var scheduledEndTimes = new Dictionary<int, TimeSpan>();
+                var scheduledEmployees = new List<int>();
 
-                var highestPriority = totalEmployees.OrderBy(x => x.GetRoomPriority(room)).First().GetRoomPriority(room); //order by room priority
-                var priorityEmployees = totalEmployees.Where(x => x.GetRoomPriority(room) == highestPriority).ToList(); //A list of the employees at the highest priority
-
-                var employee = priorityEmployees.OrderByDescending(x => x.MaxHours - scheduledHours[x.Id]).First(); //Pick whoever has the most available hours left this week
-                var potentialHoursThisShift = employee.GetEnd(dayOfWeek).Subtract(childStartTime);
-
-                //Set the shift end time to either the employees end time that day, or 8 hours after the start time.
-                TimeSpan stopTime;
-                if (potentialHoursThisShift.Hours >= 8)
+                foreach (var childStartTime in childStartTimes)
                 {
-                    stopTime = childStartTime.Add(new TimeSpan(8, 0, 0));
-                }
-                else
-                {
-                    stopTime = childStartTime.Add(potentialHoursThisShift);
-                }
+                    //Get the employees that are in this room this day, that haven't been scheduled this week, and that havn't met their max hours.
+                    var totalEmployees = GetFilteredEmployees(room, dayOfWeek, scheduledEmployees);
+                    totalEmployees = totalEmployees.Where(x => x.GetStart(dayOfWeek).CompareTo(childStartTime) <= 0).ToList(); //theystart before this child start time
 
-                //scheduledHours[employee.Id] += hours; //add the hours to this employees hours for the week
-                scheduledStartTimes.Add(employee.Id, childStartTime); //add this shift start time to the scheduledStartTimes
-                scheduledEndTimes.Add(employee.Id, stopTime);//add this shift end time to the scheduledEndTimes
-                scheduledEmployees.Add(employee.Id);//add this employee to the list of employees scheduled today
-            }
+                    var highestPriority = totalEmployees.OrderBy(x => x.GetRoomPriority(room)).First().GetRoomPriority(room); //order by room priority
+                    var priorityEmployees = totalEmployees.Where(x => x.GetRoomPriority(room) == highestPriority).ToList(); //A list of the employees at the highest priority
 
-            //line up as many shift end times with child end times
-            var orderedShiftEndTimes = scheduledEndTimes.OrderByDescending(x => x.Value).ToList();
+                    var orderedPriorityEmployees = priorityEmployees.OrderByDescending(x => x.MaxHours - scheduledHours[x.Id]);
+                    
+                    Employee employee = null;
+                    TimeSpan potentialHoursThisShift = TimeSpan.Zero;
 
-            var tempOrderedShiftEnds = orderedShiftEndTimes.ToList();
-            var tempChildEnds = childEndTimes.ToList();
-            foreach (var shiftEndTime in tempOrderedShiftEnds)
-            {
-                //if this shift end is before the earliest child end, none of the remaining end times can be lined up.
-                if (shiftEndTime.Value.CompareTo(tempChildEnds[0]) < 0)
-                {
-                    break;
-                }
-
-                //find the latest child end time that is still before this shift end time.
-                TimeSpan prevTime = new TimeSpan();
-                foreach (var end in tempChildEnds)
-                {
-                    if (shiftEndTime.Value.CompareTo(end) >= 0)
+                    //Find an employee that would either have a shift over 3 hours, or that would work at least until the earliest child end time.
+                    //This prevents short shifts that don't even make it to a child end time.
+                    while (employee == null)
                     {
-                        prevTime = end;
+                        foreach (var potentialEmployee in orderedPriorityEmployees)
+                        {
+                            potentialHoursThisShift = potentialEmployee.GetEnd(dayOfWeek).Subtract(childStartTime);
+                            if (potentialHoursThisShift.Hours >= 3 || potentialEmployee.GetEnd(dayOfWeek).CompareTo(childEndTimes[0]) >= 0)
+                            {
+                                employee = potentialEmployee;
+                                break;
+                            }
+                        }
+                        //If no employees at the priority level meet the criteria, check the next priority level down.
+                        if (employee == null)
+                        {
+                            highestPriority++;
+                            //If there is no employee at any priority that meets the criteria, then there is no employee that can work until the earliest child end time, which is a problem.
+                            if (highestPriority == 10)
+                            {
+                                MessageBox.Show(string.Format("No employees in this room can work until {0}:{1}", childEndTimes[0].Hours, childEndTimes[0].Minutes));
+                                return;
+                            }
+
+                            priorityEmployees = totalEmployees.Where(x => x.GetRoomPriority(room) == highestPriority).ToList();
+                            orderedPriorityEmployees = priorityEmployees.OrderByDescending(x => x.MaxHours - scheduledHours[x.Id]);
+                        }
+                    }
+
+                    //Set the shift end time to either the employees end time that day, or 8 hours after the start time.
+                    TimeSpan stopTime;
+                    if (potentialHoursThisShift.Hours >= 8)
+                    {
+                        stopTime = childStartTime.Add(new TimeSpan(8, 0, 0));
                     }
                     else
                     {
-                        //consider this shift end time to now be the child end time and remove them both from their respective lists
+                        stopTime = childStartTime.Add(potentialHoursThisShift);
+                    }
+
+                    scheduledStartTimes.Add(employee.Id, childStartTime); //add this shift start time to the scheduledStartTimes
+                    scheduledEndTimes.Add(employee.Id, stopTime);//add this shift end time to the scheduledEndTimes
+                    scheduledEmployees.Add(employee.Id);//add this employee to the list of employees scheduled today
+                }
+
+                //line up as many shift end times with child end times
+                var orderedShiftEndTimes = scheduledEndTimes.OrderByDescending(x => x.Value).ToList();
+
+                var tempOrderedShiftEnds = orderedShiftEndTimes.ToList();
+                var tempChildEnds = childEndTimes.ToList();
+                foreach (var shiftEndTime in tempOrderedShiftEnds)
+                {
+                    //if this shift end is before the earliest child end, none of the remaining end times can be lined up.
+                    if (shiftEndTime.Value.CompareTo(tempChildEnds[0]) < 0)
+                    {
+                        break;
+                    }
+
+                    //find the latest child end time that is still before this shift end time.
+                    TimeSpan prevTime = new TimeSpan();
+                    bool scheduled = false;
+                    foreach (var end in tempChildEnds)
+                    {
+                        if (shiftEndTime.Value.CompareTo(end) >= 0)
+                        {
+                            prevTime = end;
+                        }
+                        else
+                        {
+                            //consider this shift end time to now be the child end time and remove them both from their respective lists
+                            orderedShiftEndTimes.Remove(shiftEndTime);
+                            tempChildEnds.Remove(prevTime);
+
+                            var id = shiftEndTime.Key;
+                            employeeShifts.Add(new Shift(id, scheduledStartTimes[id], prevTime, room));
+                            scheduledHours[id] += Time.GetHoursAsDouble(prevTime.Subtract(scheduledStartTimes[id]));
+                            scheduled = true;
+                            break;
+                        }
+                    }
+                    //This covers the case were the last employee potential shift end is after or equal to the last child end time
+                    if (!scheduled)
+                    {
                         orderedShiftEndTimes.Remove(shiftEndTime);
                         tempChildEnds.Remove(prevTime);
 
                         var id = shiftEndTime.Key;
                         employeeShifts.Add(new Shift(id, scheduledStartTimes[id], prevTime, room));
                         scheduledHours[id] += Time.GetHoursAsDouble(prevTime.Subtract(scheduledStartTimes[id]));
-                        break;
                     }
                 }
+
+                foreach (var shiftEndTime in orderedShiftEndTimes)
+                {
+                    var id = shiftEndTime.Key;
+                    employeeShifts.Add(new Shift(id, scheduledStartTimes[id], shiftEndTime.Value, room));
+                    scheduledHours[id] += Time.GetHoursAsDouble(shiftEndTime.Value.Subtract(scheduledStartTimes[id]));
+                }
+                var newStartTimes = new List<TimeSpan>();
+                orderedShiftEndTimes.ForEach(x => newStartTimes.Add(x.Value));
+
+                newStartTimes.Sort();
+                childStartTimes = newStartTimes;
+                childEndTimes = tempChildEnds;
             }
-
-            foreach (var shiftEndTime in orderedShiftEndTimes)
-            {
-                var id = shiftEndTime.Key;
-                employeeShifts.Add(new Shift(id, scheduledStartTimes[id], shiftEndTime.Value, room));
-                scheduledHours[id] += Time.GetHoursAsDouble(shiftEndTime.Value.Subtract(scheduledStartTimes[id]));
-            }
-            var newStartTimes = orderedShiftEndTimes.ToList();
-            var remainingChildEndTimes = tempChildEnds;
-
-            //var employees = GetEmployeesForTime(dayOfWeek, startTime, room);
-
-            //if (!employees.Any()) return null;
-
-            //var firstPriorities = employees.Where(x => x.GetRoomPriority(room) == 1).ToList();
-
-            //List<Employee> filteredEmployees;
-            //if (firstPriorities.Any())
-            //{
-            //    if (firstPriorities.Count() == 1) return firstPriorities.First();
-
-            //     var orderedList = firstPriorities.OrderBy(x => x.GetRooms().Count);
-
-            //    filteredEmployees = orderedList.Where(x => x.GetRooms().Count == orderedList.First().GetRooms().Count).ToList();
-            //}
-            //else
-            //{
-            //    var orderedList = employees.OrderBy(x => x.GetRoomPriority(room));
-            //    var orderedAgain = orderedList.Where(x => x.GetRoomPriority(room) == orderedList.First().GetRoomPriority(room)).OrderBy(x => x.GetRooms().Count);
-            //    filteredEmployees = orderedAgain.Where(x => x.GetRooms().Count == orderedAgain.First().GetRooms().Count).ToList();
-            //}
-
-            //if (filteredEmployees.FirstOrDefault(x => x.GetEnd(dayOfWeek).CompareTo(endTime) >= 0) != null)
-            //{
-            //    filteredEmployees = filteredEmployees.Where(x => x.GetEnd(dayOfWeek).CompareTo(endTime) >= 0).ToList();
-            //}
-            //return filteredEmployees.First();
         }
 
         public Dictionary<string, int> GetEmployeeData()
@@ -283,32 +305,44 @@ namespace Scheduler
             return employees.Where(employee => employee.FirstName == first && employee.LastName == last).Select(employee => employee.Id).FirstOrDefault();
         }
 
-        public string Import()
+        public string Import(out string filename, string tryFile = "")
         {
-            var ofd = new OpenFileDialog
-            {
-                InitialDirectory = "C:\\SchedulerStuff\\",
-                Filter = "xml files (*.xml)|*.xml",
-                Title = "Import Employee Data",
-                FilterIndex = 1,
-                RestoreDirectory = true
-            };
-
             var doc = new XmlDocument();
-            if (ofd.ShowDialog() == DialogResult.OK)
+            string returnFilename;
+            if (tryFile == "")
             {
-                var x = File.ReadAllText(ofd.FileName);
-                doc.LoadXml(x);
+                var ofd = new OpenFileDialog
+                {
+                    InitialDirectory = "C:\\SchedulerStuff\\",
+                    Filter = "xml files (*.xml)|*.xml",
+                    Title = "Import Employee Data",
+                    FilterIndex = 1,
+                    RestoreDirectory = true
+                };
+
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    returnFilename = ofd.FileName;
+                    var x = File.ReadAllText(ofd.FileName);
+                    doc.LoadXml(x);
+                }
+                else
+                {
+                    filename = "";
+                    return "";
+                }
             }
             else
             {
-                return "";
+                returnFilename = tryFile;
+                var x = File.ReadAllText(tryFile);
+                doc.LoadXml(x);
             }
 
             var importEmployees = doc.SelectNodes("//Employees/Employee");
 
             var newEmployees = new List<Employee>();
-
+            var priorNextId = nextId;
             for (var i = 0; i < importEmployees.Count; i++)
             {
                 var import = importEmployees[i];
@@ -383,10 +417,30 @@ namespace Scheduler
                     monday, tuesday, wednesday, thursday, friday, rooms));
             }
 
+            if (!newEmployees.Any())
+            {
+                //if(!suppressMessage) MessageBox.Show("Unable to import employees from the given file.  Please make sure this is a valid employee data file.", "Import Failed");
+                nextId = priorNextId;
+                filename = returnFilename;
+                return "";
+            }
+
+            if (tryFile != "")
+            {
+                var result = MessageBox.Show("The given file was detected as an employee data file.  Would you like to import these employees instead?", "Import Failed", MessageBoxButtons.YesNo);
+                if (result == DialogResult.No)
+                {
+                    nextId = priorNextId;
+                    filename = "";
+                    return "";
+                }
+            }
+
             employees.Clear();
             employees.AddRange(newEmployees);
 
-            return ofd.FileName;
+            filename = "";
+            return returnFilename;
         }
 
         public void Export(string path)

@@ -340,27 +340,41 @@ namespace Scheduler
             return kids;
         }
 
-        public void Import()
+        public void Import(out string filename, string tryFile = "")
         {
-            var ofd = new OpenFileDialog
-            {
-                InitialDirectory = "C:\\SchedulerStuff\\",
-                Filter = "xml files (*.xml)|*.xml",
-                Title = "Import Child Data",
-                FilterIndex = 1,
-                RestoreDirectory = true
-            };
-
             var doc = new XmlDocument();
-            if (ofd.ShowDialog() == DialogResult.OK)
+            string returnFilename;
+            if (tryFile == "")
             {
-                var x = File.ReadAllText(ofd.FileName);
-                doc.LoadXml(x);
+                var ofd = new OpenFileDialog
+                {
+                    InitialDirectory = "C:\\SchedulerStuff\\",
+                    Filter = "xml files (*.xml)|*.xml",
+                    Title = "Import Child Data",
+                    FilterIndex = 1,
+                    RestoreDirectory = true
+                };
+
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    returnFilename = ofd.FileName;
+                    var x = File.ReadAllText(ofd.FileName);
+                    doc.LoadXml(x);
+                }
+                else
+                {
+                    filename = "";
+                    return;
+                }
             }
             else
             {
-                return;
+                returnFilename = tryFile;
+                var x = File.ReadAllText(tryFile);
+                doc.LoadXml(x);
             }
+            
+            
 
             var manager = new XmlNamespaceManager(doc.NameTable);
             manager.AddNamespace("ns", "urn:crystal-reports:schemas:report-detail");
@@ -400,12 +414,23 @@ namespace Scheduler
 
             if (!kids.Any())
             {
-                MessageBox.Show("Unable to import kids from the given file.  Please make sure this is a valid child data file.", "Import Failed");
+                filename = returnFilename;
                 return;
+            }
+
+            if (tryFile != "")
+            {
+                var result = MessageBox.Show("The given file was detected as an child data file.  Would you like to import these children instead?", "Import Failed", MessageBoxButtons.YesNo);
+                if (result == DialogResult.No)
+                {
+                    filename = "";
+                    return;
+                }
             }
             
             children.Clear();
             children.AddRange(kids);
+            filename = "";
         }
 
         public string GetIdFromName(string first, string last)

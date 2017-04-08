@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Windows.Forms;
 
 namespace Scheduler
 {
@@ -57,8 +56,9 @@ namespace Scheduler
             var saTimes = GetEmployeesNeeded(sa, roomService.GetRoom("SA").Ratio);
 
             employeeService.InitializeHoursDictionary();
+            employeeService.GetIdealEmployee("wednesday", lambTimes[2], "LL");
             employeeService.GetIdealEmployee("wednesday", turtleTimes[2], "TT");
-            employeeService.Import();
+            //employeeService.Import();
             //MessageBox.Show("here");
         }
 
