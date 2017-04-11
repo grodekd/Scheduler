@@ -73,6 +73,12 @@
     <Compile Include="ConfirmImportForm.Designer.cs">
       <DependentUpon>ConfirmImportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DailyBreakdownForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DailyBreakdownForm.Designer.cs">
+      <DependentUpon>DailyBreakdownForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee\Employee.cs" />
     <Compile Include="Employee\EmployeeControl.cs">
       <SubType>UserControl</SubType>
@@ -139,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConfirmImportForm.resx">
       <DependentUpon>ConfirmImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DailyBreakdownForm.resx">
+      <DependentUpon>DailyBreakdownForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee\EmployeeControl.resx">
       <DependentUpon>EmployeeControl.cs</DependentUpon>

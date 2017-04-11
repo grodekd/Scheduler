@@ -147,5 +147,10 @@ namespace Scheduler
             this.dataGridView1.Visible = true;
             dataGridView1.Height = 23 + dataGridView1.Rows.Cast<DataGridViewRow>().Sum(row => row.Height);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var room = roomsBox.Controls.OfType<RadioButton>().First(x => x.Checked).Text;
+        }
     }
 }

@@ -29,6 +29,10 @@ namespace Scheduler
             currentView = ViewType.Main;
             titleLabel.Text = "Home";
             this.FormClosing += MainFormClosing;
+
+            string x;
+            employeeService.Import(out x, "C:\\Git\\Scheduler\\xmls\\testexport.xml");
+            childService.Import(out x, "C:\\Git\\Scheduler\\xmls\\Daily Schedule for Child care 6.xml");
         }
 
         private void sdgToolStripMenuItem_Click(object sender, EventArgs e)

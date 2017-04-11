@@ -1,1 +1,0 @@
-C:\Git\Scheduler\Scheduler\bin\Debug\Scheduler.exe.config

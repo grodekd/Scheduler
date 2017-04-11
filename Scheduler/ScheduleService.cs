@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace Scheduler
 {
@@ -56,10 +57,54 @@ namespace Scheduler
             var saTimes = GetEmployeesNeeded(sa, roomService.GetRoom("SA").Ratio);
 
             employeeService.InitializeHoursDictionary();
-            employeeService.GetIdealEmployee("wednesday", lambTimes[2], "LL");
-            employeeService.GetIdealEmployee("wednesday", turtleTimes[2], "TT");
-            //employeeService.Import();
-            //MessageBox.Show("here");
+            var outerMaxHours = 8;
+
+            while (outerMaxHours <= 10)
+            {
+                var maxHours = outerMaxHours;
+                var success = employeeService.GetIdealEmployee("wednesday", lambTimes[2], maxHours, "LL");
+                while (!success)
+                {
+                    if (maxHours == 10)
+                    {
+                        MessageBox.Show("Fail");
+                    }
+                    maxHours++;
+                    success = employeeService.GetIdealEmployee("wednesday", lambTimes[2], maxHours, "LL");
+                }
+
+                maxHours = outerMaxHours;
+                success = employeeService.GetIdealEmployee("wednesday", turtleTimes[2], maxHours, "TT");
+                while (!success)
+                {
+                    if (maxHours == 10)
+                    {
+                        //clear all shifts in employee service
+                        employeeService.employeeShifts = new List<Shift>();
+                        outerMaxHours++;
+                        break;
+                    }
+                    maxHours++;
+                    success = employeeService.GetIdealEmployee("wednesday", turtleTimes[2], maxHours, "TT");
+                }
+                if (!success) continue;
+
+                maxHours = outerMaxHours;
+                success = employeeService.GetIdealEmployee("wednesday", bee1Times[2], maxHours, "BB1");
+                while (!success)
+                {
+                    if (maxHours == 10)
+                    {
+                        //clear all shifts in employee service
+                        employeeService.employeeShifts = new List<Shift>();
+                        outerMaxHours++;
+                        break;
+                    }
+                    maxHours++;
+                    success = employeeService.GetIdealEmployee("wednesday", bee1Times[2], maxHours, "BB1");
+                }
+                var x = employeeService.employeeShifts;
+            }
         }
 
         /// <summary>
