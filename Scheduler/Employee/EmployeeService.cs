@@ -13,7 +13,7 @@ namespace Scheduler
         private static EmployeeService EmployeeServiceInstance;
         private readonly List<Employee> employees;
         private Dictionary<int, double> scheduledHours;
-        public List<Shift> employeeShifts;
+        //public List<Shift> employeeShifts;
         private List<Shift> tempEmployeeShifts;
         private int nextId;
 
@@ -21,7 +21,6 @@ namespace Scheduler
         {
             employees = new List<Employee>();
             scheduledHours = new Dictionary<int, double>();
-            employeeShifts = new List<Shift>();
             tempEmployeeShifts = new List<Shift>();
             //{
             //    new Employee("1", "Testy", "McTest", 40, new List<TimeSpan>{new TimeSpan(8, 0, 0), new TimeSpan(18, 0, 0)},
@@ -82,9 +81,9 @@ namespace Scheduler
             return employees.Where(employee => employee.HasRoom(roomCode)).ToList();
         }
 
-        public List<Employee> GetFilteredEmployees(string roomCode, string dayOfWeek, List<int> employeesToIgnore)
+        public List<Employee> GetFilteredEmployees(string roomCode, string dayOfWeek, List<int> employeesToIgnore, List<Shift> currentShifts)
         {
-            var scheduled = employeeShifts.Select(x => x.EmployeeId);
+            var scheduled = currentShifts.Select(x => x.EmployeeId);
             var tempScheduled = tempEmployeeShifts.Select(x => x.EmployeeId);
             return employees.Where(employee => employee.HasRoom(roomCode) && scheduledHours[employee.Id] < employee.MaxHours && !tempScheduled.Contains(employee.Id)
                 && !scheduled.Contains(employee.Id) && !employeesToIgnore.Contains(employee.Id) && employee.HasDay(dayOfWeek)).ToList();
@@ -99,11 +98,12 @@ namespace Scheduler
             }
         }
 
-        public bool GetIdealEmployee(string dayOfWeek, Dictionary<TimeSpan, int> times, int maxHours, string room = "")
+        public List<Shift> GetIdealEmployee(string dayOfWeek, Dictionary<TimeSpan, int> times, int maxHours, List<Shift> currentShifts, out List<Shift []> replacements, string room = "")
         {
             var childStartTimes = new List<TimeSpan>();
             var childEndTimes = new List<TimeSpan>();
             tempEmployeeShifts = new List<Shift>();
+            replacements = new List<Shift[]>();
 
             int count = 0;
             foreach (var time in times)
@@ -128,27 +128,28 @@ namespace Scheduler
                 foreach (var childStartTime in childStartTimes)
                 {
                     //Get the employees that are in this room this day, that haven't been scheduled this week, and that havn't met their max hours.
-                    var totalEmployees = GetFilteredEmployees(room, dayOfWeek, scheduledEmployees);
+                    var totalEmployees = GetFilteredEmployees(room, dayOfWeek, scheduledEmployees, currentShifts);
                     totalEmployees = totalEmployees.Where(x => x.GetStart(dayOfWeek).CompareTo(childStartTime) <= 0).ToList(); //theystart before this child start time
 
                     //No employee for this room can start early enough.
                     if (!totalEmployees.Any())
                     {
                         //Try and find an employee that was already scheduled that would work.
-                        foreach (var shift in employeeShifts) //Todo: consider checking temp scheduled employees as well
+                        foreach (var shift in currentShifts) //Todo: consider checking temp scheduled employees as well
                         {
                             var shiftEmployee = employees.First(x => x.Id == shift.EmployeeId);
 
                             //Check if the scheduled employee can work this room and if they start early enough.
                             if (shiftEmployee.HasRoom(room) && shiftEmployee.GetStart(dayOfWeek).CompareTo(childStartTime) <= 0)
                             {
-                                var replaced = ReplaceEmployeeInShift(shift, dayOfWeek, scheduledEmployees);
+                                var replacement = ReplaceEmployeeInShift(shift, dayOfWeek, scheduledEmployees, currentShifts);
 
-                                if (!replaced)
+                                if (replacement == null)
                                 {
                                     continue;
                                 }
 
+                                replacements.Add(replacement);
                                 totalEmployees = new List<Employee> { shiftEmployee };
                                 break;
                             }
@@ -184,20 +185,21 @@ namespace Scheduler
                             //If there is no employee at any priority that meets the criteria, then there is no employee that can work until the earliest child end time, which is a problem.
                             if (highestPriority == 10)
                             {
-                                foreach (var shift in employeeShifts) //Todo: consider checking temp scheduled employees as well
+                                foreach (var shift in currentShifts) //Todo: consider checking temp scheduled employees as well
                                 {
                                     var shiftEmployee = employees.First(x => x.Id == shift.EmployeeId);
 
                                     //Check if the scheduled employee can work this room and if they end late enough.
                                     if (shiftEmployee.HasRoom(room) && shiftEmployee.GetEnd(dayOfWeek).CompareTo(childEndTimes[0]) >= 0)
                                     {
-                                        var replaced = ReplaceEmployeeInShift(shift, dayOfWeek, scheduledEmployees);
+                                        var replacement = ReplaceEmployeeInShift(shift, dayOfWeek, scheduledEmployees, currentShifts);
 
-                                        if (!replaced)
+                                        if (replacement == null)
                                         {
                                             continue;
                                         }
 
+                                        replacements.Add(replacement);
                                         employee = shiftEmployee;
                                         break;
                                     }
@@ -205,7 +207,7 @@ namespace Scheduler
                                 if (employee == null)
                                 {
                                     MessageBox.Show(string.Format("No employees in this room can work until {0}:{1}", childEndTimes[0].Hours, childEndTimes[0].Minutes));
-                                    return false;
+                                    return null;
                                 }
 
                             }
@@ -292,13 +294,13 @@ namespace Scheduler
                 childEndTimes = tempChildEnds;
             }
 
-            employeeShifts.AddRange(tempEmployeeShifts);
-            return true;
+            //currentShifts.AddRange(tempEmployeeShifts);
+            return tempEmployeeShifts;
         }
 
-        private bool ReplaceEmployeeInShift(Shift shift, string dayOfWeek, List<int> scheduledEmployees)
+        private Shift[] ReplaceEmployeeInShift(Shift shift, string dayOfWeek, List<int> scheduledEmployees, List<Shift> currentShifts)
         {
-            var totalEmployees = GetFilteredEmployees(shift.RoomCode, dayOfWeek, scheduledEmployees);
+            var totalEmployees = GetFilteredEmployees(shift.RoomCode, dayOfWeek, scheduledEmployees, currentShifts);
 
             var potentialEmployees = totalEmployees.Where(x => x.GetStart(dayOfWeek).CompareTo(shift.StartTime) <= 0 && x.GetEnd(dayOfWeek).CompareTo(shift.EndTime) >= 0).ToList();
             var orderedEmployees = potentialEmployees.OrderByDescending(x => x.MaxHours - scheduledHours[x.Id]);
@@ -306,17 +308,18 @@ namespace Scheduler
             if (orderedEmployees.Any())
             {
                 var replacement = orderedEmployees.First();
-                employeeShifts.Remove(shift);
-                employeeShifts.Add(new Shift(replacement.Id, shift.StartTime, shift.EndTime, shift.RoomCode));
+                var newShift = new Shift(replacement.Id, shift.StartTime, shift.EndTime, shift.RoomCode);
+                currentShifts.Remove(shift);
+                currentShifts.Add(newShift);
 
                 var shiftHours = scheduledHours[shift.EmployeeId];
                 scheduledHours[shift.EmployeeId] = 0;
                 scheduledHours[replacement.Id] = shiftHours;
 
-                return true;
+                return new []{shift, newShift};
             }
 
-            return false;
+            return null;
         }
 
         public Dictionary<string, int> GetEmployeeData()
