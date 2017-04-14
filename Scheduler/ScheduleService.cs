@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using System.Windows.Markup;
 
 namespace Scheduler
 {
@@ -58,54 +59,83 @@ namespace Scheduler
 
             employeeService.InitializeHoursDictionary();
             var outerMaxHours = 8;
+            var replacements = new List<Shift[]>();
+            var shifts = new List<Shift>();
 
-            while (outerMaxHours <= 10)
-            {
-                var maxHours = outerMaxHours;
-                var success = employeeService.GetIdealEmployee("wednesday", lambTimes[2], maxHours, "LL");
-                while (!success)
-                {
-                    if (maxHours == 10)
-                    {
-                        MessageBox.Show("Fail");
-                    }
-                    maxHours++;
-                    success = employeeService.GetIdealEmployee("wednesday", lambTimes[2], maxHours, "LL");
-                }
+            var x = employeeService.GetIdealEmployee("wednesday", lambTimes[2], outerMaxHours, shifts, out replacements, "LL");
+            shifts.AddRange(x);
+            x = employeeService.GetIdealEmployee("wednesday", turtleTimes[2], outerMaxHours, shifts, out replacements, "TT");
+            shifts.AddRange(x);
+            x = employeeService.GetIdealEmployee("wednesday", bee1Times[2], outerMaxHours, shifts, out replacements, "BB1");
+            shifts.AddRange(x);
+            //shifts = employeeService.GetIdealEmployee("wednesday", bee2Times[2], outerMaxHours, shifts, "BB2");
 
-                maxHours = outerMaxHours;
-                success = employeeService.GetIdealEmployee("wednesday", turtleTimes[2], maxHours, "TT");
-                while (!success)
-                {
-                    if (maxHours == 10)
-                    {
-                        //clear all shifts in employee service
-                        employeeService.employeeShifts = new List<Shift>();
-                        outerMaxHours++;
-                        break;
-                    }
-                    maxHours++;
-                    success = employeeService.GetIdealEmployee("wednesday", turtleTimes[2], maxHours, "TT");
-                }
-                if (!success) continue;
+            //while (outerMaxHours <= 10)
+            //{
+            //    var maxHours = outerMaxHours;
+            //    var success = employeeService.GetIdealEmployee("wednesday", lambTimes[2], maxHours, "LL");
+            //    while (!success)
+            //    {
+            //        if (maxHours == 10)
+            //        {
+            //            MessageBox.Show("Fail");
+            //        }
+            //        maxHours++;
+            //        success = employeeService.GetIdealEmployee("wednesday", lambTimes[2], maxHours, "LL");
+            //    }
 
-                maxHours = outerMaxHours;
-                success = employeeService.GetIdealEmployee("wednesday", bee1Times[2], maxHours, "BB1");
-                while (!success)
-                {
-                    if (maxHours == 10)
-                    {
-                        //clear all shifts in employee service
-                        employeeService.employeeShifts = new List<Shift>();
-                        outerMaxHours++;
-                        break;
-                    }
-                    maxHours++;
-                    success = employeeService.GetIdealEmployee("wednesday", bee1Times[2], maxHours, "BB1");
-                }
-                var x = employeeService.employeeShifts;
-            }
+            //    maxHours = outerMaxHours;
+            //    success = employeeService.GetIdealEmployee("wednesday", turtleTimes[2], maxHours, "TT");
+            //    while (!success)
+            //    {
+            //        if (maxHours == 10)
+            //        {
+            //            //clear all shifts in employee service
+            //            employeeService.employeeShifts = new List<Shift>();
+            //            outerMaxHours++;
+            //            break;
+            //        }
+            //        maxHours++;
+            //        success = employeeService.GetIdealEmployee("wednesday", turtleTimes[2], maxHours, "TT");
+            //    }
+            //    if (!success) continue;
+
+            //    maxHours = outerMaxHours;
+            //    success = employeeService.GetIdealEmployee("wednesday", bee1Times[2], maxHours, "BB1");
+            //    while (!success)
+            //    {
+            //        if (maxHours == 10)
+            //        {
+            //            //clear all shifts in employee service
+            //            employeeService.employeeShifts = new List<Shift>();
+            //            outerMaxHours++;
+            //            break;
+            //        }
+            //        maxHours++;
+            //        success = employeeService.GetIdealEmployee("wednesday", bee1Times[2], maxHours, "BB1");
+            //    }
+            //    var x = employeeService.employeeShifts;
+            //}
         }
+
+        //private bool GetShifts(int index, List<Shift> shifts)
+        //{
+        //    //if index is roomcount+1 return true
+        //    var maxHours = 8;
+        //    //while maxHours <= 10
+        //    //make call to GetIdeal for this index in room lookup
+        //    //if GetIdeal succeeds
+        //    //  set shift results locally
+        //    //  call GetShifts for next index and pass in shifts param plus local shifts
+        //    //  if GetShift call returns true
+        //    //      add local shifts to permanant shifts list
+        //    //      return true
+        //    //  else
+        //    //      maxHours ++
+        //    //else
+        //    //  maxHours ++
+        //    //if it makes it outside the while, the whole thing fails.
+        //}
 
         /// <summary>
         /// Assumes all of the given children are in the same room.
