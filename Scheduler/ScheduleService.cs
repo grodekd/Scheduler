@@ -58,15 +58,27 @@ namespace Scheduler
             var saTimes = GetEmployeesNeeded(sa, roomService.GetRoom("SA").Ratio);
 
             employeeService.InitializeHoursDictionary();
-            var outerMaxHours = 8;
+            var outerMaxHours = 9;
             var replacements = new List<Shift[]>();
             var shifts = new List<Shift>();
 
-            var x = employeeService.GetIdealEmployee("wednesday", lambTimes[2], outerMaxHours, shifts, out replacements, "LL");
+            var x = employeeService.GetIdealEmployee("tuesday", lambTimes[1], outerMaxHours, shifts, out replacements, "LL");
             shifts.AddRange(x);
-            x = employeeService.GetIdealEmployee("wednesday", turtleTimes[2], outerMaxHours, shifts, out replacements, "TT");
+            x = employeeService.GetIdealEmployee("tuesday", turtleTimes[1], outerMaxHours, shifts, out replacements, "TT");
             shifts.AddRange(x);
-            x = employeeService.GetIdealEmployee("wednesday", bee1Times[2], outerMaxHours, shifts, out replacements, "BB1");
+            x = employeeService.GetIdealEmployee("tuesday", bee1Times[1], outerMaxHours, shifts, out replacements, "BB1");
+            shifts.AddRange(x);
+            x = employeeService.GetIdealEmployee("tuesday", bee2Times[1], outerMaxHours, shifts, out replacements, "BB2");
+            shifts.AddRange(x);
+            x = employeeService.GetIdealEmployee("tuesday", fly1Times[1], outerMaxHours, shifts, out replacements, "FF1");
+            shifts.AddRange(x);
+            x = employeeService.GetIdealEmployee("tuesday", fly2Times[1], outerMaxHours, shifts, out replacements, "FF2");
+            shifts.AddRange(x);
+            x = employeeService.GetIdealEmployee("tuesday", horTimes[1], outerMaxHours, shifts, out replacements, "BH");
+            shifts.AddRange(x);
+            x = employeeService.GetIdealEmployee("tuesday", mindTimes[1], outerMaxHours, shifts, out replacements, "BM");
+            shifts.AddRange(x);
+            x = employeeService.GetIdealEmployee("tuesday", saTimes[1], outerMaxHours, shifts, out replacements, "SA");
             shifts.AddRange(x);
             //shifts = employeeService.GetIdealEmployee("wednesday", bee2Times[2], outerMaxHours, shifts, "BB2");
 

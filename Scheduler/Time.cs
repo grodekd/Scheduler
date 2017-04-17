@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace Scheduler
 {
@@ -139,6 +140,29 @@ namespace Scheduler
             }
 
             return hours;
+        }
+
+        public static TimeSpan GetTimeSpanFromDouble(double time)
+        {
+            string s = time.ToString("0.00", CultureInfo.InvariantCulture);
+            string[] parts = s.Split('.');
+            int hours = int.Parse(parts[0]);
+            int minutes = int.Parse(parts[1]);
+
+            switch (minutes)
+            {
+                case 25:
+                    minutes = 15;
+                    break;
+                case 50:
+                    minutes = 30;
+                    break;
+                case 75:
+                    minutes = 45;
+                    break;
+            }
+
+            return new TimeSpan(hours, minutes, 0);
         }
     }
 }
