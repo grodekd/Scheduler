@@ -253,5 +253,54 @@ namespace Scheduler
                 ageDoc
             };
         }
+
+        public bool CouldWorkTime(List<Shift> currentShifts, TimeSpan startTime, int maxHours)
+        {
+            var blocks = GetAvailableBlocks(currentShifts);
+            var currentHours = Shift.GetHoursForEmployee(currentShifts, Id);
+
+            //If they are already at the max hours for the day, return false;
+            if (currentHours >= maxHours) return false;
+
+            if (!blocks.Any(block => block.Key.CompareTo(startTime) <= 0 && block.Value.CompareTo(startTime.Add(new TimeSpan(1, 0, 0))) >= 0)) return false;
+
+            var blockStopTime = blocks.First(x => x.Key.CompareTo(startTime) <= 0 && x.Value.CompareTo(startTime) >= 0).Value;
+
+            //If a shift from the start time to the end of this availability block would put them over the max hours, return false
+            if (currentHours + Time.GetHoursAsDouble(blockStopTime.Subtract(startTime)) > maxHours) return false;
+
+            //return if they have a block of available time that this start time falls into where there is at least an hour between the start time and the end of the block.
+            return true;
+        }
+
+        public TimeSpan GetStopTime(List<Shift> currentShifts, TimeSpan startTime, int maxHours)
+        {
+            var blocks = GetAvailableBlocks(currentShifts);
+            return blocks.First(x => x.Key.CompareTo(startTime) <= 0 && x.Value.CompareTo(startTime) >= 0).Value;
+        }
+
+        private Dictionary<TimeSpan, TimeSpan> GetAvailableBlocks(List<Shift> currentShifts)
+        {
+            var availableBlocks = new Dictionary<TimeSpan, TimeSpan>();
+            var orderedShifts = currentShifts.OrderBy(x => x.StartTime).ToList();
+
+            var previousEnd = GetStart(currentShifts.First().DayOfWeek);
+            foreach (var shift in orderedShifts)
+            {
+                if (previousEnd.CompareTo(shift.StartTime) != 0)
+                {
+                    availableBlocks.Add(previousEnd, shift.StartTime);
+                }
+                previousEnd = shift.EndTime;
+            }
+
+            if (previousEnd.CompareTo(GetEnd(currentShifts.First().DayOfWeek)) != 0)
+            {
+                availableBlocks.Add(previousEnd, GetEnd(currentShifts.First().DayOfWeek));
+            }
+
+            return availableBlocks;
+        }
+
     }
 }
