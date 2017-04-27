@@ -310,7 +310,8 @@ namespace Scheduler
                             tempChildEnds.Remove(prevTime);
 
                             var id = shiftEndTime.Key;
-                            tempEmployeeShifts.Add(new Shift(id, scheduledStartTimes[id], prevTime, room, dayOfWeek));
+                            var name = string.Format("{0} {1}", GetEmployee(id).FirstName, GetEmployee(id).LastName);
+                            tempEmployeeShifts.Add(new Shift(id, name, scheduledStartTimes[id], prevTime, room, dayOfWeek));
                             scheduledHours[id] += Time.GetHoursAsDouble(prevTime.Subtract(scheduledStartTimes[id]));
                             scheduled = true;
                             break;
@@ -323,7 +324,8 @@ namespace Scheduler
                         tempChildEnds.Remove(prevTime);
 
                         var id = shiftEndTime.Key;
-                        tempEmployeeShifts.Add(new Shift(id, scheduledStartTimes[id], prevTime, room, dayOfWeek));
+                        var name = string.Format("{0} {1}", GetEmployee(id).FirstName, GetEmployee(id).LastName);
+                        tempEmployeeShifts.Add(new Shift(id, name, scheduledStartTimes[id], prevTime, room, dayOfWeek));
                         scheduledHours[id] += Time.GetHoursAsDouble(prevTime.Subtract(scheduledStartTimes[id]));
                     }
                 }
@@ -331,7 +333,8 @@ namespace Scheduler
                 foreach (var shiftEndTime in orderedShiftEndTimes)
                 {
                     var id = shiftEndTime.Key;
-                    tempEmployeeShifts.Add(new Shift(id, scheduledStartTimes[id], shiftEndTime.Value, room, dayOfWeek));
+                    var name = string.Format("{0} {1}", GetEmployee(id).FirstName, GetEmployee(id).LastName);
+                    tempEmployeeShifts.Add(new Shift(id, name, scheduledStartTimes[id], shiftEndTime.Value, room, dayOfWeek));
                     scheduledHours[id] += Time.GetHoursAsDouble(shiftEndTime.Value.Subtract(scheduledStartTimes[id]));
                 }
                 var newStartTimes = new List<TimeSpan>();
@@ -380,7 +383,7 @@ namespace Scheduler
             if (orderedEmployees.Any())
             {
                 var replacement = orderedEmployees.First();
-                var newShift = new Shift(replacement.Id, shift.StartTime, shift.EndTime, shift.RoomCode, dayOfWeek);
+                var newShift = new Shift(replacement.Id, string.Format("{0} {1}", replacement.FirstName, replacement.LastName), shift.StartTime, shift.EndTime, shift.RoomCode, dayOfWeek);
                 currentShifts.Remove(shift);
                 currentShifts.Add(newShift);
 
@@ -428,7 +431,9 @@ namespace Scheduler
 
         public DataTable GetEmployeeDataTable()
         {
+            //Todo - Remove ID column when done with id in table
             var table = new DataTable();
+            table.Columns.Add("ID", typeof(int));
             table.Columns.Add("First Name", typeof(string));
             table.Columns.Add("Last Name", typeof(string));
             table.Columns.Add("Max Hours", typeof(int));
@@ -441,7 +446,7 @@ namespace Scheduler
 
             foreach (var employee in employees)
             {
-                table.Rows.Add(employee.FirstName, employee.LastName, employee.MaxHours, employee.GetRoomsString(), 
+                table.Rows.Add(employee.Id, employee.FirstName, employee.LastName, employee.MaxHours, employee.GetRoomsString(), 
                     Time.GetTimeString(employee.MonStart, employee.MonEnd),
                     Time.GetTimeString(employee.TuesStart, employee.TuesEnd),
                     Time.GetTimeString(employee.WedStart, employee.WedEnd),

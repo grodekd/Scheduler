@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
 
@@ -19,7 +20,9 @@ namespace Scheduler
             else
             {
                 this.dataGridView1.DataSource = table;
-                this.dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                //Todo - Change back to 3 and 1 when done with id in table
+                this.dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                this.dataGridView1.Sort(this.dataGridView1.Columns[2], ListSortDirection.Ascending);
             }
         }
 
@@ -32,8 +35,9 @@ namespace Scheduler
 
             return new List<String>
             {
-                row.Cells[0].Value.ToString(),
-                row.Cells[1].Value.ToString()
+                //Todo - Change back to 0 and 1 when done with id in table
+                row.Cells[1].Value.ToString(),
+                row.Cells[2].Value.ToString()
             };
         }
 
