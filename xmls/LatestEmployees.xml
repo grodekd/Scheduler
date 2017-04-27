@@ -12,9 +12,9 @@
       <EndMin>0</EndMin>
     </Monday>
     <Tuesday>
-      <StartHour>15</StartHour>
-      <StartMin>30</StartMin>
-      <EndHour>18</EndHour>
+      <StartHour>0</StartHour>
+      <StartMin>0</StartMin>
+      <EndHour>0</EndHour>
       <EndMin>0</EndMin>
     </Tuesday>
     <Wednesday>
@@ -24,9 +24,9 @@
       <EndMin>0</EndMin>
     </Wednesday>
     <Thursday>
-      <StartHour>15</StartHour>
-      <StartMin>30</StartMin>
-      <EndHour>18</EndHour>
+      <StartHour>0</StartHour>
+      <StartMin>0</StartMin>
+      <EndHour>0</EndHour>
       <EndMin>0</EndMin>
     </Thursday>
     <Friday>
@@ -722,38 +722,38 @@
   </Employee>
   <Employee>
     <ID>11</ID>
-    <FirstName>Nicole</FirstName>
-    <LastName>Domnitz</LastName>
-    <MaxHours>13.5</MaxHours>
+    <FirstName>Katie</FirstName>
+    <LastName>Gebert</LastName>
+    <MaxHours>40</MaxHours>
     <Monday>
-      <StartHour>8</StartHour>
+      <StartHour>6</StartHour>
       <StartMin>0</StartMin>
-      <EndHour>12</EndHour>
-      <EndMin>30</EndMin>
+      <EndHour>18</EndHour>
+      <EndMin>0</EndMin>
     </Monday>
     <Tuesday>
-      <StartHour>8</StartHour>
+      <StartHour>6</StartHour>
       <StartMin>0</StartMin>
-      <EndHour>12</EndHour>
-      <EndMin>30</EndMin>
+      <EndHour>18</EndHour>
+      <EndMin>0</EndMin>
     </Tuesday>
     <Wednesday>
-      <StartHour>8</StartHour>
+      <StartHour>6</StartHour>
       <StartMin>0</StartMin>
-      <EndHour>12</EndHour>
-      <EndMin>30</EndMin>
+      <EndHour>18</EndHour>
+      <EndMin>0</EndMin>
     </Wednesday>
     <Thursday>
-      <StartHour>8</StartHour>
+      <StartHour>6</StartHour>
       <StartMin>0</StartMin>
-      <EndHour>12</EndHour>
-      <EndMin>30</EndMin>
+      <EndHour>18</EndHour>
+      <EndMin>0</EndMin>
     </Thursday>
     <Friday>
-      <StartHour>8</StartHour>
+      <StartHour>6</StartHour>
       <StartMin>0</StartMin>
-      <EndHour>12</EndHour>
-      <EndMin>30</EndMin>
+      <EndHour>18</EndHour>
+      <EndMin>0</EndMin>
     </Friday>
     <LL>
       <Works>no</Works>
@@ -764,12 +764,12 @@
       <Priority>0</Priority>
     </TT>
     <BB1>
-      <Works>no</Works>
-      <Priority>0</Priority>
+      <Works>yes</Works>
+      <Priority>2</Priority>
     </BB1>
     <BB2>
-      <Works>no</Works>
-      <Priority>0</Priority>
+      <Works>yes</Works>
+      <Priority>1</Priority>
     </BB2>
     <FF1>
       <Works>no</Works>
@@ -781,15 +781,15 @@
     </FF2>
     <BH>
       <Works>yes</Works>
-      <Priority>1</Priority>
+      <Priority>4</Priority>
     </BH>
     <BM>
       <Works>yes</Works>
-      <Priority>2</Priority>
+      <Priority>3</Priority>
     </BM>
     <SA>
-      <Works>yes</Works>
-      <Priority>3</Priority>
+      <Works>no</Works>
+      <Priority>0</Priority>
     </SA>
   </Employee>
   <Employee>
@@ -938,37 +938,37 @@
   </Employee>
   <Employee>
     <ID>14</ID>
-    <FirstName>Jenny</FirstName>
-    <LastName>Hostettler</LastName>
-    <MaxHours>19</MaxHours>
+    <FirstName>Monica</FirstName>
+    <LastName>Pirc</LastName>
+    <MaxHours>30</MaxHours>
     <Monday>
       <StartHour>8</StartHour>
       <StartMin>0</StartMin>
-      <EndHour>15</EndHour>
+      <EndHour>18</EndHour>
       <EndMin>0</EndMin>
     </Monday>
     <Tuesday>
       <StartHour>8</StartHour>
       <StartMin>0</StartMin>
-      <EndHour>12</EndHour>
+      <EndHour>18</EndHour>
       <EndMin>0</EndMin>
     </Tuesday>
     <Wednesday>
       <StartHour>8</StartHour>
       <StartMin>0</StartMin>
-      <EndHour>12</EndHour>
+      <EndHour>18</EndHour>
       <EndMin>0</EndMin>
     </Wednesday>
     <Thursday>
-      <StartHour>0</StartHour>
+      <StartHour>8</StartHour>
       <StartMin>0</StartMin>
-      <EndHour>0</EndHour>
+      <EndHour>18</EndHour>
       <EndMin>0</EndMin>
     </Thursday>
     <Friday>
-      <StartHour>13</StartHour>
+      <StartHour>8</StartHour>
       <StartMin>0</StartMin>
-      <EndHour>17</EndHour>
+      <EndHour>18</EndHour>
       <EndMin>0</EndMin>
     </Friday>
     <LL>
@@ -976,32 +976,32 @@
       <Priority>0</Priority>
     </LL>
     <TT>
-      <Works>no</Works>
-      <Priority>0</Priority>
+      <Works>yes</Works>
+      <Priority>3</Priority>
     </TT>
     <BB1>
-      <Works>no</Works>
-      <Priority>0</Priority>
+      <Works>yes</Works>
+      <Priority>6</Priority>
     </BB1>
     <BB2>
-      <Works>no</Works>
-      <Priority>0</Priority>
+      <Works>yes</Works>
+      <Priority>7</Priority>
     </BB2>
     <FF1>
-      <Works>no</Works>
-      <Priority>0</Priority>
+      <Works>yes</Works>
+      <Priority>4</Priority>
     </FF1>
     <FF2>
-      <Works>no</Works>
-      <Priority>0</Priority>
+      <Works>yes</Works>
+      <Priority>5</Priority>
     </FF2>
     <BH>
-      <Works>no</Works>
-      <Priority>0</Priority>
+      <Works>yes</Works>
+      <Priority>2</Priority>
     </BH>
     <BM>
-      <Works>no</Works>
-      <Priority>0</Priority>
+      <Works>yes</Works>
+      <Priority>1</Priority>
     </BM>
     <SA>
       <Works>no</Works>
@@ -1158,9 +1158,9 @@
     <LastName>Kitrow</LastName>
     <MaxHours>40</MaxHours>
     <Monday>
-      <StartHour>0</StartHour>
+      <StartHour>6</StartHour>
       <StartMin>0</StartMin>
-      <EndHour>0</EndHour>
+      <EndHour>18</EndHour>
       <EndMin>0</EndMin>
     </Monday>
     <Tuesday>
@@ -1170,21 +1170,21 @@
       <EndMin>0</EndMin>
     </Tuesday>
     <Wednesday>
-      <StartHour>0</StartHour>
+      <StartHour>6</StartHour>
       <StartMin>0</StartMin>
-      <EndHour>0</EndHour>
+      <EndHour>18</EndHour>
       <EndMin>0</EndMin>
     </Wednesday>
     <Thursday>
-      <StartHour>0</StartHour>
+      <StartHour>6</StartHour>
       <StartMin>0</StartMin>
-      <EndHour>0</EndHour>
+      <EndHour>18</EndHour>
       <EndMin>0</EndMin>
     </Thursday>
     <Friday>
-      <StartHour>0</StartHour>
+      <StartHour>6</StartHour>
       <StartMin>0</StartMin>
-      <EndHour>0</EndHour>
+      <EndHour>18</EndHour>
       <EndMin>0</EndMin>
     </Friday>
     <LL>
@@ -1446,33 +1446,33 @@
     <LastName>Landvatter</LastName>
     <MaxHours>28</MaxHours>
     <Monday>
-      <StartHour>0</StartHour>
+      <StartHour>6</StartHour>
       <StartMin>0</StartMin>
-      <EndHour>0</EndHour>
+      <EndHour>12</EndHour>
       <EndMin>0</EndMin>
     </Monday>
     <Tuesday>
-      <StartHour>11</StartHour>
-      <StartMin>30</StartMin>
+      <StartHour>12</StartHour>
+      <StartMin>0</StartMin>
       <EndHour>18</EndHour>
       <EndMin>0</EndMin>
     </Tuesday>
     <Wednesday>
-      <StartHour>11</StartHour>
-      <StartMin>30</StartMin>
-      <EndHour>18</EndHour>
+      <StartHour>6</StartHour>
+      <StartMin>0</StartMin>
+      <EndHour>12</EndHour>
       <EndMin>0</EndMin>
     </Wednesday>
     <Thursday>
-      <StartHour>11</StartHour>
-      <StartMin>30</StartMin>
-      <EndHour>18</EndHour>
+      <StartHour>0</StartHour>
+      <StartMin>0</StartMin>
+      <EndHour>0</EndHour>
       <EndMin>0</EndMin>
     </Thursday>
     <Friday>
-      <StartHour>10</StartHour>
-      <StartMin>30</StartMin>
-      <EndHour>18</EndHour>
+      <StartHour>6</StartHour>
+      <StartMin>0</StartMin>
+      <EndHour>12</EndHour>
       <EndMin>0</EndMin>
     </Friday>
     <LL>
@@ -1658,37 +1658,37 @@
   </Employee>
   <Employee>
     <ID>24</ID>
-    <FirstName>Marianne</FirstName>
+    <FirstName>Rebecca</FirstName>
     <LastName>Loescher</LastName>
-    <MaxHours>40</MaxHours>
+    <MaxHours>5</MaxHours>
     <Monday>
-      <StartHour>6</StartHour>
-      <StartMin>0</StartMin>
-      <EndHour>17</EndHour>
+      <StartHour>15</StartHour>
+      <StartMin>30</StartMin>
+      <EndHour>18</EndHour>
       <EndMin>0</EndMin>
     </Monday>
     <Tuesday>
-      <StartHour>6</StartHour>
-      <StartMin>0</StartMin>
-      <EndHour>17</EndHour>
+      <StartHour>15</StartHour>
+      <StartMin>30</StartMin>
+      <EndHour>18</EndHour>
       <EndMin>0</EndMin>
     </Tuesday>
     <Wednesday>
-      <StartHour>6</StartHour>
-      <StartMin>0</StartMin>
-      <EndHour>17</EndHour>
+      <StartHour>15</StartHour>
+      <StartMin>30</StartMin>
+      <EndHour>18</EndHour>
       <EndMin>0</EndMin>
     </Wednesday>
     <Thursday>
-      <StartHour>6</StartHour>
-      <StartMin>0</StartMin>
-      <EndHour>17</EndHour>
+      <StartHour>15</StartHour>
+      <StartMin>30</StartMin>
+      <EndHour>18</EndHour>
       <EndMin>0</EndMin>
     </Thursday>
     <Friday>
-      <StartHour>6</StartHour>
-      <StartMin>0</StartMin>
-      <EndHour>17</EndHour>
+      <StartHour>15</StartHour>
+      <StartMin>30</StartMin>
+      <EndHour>18</EndHour>
       <EndMin>0</EndMin>
     </Friday>
     <LL>
@@ -1701,19 +1701,19 @@
     </TT>
     <BB1>
       <Works>yes</Works>
-      <Priority>1</Priority>
+      <Priority>2</Priority>
     </BB1>
     <BB2>
-      <Works>no</Works>
-      <Priority>0</Priority>
+      <Works>yes</Works>
+      <Priority>1</Priority>
     </BB2>
     <FF1>
       <Works>no</Works>
       <Priority>0</Priority>
     </FF1>
     <FF2>
-      <Works>no</Works>
-      <Priority>0</Priority>
+      <Works>yes</Works>
+      <Priority>3</Priority>
     </FF2>
     <BH>
       <Works>no</Works>
@@ -1730,9 +1730,9 @@
   </Employee>
   <Employee>
     <ID>25</ID>
-    <FirstName>Anna</FirstName>
-    <LastName>Otto</LastName>
-    <MaxHours>14.25</MaxHours>
+    <FirstName>Meagan</FirstName>
+    <LastName>Norton</LastName>
+    <MaxHours>12</MaxHours>
     <Monday>
       <StartHour>6</StartHour>
       <StartMin>30</StartMin>
@@ -1740,10 +1740,10 @@
       <EndMin>45</EndMin>
     </Monday>
     <Tuesday>
-      <StartHour>0</StartHour>
-      <StartMin>0</StartMin>
-      <EndHour>0</EndHour>
-      <EndMin>0</EndMin>
+      <StartHour>6</StartHour>
+      <StartMin>30</StartMin>
+      <EndHour>11</EndHour>
+      <EndMin>45</EndMin>
     </Tuesday>
     <Wednesday>
       <StartHour>0</StartHour>
@@ -1752,40 +1752,40 @@
       <EndMin>0</EndMin>
     </Wednesday>
     <Thursday>
+      <StartHour>6</StartHour>
+      <StartMin>30</StartMin>
+      <EndHour>11</EndHour>
+      <EndMin>45</EndMin>
+    </Thursday>
+    <Friday>
       <StartHour>0</StartHour>
       <StartMin>0</StartMin>
       <EndHour>0</EndHour>
       <EndMin>0</EndMin>
-    </Thursday>
-    <Friday>
-      <StartHour>6</StartHour>
-      <StartMin>0</StartMin>
-      <EndHour>18</EndHour>
-      <EndMin>0</EndMin>
     </Friday>
     <LL>
-      <Works>yes</Works>
-      <Priority>1</Priority>
+      <Works>no</Works>
+      <Priority>0</Priority>
     </LL>
     <TT>
-      <Works>yes</Works>
-      <Priority>2</Priority>
+      <Works>no</Works>
+      <Priority>0</Priority>
     </TT>
     <BB1>
       <Works>no</Works>
       <Priority>0</Priority>
     </BB1>
     <BB2>
-      <Works>no</Works>
-      <Priority>0</Priority>
+      <Works>yes</Works>
+      <Priority>1</Priority>
     </BB2>
     <FF1>
       <Works>no</Works>
       <Priority>0</Priority>
     </FF1>
     <FF2>
-      <Works>no</Works>
-      <Priority>0</Priority>
+      <Works>yes</Works>
+      <Priority>2</Priority>
     </FF2>
     <BH>
       <Works>no</Works>
@@ -1804,7 +1804,7 @@
     <ID>26</ID>
     <FirstName>Monica</FirstName>
     <LastName>Quinnette</LastName>
-    <MaxHours>10.5</MaxHours>
+    <MaxHours>7</MaxHours>
     <Monday>
       <StartHour>0</StartHour>
       <StartMin>0</StartMin>
@@ -1812,20 +1812,20 @@
       <EndMin>0</EndMin>
     </Monday>
     <Tuesday>
-      <StartHour>14</StartHour>
-      <StartMin>30</StartMin>
+      <StartHour>12</StartHour>
+      <StartMin>0</StartMin>
       <EndHour>18</EndHour>
       <EndMin>0</EndMin>
     </Tuesday>
     <Wednesday>
-      <StartHour>14</StartHour>
-      <StartMin>30</StartMin>
-      <EndHour>18</EndHour>
+      <StartHour>0</StartHour>
+      <StartMin>0</StartMin>
+      <EndHour>0</EndHour>
       <EndMin>0</EndMin>
     </Wednesday>
     <Thursday>
-      <StartHour>14</StartHour>
-      <StartMin>30</StartMin>
+      <StartHour>12</StartHour>
+      <StartMin>0</StartMin>
       <EndHour>18</EndHour>
       <EndMin>0</EndMin>
     </Thursday>
@@ -2092,7 +2092,7 @@
     <ID>30</ID>
     <FirstName>Kaitlyn</FirstName>
     <LastName>Scherf</LastName>
-    <MaxHours>7.5</MaxHours>
+    <MaxHours>0</MaxHours>
     <Monday>
       <StartHour>0</StartHour>
       <StartMin>0</StartMin>
@@ -2100,21 +2100,21 @@
       <EndMin>0</EndMin>
     </Monday>
     <Tuesday>
-      <StartHour>15</StartHour>
-      <StartMin>30</StartMin>
-      <EndHour>18</EndHour>
+      <StartHour>0</StartHour>
+      <StartMin>0</StartMin>
+      <EndHour>0</EndHour>
       <EndMin>0</EndMin>
     </Tuesday>
     <Wednesday>
-      <StartHour>15</StartHour>
-      <StartMin>30</StartMin>
-      <EndHour>18</EndHour>
+      <StartHour>0</StartHour>
+      <StartMin>0</StartMin>
+      <EndHour>0</EndHour>
       <EndMin>0</EndMin>
     </Wednesday>
     <Thursday>
-      <StartHour>15</StartHour>
-      <StartMin>30</StartMin>
-      <EndHour>18</EndHour>
+      <StartHour>0</StartHour>
+      <StartMin>0</StartMin>
+      <EndHour>0</EndHour>
       <EndMin>0</EndMin>
     </Thursday>
     <Friday>
@@ -2246,19 +2246,19 @@
     <Tuesday>
       <StartHour>6</StartHour>
       <StartMin>0</StartMin>
-      <EndHour>15</EndHour>
+      <EndHour>17</EndHour>
       <EndMin>0</EndMin>
     </Tuesday>
     <Wednesday>
-      <StartHour>6</StartHour>
-      <StartMin>0</StartMin>
-      <EndHour>15</EndHour>
-      <EndMin>0</EndMin>
-    </Wednesday>
-    <Thursday>
       <StartHour>0</StartHour>
       <StartMin>0</StartMin>
       <EndHour>0</EndHour>
+      <EndMin>0</EndMin>
+    </Wednesday>
+    <Thursday>
+      <StartHour>6</StartHour>
+      <StartMin>0</StartMin>
+      <EndHour>17</EndHour>
       <EndMin>0</EndMin>
     </Thursday>
     <Friday>
@@ -2308,36 +2308,36 @@
     <ID>33</ID>
     <FirstName>Valerie</FirstName>
     <LastName>Schmidt</LastName>
-    <MaxHours>21</MaxHours>
+    <MaxHours>32</MaxHours>
     <Monday>
       <StartHour>8</StartHour>
-      <StartMin>0</StartMin>
+      <StartMin>15</StartMin>
       <EndHour>15</EndHour>
-      <EndMin>0</EndMin>
+      <EndMin>15</EndMin>
     </Monday>
     <Tuesday>
       <StartHour>8</StartHour>
-      <StartMin>0</StartMin>
+      <StartMin>15</StartMin>
       <EndHour>15</EndHour>
-      <EndMin>0</EndMin>
+      <EndMin>15</EndMin>
     </Tuesday>
     <Wednesday>
-      <StartHour>8</StartHour>
+      <StartHour>0</StartHour>
       <StartMin>0</StartMin>
-      <EndHour>15</EndHour>
+      <EndHour>0</EndHour>
       <EndMin>0</EndMin>
     </Wednesday>
     <Thursday>
       <StartHour>8</StartHour>
-      <StartMin>0</StartMin>
+      <StartMin>15</StartMin>
       <EndHour>15</EndHour>
-      <EndMin>0</EndMin>
+      <EndMin>15</EndMin>
     </Thursday>
     <Friday>
       <StartHour>8</StartHour>
-      <StartMin>0</StartMin>
+      <StartMin>15</StartMin>
       <EndHour>15</EndHour>
-      <EndMin>0</EndMin>
+      <EndMin>15</EndMin>
     </Friday>
     <LL>
       <Works>no</Works>
@@ -2740,7 +2740,7 @@
     <ID>39</ID>
     <FirstName>Mikaela</FirstName>
     <LastName>Wittnebel</LastName>
-    <MaxHours>5.5</MaxHours>
+    <MaxHours>12</MaxHours>
     <Monday>
       <StartHour>0</StartHour>
       <StartMin>0</StartMin>
@@ -2754,10 +2754,10 @@
       <EndMin>0</EndMin>
     </Tuesday>
     <Wednesday>
-      <StartHour>0</StartHour>
+      <StartHour>6</StartHour>
       <StartMin>0</StartMin>
-      <EndHour>0</EndHour>
-      <EndMin>0</EndMin>
+      <EndHour>13</EndHour>
+      <EndMin>30</EndMin>
     </Wednesday>
     <Thursday>
       <StartHour>0</StartHour>
@@ -2814,10 +2814,10 @@
     <LastName>Zak</LastName>
     <MaxHours>24</MaxHours>
     <Monday>
-      <StartHour>0</StartHour>
-      <StartMin>0</StartMin>
-      <EndHour>0</EndHour>
-      <EndMin>0</EndMin>
+      <StartHour>8</StartHour>
+      <StartMin>30</StartMin>
+      <EndHour>16</EndHour>
+      <EndMin>30</EndMin>
     </Monday>
     <Tuesday>
       <StartHour>8</StartHour>
@@ -2826,10 +2826,10 @@
       <EndMin>30</EndMin>
     </Tuesday>
     <Wednesday>
-      <StartHour>0</StartHour>
-      <StartMin>0</StartMin>
-      <EndHour>0</EndHour>
-      <EndMin>0</EndMin>
+      <StartHour>8</StartHour>
+      <StartMin>30</StartMin>
+      <EndHour>16</EndHour>
+      <EndMin>30</EndMin>
     </Wednesday>
     <Thursday>
       <StartHour>8</StartHour>
@@ -3022,6 +3022,150 @@
     <SA>
       <Works>yes</Works>
       <Priority>1</Priority>
+    </SA>
+  </Employee>
+  <Employee>
+    <ID>43</ID>
+    <FirstName>Marianne</FirstName>
+    <LastName>Beyersdorf</LastName>
+    <MaxHours>20</MaxHours>
+    <Monday>
+      <StartHour>0</StartHour>
+      <StartMin>0</StartMin>
+      <EndHour>0</EndHour>
+      <EndMin>0</EndMin>
+    </Monday>
+    <Tuesday>
+      <StartHour>0</StartHour>
+      <StartMin>0</StartMin>
+      <EndHour>0</EndHour>
+      <EndMin>0</EndMin>
+    </Tuesday>
+    <Wednesday>
+      <StartHour>0</StartHour>
+      <StartMin>0</StartMin>
+      <EndHour>0</EndHour>
+      <EndMin>0</EndMin>
+    </Wednesday>
+    <Thursday>
+      <StartHour>6</StartHour>
+      <StartMin>0</StartMin>
+      <EndHour>18</EndHour>
+      <EndMin>0</EndMin>
+    </Thursday>
+    <Friday>
+      <StartHour>6</StartHour>
+      <StartMin>0</StartMin>
+      <EndHour>18</EndHour>
+      <EndMin>0</EndMin>
+    </Friday>
+    <LL>
+      <Works>no</Works>
+      <Priority>0</Priority>
+    </LL>
+    <TT>
+      <Works>yes</Works>
+      <Priority>3</Priority>
+    </TT>
+    <BB1>
+      <Works>yes</Works>
+      <Priority>1</Priority>
+    </BB1>
+    <BB2>
+      <Works>yes</Works>
+      <Priority>2</Priority>
+    </BB2>
+    <FF1>
+      <Works>no</Works>
+      <Priority>0</Priority>
+    </FF1>
+    <FF2>
+      <Works>no</Works>
+      <Priority>0</Priority>
+    </FF2>
+    <BH>
+      <Works>no</Works>
+      <Priority>0</Priority>
+    </BH>
+    <BM>
+      <Works>no</Works>
+      <Priority>0</Priority>
+    </BM>
+    <SA>
+      <Works>no</Works>
+      <Priority>0</Priority>
+    </SA>
+  </Employee>
+  <Employee>
+    <ID>44</ID>
+    <FirstName>Katie</FirstName>
+    <LastName>Wilhelm</LastName>
+    <MaxHours>40</MaxHours>
+    <Monday>
+      <StartHour>6</StartHour>
+      <StartMin>0</StartMin>
+      <EndHour>18</EndHour>
+      <EndMin>0</EndMin>
+    </Monday>
+    <Tuesday>
+      <StartHour>6</StartHour>
+      <StartMin>0</StartMin>
+      <EndHour>18</EndHour>
+      <EndMin>0</EndMin>
+    </Tuesday>
+    <Wednesday>
+      <StartHour>6</StartHour>
+      <StartMin>0</StartMin>
+      <EndHour>18</EndHour>
+      <EndMin>0</EndMin>
+    </Wednesday>
+    <Thursday>
+      <StartHour>6</StartHour>
+      <StartMin>0</StartMin>
+      <EndHour>18</EndHour>
+      <EndMin>0</EndMin>
+    </Thursday>
+    <Friday>
+      <StartHour>6</StartHour>
+      <StartMin>0</StartMin>
+      <EndHour>18</EndHour>
+      <EndMin>0</EndMin>
+    </Friday>
+    <LL>
+      <Works>no</Works>
+      <Priority>0</Priority>
+    </LL>
+    <TT>
+      <Works>no</Works>
+      <Priority>0</Priority>
+    </TT>
+    <BB1>
+      <Works>yes</Works>
+      <Priority>6</Priority>
+    </BB1>
+    <BB2>
+      <Works>yes</Works>
+      <Priority>5</Priority>
+    </BB2>
+    <FF1>
+      <Works>yes</Works>
+      <Priority>2</Priority>
+    </FF1>
+    <FF2>
+      <Works>yes</Works>
+      <Priority>1</Priority>
+    </FF2>
+    <BH>
+      <Works>yes</Works>
+      <Priority>4</Priority>
+    </BH>
+    <BM>
+      <Works>yes</Works>
+      <Priority>3</Priority>
+    </BM>
+    <SA>
+      <Works>no</Works>
+      <Priority>0</Priority>
     </SA>
   </Employee>
 </Employees>

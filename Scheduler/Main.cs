@@ -31,7 +31,7 @@ namespace Scheduler
             this.FormClosing += MainFormClosing;
 
             string x;
-            employeeService.Import(out x, "C:\\Git\\Scheduler\\xmls\\testexport.xml");
+            employeeService.Import(out x, "C:\\Git\\Scheduler\\xmls\\LatestEmployees.xml");
             childService.Import(out x, "C:\\Git\\Scheduler\\xmls\\Daily Schedule for Child care 6.xml");
         }
 

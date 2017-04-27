@@ -6,9 +6,10 @@ namespace Scheduler
 {
     public class Shift
     {
-        public Shift(int employeeId, TimeSpan startTime, TimeSpan endTime, string roomCode, string dow)
+        public Shift(int employeeId, string employeeName, TimeSpan startTime, TimeSpan endTime, string roomCode, string dow)
         {
             this.EmployeeId = employeeId;
+            this.EmployeeName = employeeName;
             this.StartTime = startTime;
             this.EndTime = endTime;
             this.RoomCode = roomCode;
@@ -16,6 +17,8 @@ namespace Scheduler
         }
 
         public int EmployeeId { get; private set; }
+
+        public string EmployeeName { get; private set; }
 
         public TimeSpan StartTime { get; private set; }
 
