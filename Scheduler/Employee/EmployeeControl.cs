@@ -20,9 +20,9 @@ namespace Scheduler
             else
             {
                 this.dataGridView1.DataSource = table;
-                //Todo - Change back to 3 and 1 when done with id in table
-                this.dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                this.dataGridView1.Sort(this.dataGridView1.Columns[2], ListSortDirection.Ascending);
+                //Todo - Change to 4 and 2 for id in table
+                this.dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                this.dataGridView1.Sort(this.dataGridView1.Columns[1], ListSortDirection.Ascending);
             }
         }
 
@@ -35,9 +35,9 @@ namespace Scheduler
 
             return new List<String>
             {
-                //Todo - Change back to 0 and 1 when done with id in table
-                row.Cells[1].Value.ToString(),
-                row.Cells[2].Value.ToString()
+                //Todo - Change to 1 and 2 for id in table
+                row.Cells[0].Value.ToString(),
+                row.Cells[1].Value.ToString()
             };
         }
 
