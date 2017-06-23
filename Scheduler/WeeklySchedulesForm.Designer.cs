@@ -189,55 +189,55 @@
             this.mondayTextBox.Name = "mondayTextBox";
             this.mondayTextBox.ReadOnly = true;
             this.mondayTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.mondayTextBox.Size = new System.Drawing.Size(218, 387);
+            this.mondayTextBox.Size = new System.Drawing.Size(235, 387);
             this.mondayTextBox.TabIndex = 6;
             this.mondayTextBox.Text = "No Employee Shifts";
             // 
             // tuesdayTextBox
             // 
-            this.tuesdayTextBox.Location = new System.Drawing.Point(325, 138);
+            this.tuesdayTextBox.Location = new System.Drawing.Point(321, 138);
             this.tuesdayTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.tuesdayTextBox.Multiline = true;
             this.tuesdayTextBox.Name = "tuesdayTextBox";
             this.tuesdayTextBox.ReadOnly = true;
             this.tuesdayTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tuesdayTextBox.Size = new System.Drawing.Size(218, 387);
+            this.tuesdayTextBox.Size = new System.Drawing.Size(235, 387);
             this.tuesdayTextBox.TabIndex = 7;
             this.tuesdayTextBox.Text = "No Employee Shifts";
             // 
             // wednesdayTextBox
             // 
-            this.wednesdayTextBox.Location = new System.Drawing.Point(586, 138);
+            this.wednesdayTextBox.Location = new System.Drawing.Point(579, 138);
             this.wednesdayTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.wednesdayTextBox.Multiline = true;
             this.wednesdayTextBox.Name = "wednesdayTextBox";
             this.wednesdayTextBox.ReadOnly = true;
             this.wednesdayTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.wednesdayTextBox.Size = new System.Drawing.Size(218, 387);
+            this.wednesdayTextBox.Size = new System.Drawing.Size(235, 387);
             this.wednesdayTextBox.TabIndex = 8;
             this.wednesdayTextBox.Text = "No Employee Shifts";
             // 
             // thursdayTextBox
             // 
-            this.thursdayTextBox.Location = new System.Drawing.Point(848, 138);
+            this.thursdayTextBox.Location = new System.Drawing.Point(835, 138);
             this.thursdayTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.thursdayTextBox.Multiline = true;
             this.thursdayTextBox.Name = "thursdayTextBox";
             this.thursdayTextBox.ReadOnly = true;
             this.thursdayTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.thursdayTextBox.Size = new System.Drawing.Size(218, 387);
+            this.thursdayTextBox.Size = new System.Drawing.Size(235, 387);
             this.thursdayTextBox.TabIndex = 9;
             this.thursdayTextBox.Text = "No Employee Shifts";
             // 
             // fridayTextBox
             // 
-            this.fridayTextBox.Location = new System.Drawing.Point(1109, 138);
+            this.fridayTextBox.Location = new System.Drawing.Point(1092, 138);
             this.fridayTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.fridayTextBox.Multiline = true;
             this.fridayTextBox.Name = "fridayTextBox";
             this.fridayTextBox.ReadOnly = true;
             this.fridayTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.fridayTextBox.Size = new System.Drawing.Size(218, 387);
+            this.fridayTextBox.Size = new System.Drawing.Size(235, 387);
             this.fridayTextBox.TabIndex = 10;
             this.fridayTextBox.Text = "No Employee Shifts";
             // 
@@ -245,7 +245,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(143, 111);
+            this.label2.Location = new System.Drawing.Point(152, 111);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 17);
@@ -256,7 +256,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(402, 111);
+            this.label3.Location = new System.Drawing.Point(407, 111);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 17);
@@ -278,7 +278,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(923, 111);
+            this.label5.Location = new System.Drawing.Point(913, 111);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 17);
@@ -289,7 +289,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1194, 111);
+            this.label6.Location = new System.Drawing.Point(1180, 111);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 17);

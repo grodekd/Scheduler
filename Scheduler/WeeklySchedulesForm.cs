@@ -19,59 +19,59 @@ namespace Scheduler
         {
             InitializeComponent();
 
-            employeeShifts["LL"]["monday"].ForEach(x => lambShifts["monday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["LL"]["tuesday"].ForEach(x => lambShifts["tuesday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["LL"]["wednesday"].ForEach(x => lambShifts["wednesday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["LL"]["thursday"].ForEach(x => lambShifts["thursday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["LL"]["friday"].ForEach(x => lambShifts["friday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
+            employeeShifts["LL"]["monday"].ForEach(x => lambShifts["monday"] += StyleShiftTime(x));
+            employeeShifts["LL"]["tuesday"].ForEach(x => lambShifts["tuesday"] += StyleShiftTime(x));
+            employeeShifts["LL"]["wednesday"].ForEach(x => lambShifts["wednesday"] += StyleShiftTime(x));
+            employeeShifts["LL"]["thursday"].ForEach(x => lambShifts["thursday"] += StyleShiftTime(x));
+            employeeShifts["LL"]["friday"].ForEach(x => lambShifts["friday"] += StyleShiftTime(x));
 
-            employeeShifts["TT"]["monday"].ForEach(x => turtleShifts["monday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["TT"]["tuesday"].ForEach(x => turtleShifts["tuesday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["TT"]["wednesday"].ForEach(x => turtleShifts["wednesday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["TT"]["thursday"].ForEach(x => turtleShifts["thursday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["TT"]["friday"].ForEach(x => turtleShifts["friday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
+            employeeShifts["TT"]["monday"].ForEach(x => turtleShifts["monday"] += StyleShiftTime(x));
+            employeeShifts["TT"]["tuesday"].ForEach(x => turtleShifts["tuesday"] += StyleShiftTime(x));
+            employeeShifts["TT"]["wednesday"].ForEach(x => turtleShifts["wednesday"] += StyleShiftTime(x));
+            employeeShifts["TT"]["thursday"].ForEach(x => turtleShifts["thursday"] += StyleShiftTime(x));
+            employeeShifts["TT"]["friday"].ForEach(x => turtleShifts["friday"] += StyleShiftTime(x));
 
-            employeeShifts["BB1"]["monday"].ForEach(x => bee1Shifts["monday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["BB1"]["tuesday"].ForEach(x => bee1Shifts["tuesday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["BB1"]["wednesday"].ForEach(x => bee1Shifts["wednesday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["BB1"]["thursday"].ForEach(x => bee1Shifts["thursday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["BB1"]["friday"].ForEach(x => bee1Shifts["friday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
+            employeeShifts["BB1"]["monday"].ForEach(x => bee1Shifts["monday"] += StyleShiftTime(x));
+            employeeShifts["BB1"]["tuesday"].ForEach(x => bee1Shifts["tuesday"] += StyleShiftTime(x));
+            employeeShifts["BB1"]["wednesday"].ForEach(x => bee1Shifts["wednesday"] += StyleShiftTime(x));
+            employeeShifts["BB1"]["thursday"].ForEach(x => bee1Shifts["thursday"] += StyleShiftTime(x));
+            employeeShifts["BB1"]["friday"].ForEach(x => bee1Shifts["friday"] += StyleShiftTime(x));
 
-            employeeShifts["BB2"]["monday"].ForEach(x => bee2Shifts["monday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["BB2"]["tuesday"].ForEach(x => bee2Shifts["tuesday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["BB2"]["wednesday"].ForEach(x => bee2Shifts["wednesday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["BB2"]["thursday"].ForEach(x => bee2Shifts["thursday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["BB2"]["friday"].ForEach(x => bee2Shifts["friday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
+            employeeShifts["BB2"]["monday"].ForEach(x => bee2Shifts["monday"] += StyleShiftTime(x));
+            employeeShifts["BB2"]["tuesday"].ForEach(x => bee2Shifts["tuesday"] += StyleShiftTime(x));
+            employeeShifts["BB2"]["wednesday"].ForEach(x => bee2Shifts["wednesday"] += StyleShiftTime(x));
+            employeeShifts["BB2"]["thursday"].ForEach(x => bee2Shifts["thursday"] += StyleShiftTime(x));
+            employeeShifts["BB2"]["friday"].ForEach(x => bee2Shifts["friday"] += StyleShiftTime(x));
 
-            employeeShifts["FF1"]["monday"].ForEach(x => fly1Shifts["monday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["FF1"]["tuesday"].ForEach(x => fly1Shifts["tuesday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["FF1"]["wednesday"].ForEach(x => fly1Shifts["wednesday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["FF1"]["thursday"].ForEach(x => fly1Shifts["thursday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["FF1"]["friday"].ForEach(x => fly1Shifts["friday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
+            employeeShifts["FF1"]["monday"].ForEach(x => fly1Shifts["monday"] += StyleShiftTime(x));
+            employeeShifts["FF1"]["tuesday"].ForEach(x => fly1Shifts["tuesday"] += StyleShiftTime(x));
+            employeeShifts["FF1"]["wednesday"].ForEach(x => fly1Shifts["wednesday"] += StyleShiftTime(x));
+            employeeShifts["FF1"]["thursday"].ForEach(x => fly1Shifts["thursday"] += StyleShiftTime(x));
+            employeeShifts["FF1"]["friday"].ForEach(x => fly1Shifts["friday"] += StyleShiftTime(x));
 
-            employeeShifts["FF2"]["monday"].ForEach(x => fly2Shifts["monday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["FF2"]["tuesday"].ForEach(x => fly2Shifts["tuesday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["FF2"]["wednesday"].ForEach(x => fly2Shifts["wednesday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["FF2"]["thursday"].ForEach(x => fly2Shifts["thursday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["FF2"]["friday"].ForEach(x => fly2Shifts["friday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
+            employeeShifts["FF2"]["monday"].ForEach(x => fly2Shifts["monday"] += StyleShiftTime(x));
+            employeeShifts["FF2"]["tuesday"].ForEach(x => fly2Shifts["tuesday"] += StyleShiftTime(x));
+            employeeShifts["FF2"]["wednesday"].ForEach(x => fly2Shifts["wednesday"] += StyleShiftTime(x));
+            employeeShifts["FF2"]["thursday"].ForEach(x => fly2Shifts["thursday"] += StyleShiftTime(x));
+            employeeShifts["FF2"]["friday"].ForEach(x => fly2Shifts["friday"] += StyleShiftTime(x));
 
-            employeeShifts["BH"]["monday"].ForEach(x => horShifts["monday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["BH"]["tuesday"].ForEach(x => horShifts["tuesday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["BH"]["wednesday"].ForEach(x => horShifts["wednesday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["BH"]["thursday"].ForEach(x => horShifts["thursday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["BH"]["friday"].ForEach(x => horShifts["friday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
+            employeeShifts["BH"]["monday"].ForEach(x => horShifts["monday"] += StyleShiftTime(x));
+            employeeShifts["BH"]["tuesday"].ForEach(x => horShifts["tuesday"] += StyleShiftTime(x));
+            employeeShifts["BH"]["wednesday"].ForEach(x => horShifts["wednesday"] += StyleShiftTime(x));
+            employeeShifts["BH"]["thursday"].ForEach(x => horShifts["thursday"] += StyleShiftTime(x));
+            employeeShifts["BH"]["friday"].ForEach(x => horShifts["friday"] += StyleShiftTime(x));
 
-            employeeShifts["BM"]["monday"].ForEach(x => mindShifts["monday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["BM"]["tuesday"].ForEach(x => mindShifts["tuesday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["BM"]["wednesday"].ForEach(x => mindShifts["wednesday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["BM"]["thursday"].ForEach(x => mindShifts["thursday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["BM"]["friday"].ForEach(x => mindShifts["friday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
+            employeeShifts["BM"]["monday"].ForEach(x => mindShifts["monday"] += StyleShiftTime(x));
+            employeeShifts["BM"]["tuesday"].ForEach(x => mindShifts["tuesday"] += StyleShiftTime(x));
+            employeeShifts["BM"]["wednesday"].ForEach(x => mindShifts["wednesday"] += StyleShiftTime(x));
+            employeeShifts["BM"]["thursday"].ForEach(x => mindShifts["thursday"] += StyleShiftTime(x));
+            employeeShifts["BM"]["friday"].ForEach(x => mindShifts["friday"] += StyleShiftTime(x));
 
-            employeeShifts["SA"]["monday"].ForEach(x => saShifts["monday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["SA"]["tuesday"].ForEach(x => saShifts["tuesday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["SA"]["wednesday"].ForEach(x => saShifts["wednesday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["SA"]["thursday"].ForEach(x => saShifts["thursday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
-            employeeShifts["SA"]["friday"].ForEach(x => saShifts["friday"] += string.Format("{0} {1}:{2} to {3}:{4}\r\n\r\n", x.EmployeeName, x.StartTime.Hours, x.StartTime.Minutes, x.EndTime.Hours, x.EndTime.Minutes));
+            employeeShifts["SA"]["monday"].ForEach(x => saShifts["monday"] += StyleShiftTime(x));
+            employeeShifts["SA"]["tuesday"].ForEach(x => saShifts["tuesday"] += StyleShiftTime(x));
+            employeeShifts["SA"]["wednesday"].ForEach(x => saShifts["wednesday"] += StyleShiftTime(x));
+            employeeShifts["SA"]["thursday"].ForEach(x => saShifts["thursday"] += StyleShiftTime(x));
+            employeeShifts["SA"]["friday"].ForEach(x => saShifts["friday"] += StyleShiftTime(x));
 
             lambRadio_CheckedChanged(null, null);
         }
@@ -173,6 +173,11 @@ namespace Scheduler
             wednesdayTextBox.Text = saShifts["wednesday"];
             thursdayTextBox.Text = saShifts["thursday"];
             fridayTextBox.Text = saShifts["friday"];
+        }
+
+        private string StyleShiftTime(Shift shift)
+        {
+            return string.Format("{0}: {1}\r\n\r\n", shift.EmployeeName, Time.GetTimeString(shift.StartTime, shift.EndTime));
         }
     }
 }

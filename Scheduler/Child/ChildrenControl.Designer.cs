@@ -40,7 +40,6 @@
             this.turtleRadio = new System.Windows.Forms.RadioButton();
             this.lambRadio = new System.Windows.Forms.RadioButton();
             this.emptyLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.roomsBox.SuspendLayout();
             this.SuspendLayout();
@@ -56,10 +55,10 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.Location = new System.Drawing.Point(0, 51);
-            this.dataGridView1.MaximumSize = new System.Drawing.Size(1352, 402);
+            this.dataGridView1.MaximumSize = new System.Drawing.Size(1352, 494);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridView1.Size = new System.Drawing.Size(1352, 402);
+            this.dataGridView1.Size = new System.Drawing.Size(1352, 440);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.MouseEnter += new System.EventHandler(this.DataGrid_MouseEnter);
             // 
@@ -193,21 +192,10 @@
             this.emptyLabel.Text = "No Child Data Available";
             this.emptyLabel.Visible = false;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(550, 459);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 32);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "View Daily Breakdown";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // ChildrenControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.emptyLabel);
             this.Controls.Add(this.roomsBox);
             this.Controls.Add(this.dataGridView1);
@@ -235,6 +223,5 @@
         private System.Windows.Forms.RadioButton turtleRadio;
         private System.Windows.Forms.RadioButton lambRadio;
         private System.Windows.Forms.Label emptyLabel;
-        private System.Windows.Forms.Button button1;
     }
 }
