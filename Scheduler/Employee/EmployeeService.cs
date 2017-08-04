@@ -125,6 +125,16 @@ namespace Scheduler
             }
         }
 
+        public void ScheduleEmployee(Shift scheduledShift)
+        {
+            scheduledHours[scheduledShift.EmployeeId] += Time.GetHoursAsDouble(scheduledShift.EndTime.Subtract(scheduledShift.StartTime));
+        }
+
+        public double GetScheduledHoursForEmployee(int employeeId)
+        {
+            return scheduledHours[employeeId];
+        }
+
         //public List<Shift> GetIdealEmployee(string dayOfWeek, Dictionary<TimeSpan, int> times, int maxHours, List<Shift> currentShifts, out List<Shift []> replacements, out KeyValuePair<TimeSpan, TimeSpan> startSwap, string room = "")
         //{
         //    var childStartTimes = new List<TimeSpan>();
@@ -338,7 +348,7 @@ namespace Scheduler
         //                scheduledHours[id] += Time.GetHoursAsDouble(prevTime.Subtract(scheduledStartTimes[id]));
         //            }
         //        }
-
+        //HERE
         //        foreach (var shiftEndTime in orderedShiftEndTimes)
         //        {
         //            var id = shiftEndTime.Key;
@@ -406,34 +416,72 @@ namespace Scheduler
         //    return null;
         //}
 
-        public TimeSpan GetEarliestStartTime(List<Employee> employees, string dayOfWeek)
+        public Dictionary<int, TimeSpan> GetEarliestStartTimes(List<Employee> employees, string dayOfWeek, int count)
         {
-            var earliest = TimeSpan.MaxValue;
+            var earliestTimes = new Dictionary<int, TimeSpan>();
+
+            for(var i = 1; i <= count; i++)
+            {
+                earliestTimes[i] = TimeSpan.MaxValue;
+            }
 
             foreach (var employee in employees)
             {
-                if (employee.GetStart(dayOfWeek).CompareTo(earliest) < 0)
+                var startTime = employee.GetStart(dayOfWeek);
+                var index = count;
+                
+                while(index > 0 && startTime.CompareTo(earliestTimes[index]) < 0)
                 {
-                    earliest = employee.GetStart(dayOfWeek);
+                    index--;
+                }
+
+                if (index < count)
+                {
+                    index++;
+                    for(var i = count; i > index; i--)
+                    {
+                        earliestTimes[i] = earliestTimes[i - 1];
+                    }
+
+                    earliestTimes[index] = startTime;
                 }
             }
 
-            return earliest;
+            return earliestTimes;
         }
 
-        public TimeSpan GetLatestEndTime(List<Employee> employees, string dayOfWeek)
+        public Dictionary<int, TimeSpan> GetLatestEndTimes(List<Employee> employees, string dayOfWeek, int count)
         {
-            var latest = TimeSpan.MinValue;
+            var latestTimes = new Dictionary<int, TimeSpan>();
+
+            for (var i = 1; i <= count; i++)
+            {
+                latestTimes[i] = TimeSpan.MinValue;
+            }
 
             foreach (var employee in employees)
             {
-                if (employee.GetEnd(dayOfWeek).CompareTo(latest) > 0)
+                var endTime = employee.GetEnd(dayOfWeek);
+                var index = count;
+
+                while (index > 0 && endTime.CompareTo(latestTimes[index]) > 0)
                 {
-                    latest = employee.GetEnd(dayOfWeek);
+                    index--;
+                }
+
+                if (index < count)
+                {
+                    index++;
+                    for (var i = count; i > index; i--)
+                    {
+                        latestTimes[i] = latestTimes[i - 1];
+                    }
+
+                    latestTimes[index] = endTime;
                 }
             }
 
-            return latest;
+            return latestTimes;
         }
 
         public Dictionary<string, int> GetEmployeeData()
