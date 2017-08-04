@@ -63,7 +63,15 @@ namespace Scheduler
 
             var childStartTimes = new List<TimeSpan>() { new TimeSpan(6,15,0), new TimeSpan(7, 15, 0), new TimeSpan(7, 30, 0), new TimeSpan(8, 15, 0) };
             var childEndTimes = new List<TimeSpan>() { new TimeSpan(13, 15, 0), new TimeSpan(14, 15, 0), new TimeSpan(16, 30, 0), new TimeSpan(18, 0, 0) };
-            var failedTimes = new Dictionary<TimeSpan, TimeSpan>();
+            var scheduledShifts = new List<Shift>();
+            var failedShifts = new List<Shift>();
+
+            //testing vars to be REMOVED
+            var dayOfWeek = "monday";
+            var room = "LL";
+            var maxHours = 8;
+
+            //employeeService.InitializeHoursDictionary();
 
             //int count = 0;
             //foreach (var time in lambTimes[0])
@@ -79,78 +87,214 @@ namespace Scheduler
             //    }
             //}
 
-            //Check if any of the employees in the room on that day start early enough.
-            var employeeCheck = employeeService.GetFilteredEmployees("LL", "monday");
-            if (!employeeCheck.Where(employee => employee.GetStart("monday").CompareTo(childStartTimes.First()) <= 0).Any())
+            var employeeCheck = employeeService.GetFilteredEmployees(room, dayOfWeek);
+
+            employeeService.AddOrUpdate(employeeCheck.First()); //For testing only.  REMOVE
+            employeeService.InitializeHoursDictionary(); //For testing only.  REMOVE
+
+
+            #region "Update For Earliest"
+            //The process in this region makes sure there is an employee that can start early enough for each of the child start times.
+            //In the case where there is a child start time too early for any employee the child start time is changed to the earliest
+            //employee start time and the difference is recorded as a failed shift.
+            //ASSUMES ALL CHILD START TIMES ARE IN SEQUENTIAL ORDER
+
+            //Get the earliest times employees can start.  Get as many as there are child start times.
+            var earliest = employeeService.GetEarliestStartTimes(employeeCheck, dayOfWeek, childStartTimes.Count);
+
+            var updatedStartTimes = new List<TimeSpan>();
+
+            var earlyIndex = 1;
+            //Go through all the child start times
+            foreach (var time in childStartTimes)
             {
-                //Get the earliest time an employee can start.
-                var earliest = employeeService.GetEarliestStartTime(employeeCheck, "monday");
-
-                var tempStartTimes = new List<TimeSpan>();
-                var failedCount = 0;
-
-                //Go through all the child start times
-                foreach(var time in childStartTimes)
+                //If its at or after the respective earliest employee start time, add it to a temp list.
+                if (time.CompareTo(earliest[earlyIndex]) >= 0)
                 {
-                    //If its at or after the earliest employee start time, add it to a temp list.
-                    if(time.CompareTo(earliest) >= 0)
+                    updatedStartTimes.Add(time);
+                }
+                //If not, add the difference to the failed shifts and add the respective earliest employee time to the temp list.
+                else
+                {
+                    //If this earliest employee time was TimeSpan.MaxValue that means there weren't enough employees that could work in this
+                    //room at any point that day.  Mark the child start time to the latest child end time as a failed shift and remove them
+                    //from their respective lists.
+                    if (earliest[earlyIndex] != TimeSpan.MaxValue)
                     {
-                        tempStartTimes.Add(time);
+                        failedShifts.Add(new Shift(0, "", time, earliest[earlyIndex], room, dayOfWeek));
+                        updatedStartTimes.Add(earliest[earlyIndex]);
                     }
-                    //If not, add the difference to the failed times and increment the counter.
                     else
                     {
-                        failedTimes.Add(time, earliest);
-                        failedCount++;
+                        failedShifts.Add(new Shift(0, "", time, childEndTimes.Last(), room, dayOfWeek));
+                        childEndTimes.Remove(childEndTimes.Last());
+                        //dont need to remove anything from child start times.  Simply not adding anything to the temp list is enough.
                     }
                 }
-
-                //Clear the child start times
-                childStartTimes = new List<TimeSpan>();
-
-                //For each failed count add the earliest employee start time to the child start times.
-                //This ensures the correct number of employees get scheduled
-                for(var i = 0; i < failedCount; i++)
-                {
-                    childStartTimes.Add(earliest);
-                }
-
-                childStartTimes.AddRange(tempStartTimes);
+                earlyIndex++;
             }
 
-            if (!employeeCheck.Where(employee => employee.GetEnd("monday").CompareTo(childEndTimes.Last()) >= 0).Any())
+            //set the child start times to the updated list
+            childStartTimes = updatedStartTimes;
+            #endregion
+
+            #region "Update For Latest"
+            //The process for this region is similar to the Update For Earliest region, but for end times.
+            //ASSUMES ALL CHILD END TIMES ARE IN SEQUENTIAL ORDER
+
+            //Get the latest end times employees can end.  Get as many as there are child end times.
+            var latest = employeeService.GetLatestEndTimes(employeeCheck, dayOfWeek, childEndTimes.Count);
+
+            var updatedEndTimes = new List<TimeSpan>();
+
+            var lateIndex = latest.Count;
+            //Go through all the child end times
+            foreach (var time in childEndTimes)
             {
-                //Get the latest time an employee can end.
-                var latest = employeeService.GetLatestEndTime(employeeCheck, "monday");
-
-                var tempEndTimes = new List<TimeSpan>();
-                var failedCount = 0;
-
-                //Go through all the child end times
-                foreach (var time in childEndTimes)
+                //If its at or before the respective latest employee end time, add it to a temp list.
+                if (time.CompareTo(latest[lateIndex]) <= 0)
                 {
-                    //If its at or after the earliest employee start time, add it to a temp list.
-                    if (time.CompareTo(latest) <= 0)
+                    updatedEndTimes.Add(time);
+                }
+                //If not, add the difference to the failed shifts and add the respective latest employee time to the temp list.
+                else
+                {
+                    //If this latest employee time was TimeSpan.MinValue that means there weren't enough employees that could work in this
+                    //room at any point that day.  This should never happen since there are the same number of end time as start times and 
+                    //the Update For Earliest will have handled not having enough employee for that number.  Just in case it does handle it
+                    //similarly by removing the earliest child start time.
+                    if (latest[lateIndex] != TimeSpan.MinValue)
                     {
-                        tempEndTimes.Add(time);
+                        failedShifts.Add(new Shift(0, "", latest[lateIndex], time, room, dayOfWeek));
+                        updatedEndTimes.Add(latest[lateIndex]);
                     }
-                    //If not, add the difference to the failed times and increment the counter.
                     else
                     {
-                        failedTimes.Add(latest, time);
-                        failedCount++;
+                        failedShifts.Add(new Shift(0, "", childStartTimes.First(), time, room, dayOfWeek));
+                        childStartTimes.Remove(childStartTimes.First());
                     }
                 }
-                
-                childEndTimes = tempEndTimes;
+                lateIndex--;
+            }
 
-                //For each failed count add the latest employee end time to the child end times.
-                //This ensures the correct number of employees get scheduled
-                for (var i = 0; i < failedCount; i++)
+            //set the child end times to the updated list
+            childEndTimes = updatedEndTimes;
+            #endregion
+
+            while(childStartTimes.Any())
+            {
+                var scheduledStartTimes = new Dictionary<int, TimeSpan>();
+                var scheduledEndTimes = new Dictionary<int, TimeSpan>();
+
+                foreach (var childStartTime in childStartTimes)
                 {
-                    childEndTimes.Add(latest);
+                    var highestPriority = employeeCheck.OrderBy(x => x.GetRoomPriority(room)).First().GetRoomPriority(room); //Find the highest priority for this room from the employees
+                    var priorityEmployees = employeeCheck.Where(x => x.GetRoomPriority(room) == highestPriority).ToList(); //A list of the employees at the highest priority
+                    var orderedEmployees = priorityEmployees.OrderByDescending(x => x.MaxHours - employeeService.GetScheduledHoursForEmployee(x.Id)); //order employees by the number of max hours left this week.
+
+                    Employee selectedEmployee = null;
+                    TimeSpan potentialHoursThisShift = TimeSpan.Zero;
+
+                    //Find an employee that would either have a shift over 3 hours, or that would work at least until the earliest child end time.
+                    //This prevents short shifts that don't even make it to a child end time.
+                    while (selectedEmployee == null)
+                    {
+                        foreach (var employee in orderedEmployees)
+                        {
+                            potentialHoursThisShift = employee.GetEnd(dayOfWeek).Subtract(childStartTime);
+                            if (potentialHoursThisShift.Hours >= 2 || employee.GetEnd(dayOfWeek).CompareTo(childEndTimes[0]) >= 0)
+                            {
+                                selectedEmployee = employee;
+                                break;
+                            }
+                        }
+                        //If no employees at the priority level meet the criteria, check the next priority level down.
+                        if (selectedEmployee == null)
+                        {
+                            highestPriority++;
+                            if (highestPriority == 10)
+                            {
+                                //Couldn't find any employee to work at this time.
+                                //Record some kind of a fail shift.
+                            }
+
+                            //Reset employees to the next highest priority
+                            priorityEmployees = employeeCheck.Where(x => x.GetRoomPriority(room) == highestPriority).ToList();
+                            orderedEmployees = priorityEmployees.OrderByDescending(x => x.MaxHours - employeeService.GetScheduledHoursForEmployee(x.Id));
+                        }
+                    }
+
+                    //Set the shift end time to either the employees end time that day, or the max number of hours after the start time.
+                    TimeSpan stopTime;
+
+                    if (potentialHoursThisShift.Hours >= maxHours)
+                    {
+                        stopTime = childStartTime.Add(new TimeSpan(maxHours, 0, 0));
+                    }
+                    else
+                    {
+                        stopTime = childStartTime.Add(potentialHoursThisShift);
+                    }
+
+                    scheduledStartTimes.Add(selectedEmployee.Id, childStartTime);
+                    scheduledEndTimes.Add(selectedEmployee.Id, stopTime);
+                }
+
+                var orderedShiftEndTimes = scheduledEndTimes.OrderByDescending(x => x.Value).ToList();
+
+                var tempOrderedShiftEnds = orderedShiftEndTimes.ToList();
+                var tempChildEnds = childEndTimes.ToList();
+
+                foreach (var shiftEndTime in tempOrderedShiftEnds)
+                {
+                    //if this shift end is before the earliest child end, none of the remaining end times can be lined up.
+                    if (shiftEndTime.Value.CompareTo(tempChildEnds[0]) < 0)
+                    {
+                        break;
+                    }
+
+                    //find the latest child end time that is still before this shift end time.
+                    TimeSpan prevTime = new TimeSpan();
+                    bool scheduled = false;
+                    foreach (var end in tempChildEnds)
+                    {
+                        if (shiftEndTime.Value.CompareTo(end) >= 0)
+                        {
+                            prevTime = end;
+                        }
+                        else
+                        {
+                            //consider this shift end time to now be the child end time and remove them both from their respective lists
+                            orderedShiftEndTimes.Remove(shiftEndTime);
+                            tempChildEnds.Remove(prevTime);
+
+                            var id = shiftEndTime.Key;
+                            var name = string.Format("{0} {1}", employeeService.GetEmployee(id).FirstName, employeeService.GetEmployee(id).LastName);
+                            var shift = new Shift(id, name, scheduledStartTimes[id], prevTime, room, dayOfWeek);
+                            scheduledShifts.Add(shift);
+                            employeeService.ScheduleEmployee(shift);
+
+                            scheduled = true;
+                            break;
+                        }
+                    }
+                    //This covers the case were the last employee potential shift end is after or equal to the last child end time
+                    if (!scheduled)
+                    {
+                        orderedShiftEndTimes.Remove(shiftEndTime);
+                        tempChildEnds.Remove(prevTime);
+
+                        var id = shiftEndTime.Key;
+                        var name = string.Format("{0} {1}", employeeService.GetEmployee(id).FirstName, employeeService.GetEmployee(id).LastName);
+                        var shift = new Shift(id, name, scheduledStartTimes[id], prevTime, room, dayOfWeek);
+                        scheduledShifts.Add(shift);
+                        employeeService.ScheduleEmployee(shift);
+                    }
                 }
             }
+
+
+
 
             //foreach (var childStartTime in childStartTimes)
             //{
